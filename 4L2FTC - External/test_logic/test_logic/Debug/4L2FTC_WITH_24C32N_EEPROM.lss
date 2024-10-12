@@ -1,0 +1,3344 @@
+
+4L2FTC_WITH_24C32N_EEPROM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000052  00800100  00001448  000014dc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001448  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000011  00800152  00800152  0000152e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000152e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001560  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000240  00000000  00000000  000015a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002c02  00000000  00000000  000017e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000e00  00000000  00000000  000043e2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001867  00000000  00000000  000051e2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000510  00000000  00000000  00006a4c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000080a  00000000  00000000  00006f5c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000935  00000000  00000000  00007766  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000001c0  00000000  00000000  0000809b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	61 c0       	rjmp	.+194    	; 0xc8 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	5f c0       	rjmp	.+190    	; 0xc8 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	5d c0       	rjmp	.+186    	; 0xc8 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	5b c0       	rjmp	.+182    	; 0xc8 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	59 c0       	rjmp	.+178    	; 0xc8 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	57 c0       	rjmp	.+174    	; 0xc8 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	55 c0       	rjmp	.+170    	; 0xc8 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	53 c0       	rjmp	.+166    	; 0xc8 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	51 c0       	rjmp	.+162    	; 0xc8 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	4f c0       	rjmp	.+158    	; 0xc8 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	4d c0       	rjmp	.+154    	; 0xc8 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	09 c3       	rjmp	.+1554   	; 0x644 <__vector_12>
+      32:	00 00       	nop
+      34:	49 c0       	rjmp	.+146    	; 0xc8 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	47 c0       	rjmp	.+142    	; 0xc8 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	45 c0       	rjmp	.+138    	; 0xc8 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	43 c0       	rjmp	.+134    	; 0xc8 <__bad_interrupt>
+      42:	00 00       	nop
+      44:	27 c3       	rjmp	.+1614   	; 0x694 <__vector_17>
+      46:	00 00       	nop
+      48:	64 c3       	rjmp	.+1736   	; 0x712 <__vector_18>
+      4a:	00 00       	nop
+      4c:	3d c0       	rjmp	.+122    	; 0xc8 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	3b c0       	rjmp	.+118    	; 0xc8 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	39 c0       	rjmp	.+114    	; 0xc8 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	37 c0       	rjmp	.+110    	; 0xc8 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	35 c0       	rjmp	.+106    	; 0xc8 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	33 c0       	rjmp	.+102    	; 0xc8 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	31 c0       	rjmp	.+98     	; 0xc8 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	2f c0       	rjmp	.+94     	; 0xc8 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	2d c0       	rjmp	.+90     	; 0xc8 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	2b c0       	rjmp	.+86     	; 0xc8 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	29 c0       	rjmp	.+82     	; 0xc8 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	27 c0       	rjmp	.+78     	; 0xc8 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	25 c0       	rjmp	.+74     	; 0xc8 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	23 c0       	rjmp	.+70     	; 0xc8 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	21 c0       	rjmp	.+66     	; 0xc8 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	1f c0       	rjmp	.+62     	; 0xc8 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	11 e0       	ldi	r17, 0x01	; 1
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	e8 e4       	ldi	r30, 0x48	; 72
+      a0:	f4 e1       	ldi	r31, 0x14	; 20
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a2 35       	cpi	r26, 0x52	; 82
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+      b2:	21 e0       	ldi	r18, 0x01	; 1
+      b4:	a2 e5       	ldi	r26, 0x52	; 82
+      b6:	b1 e0       	ldi	r27, 0x01	; 1
+      b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+      ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+      bc:	a3 36       	cpi	r26, 0x63	; 99
+      be:	b2 07       	cpc	r27, r18
+      c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+      c2:	93 d4       	rcall	.+2342   	; 0x9ea <main>
+      c4:	0c 94 22 0a 	jmp	0x1444	; 0x1444 <_exit>
+
+000000c8 <__bad_interrupt>:
+      c8:	9b cf       	rjmp	.-202    	; 0x0 <__vectors>
+
+000000ca <eeprom_write>:
+ */ 
+#include "eeprom.h"
+#include "main.h"
+#include "i2c.h"
+
+void eeprom_write(uint16_t address, uint8_t data) {
+      ca:	1f 93       	push	r17
+      cc:	cf 93       	push	r28
+      ce:	df 93       	push	r29
+      d0:	d8 2f       	mov	r29, r24
+      d2:	19 2f       	mov	r17, r25
+      d4:	c6 2f       	mov	r28, r22
+	i2c_start();
+      d6:	38 d2       	rcall	.+1136   	; 0x548 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 0); 
+      d8:	80 ea       	ldi	r24, 0xA0	; 160
+      da:	46 d2       	rcall	.+1164   	; 0x568 <i2c_write>
+	i2c_write((address >> 8) & 0xFF); 
+      dc:	81 2f       	mov	r24, r17
+      de:	44 d2       	rcall	.+1160   	; 0x568 <i2c_write>
+	i2c_write(address & 0xFF); 
+      e0:	8d 2f       	mov	r24, r29
+	i2c_write(data); 
+      e2:	42 d2       	rcall	.+1156   	; 0x568 <i2c_write>
+      e4:	8c 2f       	mov	r24, r28
+      e6:	40 d2       	rcall	.+1152   	; 0x568 <i2c_write>
+	i2c_stop();
+      e8:	37 d2       	rcall	.+1134   	; 0x558 <i2c_stop>
+      ea:	df 91       	pop	r29
+}
+      ec:	cf 91       	pop	r28
+      ee:	1f 91       	pop	r17
+      f0:	08 95       	ret
+
+000000f2 <eeprom_read>:
+      f2:	cf 93       	push	r28
+
+uint8_t eeprom_read(uint16_t address) {
+      f4:	df 93       	push	r29
+      f6:	c8 2f       	mov	r28, r24
+      f8:	d9 2f       	mov	r29, r25
+	uint8_t data;
+	i2c_start();
+      fa:	26 d2       	rcall	.+1100   	; 0x548 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 0); 
+      fc:	80 ea       	ldi	r24, 0xA0	; 160
+      fe:	34 d2       	rcall	.+1128   	; 0x568 <i2c_write>
+	i2c_write((address >> 8) & 0xFF);
+     100:	8d 2f       	mov	r24, r29
+     102:	32 d2       	rcall	.+1124   	; 0x568 <i2c_write>
+	i2c_write(address & 0xFF); 
+     104:	8c 2f       	mov	r24, r28
+     106:	30 d2       	rcall	.+1120   	; 0x568 <i2c_write>
+	i2c_start();
+     108:	1f d2       	rcall	.+1086   	; 0x548 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 1); 
+     10a:	81 ea       	ldi	r24, 0xA1	; 161
+     10c:	2d d2       	rcall	.+1114   	; 0x568 <i2c_write>
+     10e:	36 d2       	rcall	.+1132   	; 0x57c <i2c_read_nack>
+	data = i2c_read_nack();
+     110:	c8 2f       	mov	r28, r24
+     112:	22 d2       	rcall	.+1092   	; 0x558 <i2c_stop>
+     114:	8c 2f       	mov	r24, r28
+	i2c_stop();
+     116:	df 91       	pop	r29
+     118:	cf 91       	pop	r28
+	return data;
+     11a:	08 95       	ret
+
+0000011c <as0>:
+     11c:	cf 93       	push	r28
+     11e:	df 93       	push	r29
+     120:	85 b3       	in	r24, 0x15	; 21
+
+#include "main.h"
+#include "fans_control.h"
+
+void as0() {                     // Fan1 Speed 0
+	PORTC &= ~(1 << PC2);
+     122:	8b 7f       	andi	r24, 0xFB	; 251
+     124:	85 bb       	out	0x15, r24	; 21
+	PORTC &= ~(1 << PC1);
+     126:	85 b3       	in	r24, 0x15	; 21
+     128:	8d 7f       	andi	r24, 0xFD	; 253
+     12a:	85 bb       	out	0x15, r24	; 21
+	PORTC &= ~(1 << PC0);     // Led Pins
+     12c:	85 b3       	in	r24, 0x15	; 21
+     12e:	8e 7f       	andi	r24, 0xFE	; 254
+     130:	85 bb       	out	0x15, r24	; 21
+	PORTG &= ~(1 << PG1);
+     132:	c5 e6       	ldi	r28, 0x65	; 101
+     134:	d0 e0       	ldi	r29, 0x00	; 0
+     136:	88 81       	ld	r24, Y
+     138:	8d 7f       	andi	r24, 0xFD	; 253
+     13a:	88 83       	st	Y, r24
+	PORTG &= ~(1 << PG0);
+     13c:	88 81       	ld	r24, Y
+     13e:	8e 7f       	andi	r24, 0xFE	; 254
+     140:	88 83       	st	Y, r24
+
+	PORTC &= ~(1 << PC7);     //Relay Pins
+     142:	85 b3       	in	r24, 0x15	; 21
+     144:	8f 77       	andi	r24, 0x7F	; 127
+     146:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     148:	88 ec       	ldi	r24, 0xC8	; 200
+     14a:	90 e0       	ldi	r25, 0x00	; 0
+     14c:	8a d2       	rcall	.+1300   	; 0x662 <custom_delay_ms>
+	PORTG &= ~(1 << PG2);
+     14e:	88 81       	ld	r24, Y
+     150:	8b 7f       	andi	r24, 0xFB	; 251
+     152:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     154:	88 ec       	ldi	r24, 0xC8	; 200
+     156:	90 e0       	ldi	r25, 0x00	; 0
+     158:	84 d2       	rcall	.+1288   	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA7);
+     15a:	8b b3       	in	r24, 0x1b	; 27
+     15c:	8f 77       	andi	r24, 0x7F	; 127
+     15e:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     160:	88 ec       	ldi	r24, 0xC8	; 200
+     162:	90 e0       	ldi	r25, 0x00	; 0
+     164:	7e d2       	rcall	.+1276   	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA6);
+     166:	8b b3       	in	r24, 0x1b	; 27
+     168:	8f 7b       	andi	r24, 0xBF	; 191
+	custom_delay_ms(200);
+     16a:	8b bb       	out	0x1b, r24	; 27
+     16c:	88 ec       	ldi	r24, 0xC8	; 200
+     16e:	90 e0       	ldi	r25, 0x00	; 0
+     170:	78 d2       	rcall	.+1264   	; 0x662 <custom_delay_ms>
+}
+     172:	df 91       	pop	r29
+     174:	cf 91       	pop	r28
+     176:	08 95       	ret
+
+00000178 <as1>:
+
+void as1() {
+     178:	cf 93       	push	r28
+     17a:	df 93       	push	r29
+	PORTC |= (1 << PC2);
+     17c:	85 b3       	in	r24, 0x15	; 21
+     17e:	84 60       	ori	r24, 0x04	; 4
+     180:	85 bb       	out	0x15, r24	; 21
+	
+	PORTC &= ~(1 << PC1);
+     182:	85 b3       	in	r24, 0x15	; 21
+     184:	8d 7f       	andi	r24, 0xFD	; 253
+     186:	85 bb       	out	0x15, r24	; 21
+	PORTC &= ~(1 << PC0);     // Led Pins FAN1 Speed1
+     188:	85 b3       	in	r24, 0x15	; 21
+     18a:	8e 7f       	andi	r24, 0xFE	; 254
+     18c:	85 bb       	out	0x15, r24	; 21
+	PORTG &= ~(1 << PG1);
+     18e:	c5 e6       	ldi	r28, 0x65	; 101
+     190:	d0 e0       	ldi	r29, 0x00	; 0
+     192:	88 81       	ld	r24, Y
+     194:	8d 7f       	andi	r24, 0xFD	; 253
+     196:	88 83       	st	Y, r24
+	PORTG &= ~(1 << PG0);
+     198:	88 81       	ld	r24, Y
+     19a:	8e 7f       	andi	r24, 0xFE	; 254
+     19c:	88 83       	st	Y, r24
+	
+	PORTC &= ~(1 << PC7);
+     19e:	85 b3       	in	r24, 0x15	; 21
+     1a0:	8f 77       	andi	r24, 0x7F	; 127
+     1a2:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     1a4:	88 ec       	ldi	r24, 0xC8	; 200
+     1a6:	90 e0       	ldi	r25, 0x00	; 0
+     1a8:	5c d2       	rcall	.+1208   	; 0x662 <custom_delay_ms>
+	PORTG &=~ (1 << PG2);
+     1aa:	88 81       	ld	r24, Y
+     1ac:	8b 7f       	andi	r24, 0xFB	; 251
+     1ae:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     1b0:	88 ec       	ldi	r24, 0xC8	; 200
+     1b2:	90 e0       	ldi	r25, 0x00	; 0
+     1b4:	56 d2       	rcall	.+1196   	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA7);      //2.2K
+     1b6:	8b b3       	in	r24, 0x1b	; 27
+     1b8:	80 68       	ori	r24, 0x80	; 128
+     1ba:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     1bc:	88 ec       	ldi	r24, 0xC8	; 200
+     1be:	90 e0       	ldi	r25, 0x00	; 0
+     1c0:	50 d2       	rcall	.+1184   	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA6);
+     1c2:	8b b3       	in	r24, 0x1b	; 27
+     1c4:	8f 7b       	andi	r24, 0xBF	; 191
+	custom_delay_ms(200);
+     1c6:	8b bb       	out	0x1b, r24	; 27
+     1c8:	88 ec       	ldi	r24, 0xC8	; 200
+     1ca:	90 e0       	ldi	r25, 0x00	; 0
+     1cc:	4a d2       	rcall	.+1172   	; 0x662 <custom_delay_ms>
+	
+}
+     1ce:	df 91       	pop	r29
+     1d0:	cf 91       	pop	r28
+     1d2:	08 95       	ret
+
+000001d4 <as2>:
+
+void as2() {
+     1d4:	cf 93       	push	r28
+     1d6:	df 93       	push	r29
+	PORTC |= (1 << PC2);
+     1d8:	85 b3       	in	r24, 0x15	; 21
+     1da:	84 60       	ori	r24, 0x04	; 4
+     1dc:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC1);
+     1de:	85 b3       	in	r24, 0x15	; 21
+     1e0:	82 60       	ori	r24, 0x02	; 2
+     1e2:	85 bb       	out	0x15, r24	; 21
+
+	PORTC &= ~(1 << PC0);     // Led Pins FAN1 Speed2
+     1e4:	85 b3       	in	r24, 0x15	; 21
+     1e6:	8e 7f       	andi	r24, 0xFE	; 254
+     1e8:	85 bb       	out	0x15, r24	; 21
+	PORTG &= ~(1 << PG1);
+     1ea:	c5 e6       	ldi	r28, 0x65	; 101
+     1ec:	d0 e0       	ldi	r29, 0x00	; 0
+     1ee:	88 81       	ld	r24, Y
+     1f0:	8d 7f       	andi	r24, 0xFD	; 253
+     1f2:	88 83       	st	Y, r24
+	PORTG &= ~(1 << PG0);
+     1f4:	88 81       	ld	r24, Y
+     1f6:	8e 7f       	andi	r24, 0xFE	; 254
+     1f8:	88 83       	st	Y, r24
+
+	PORTC &= ~(1 << PC7);
+     1fa:	85 b3       	in	r24, 0x15	; 21
+     1fc:	8f 77       	andi	r24, 0x7F	; 127
+     1fe:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     200:	88 ec       	ldi	r24, 0xC8	; 200
+     202:	90 e0       	ldi	r25, 0x00	; 0
+     204:	2e d2       	rcall	.+1116   	; 0x662 <custom_delay_ms>
+	PORTG &= ~(1 << PG2);
+     206:	88 81       	ld	r24, Y
+     208:	8b 7f       	andi	r24, 0xFB	; 251
+     20a:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     20c:	88 ec       	ldi	r24, 0xC8	; 200
+     20e:	90 e0       	ldi	r25, 0x00	; 0
+     210:	28 d2       	rcall	.+1104   	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA7);
+     212:	8b b3       	in	r24, 0x1b	; 27
+     214:	8f 77       	andi	r24, 0x7F	; 127
+     216:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     218:	88 ec       	ldi	r24, 0xC8	; 200
+     21a:	90 e0       	ldi	r25, 0x00	; 0
+     21c:	22 d2       	rcall	.+1092   	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA6);    //3.3k
+     21e:	8b b3       	in	r24, 0x1b	; 27
+     220:	80 64       	ori	r24, 0x40	; 64
+	custom_delay_ms(200);
+     222:	8b bb       	out	0x1b, r24	; 27
+     224:	88 ec       	ldi	r24, 0xC8	; 200
+     226:	90 e0       	ldi	r25, 0x00	; 0
+     228:	1c d2       	rcall	.+1080   	; 0x662 <custom_delay_ms>
+}
+     22a:	df 91       	pop	r29
+     22c:	cf 91       	pop	r28
+     22e:	08 95       	ret
+
+00000230 <as3>:
+
+void as3() {
+     230:	cf 93       	push	r28
+     232:	df 93       	push	r29
+	PORTC |= (1 << PC2);
+     234:	85 b3       	in	r24, 0x15	; 21
+     236:	84 60       	ori	r24, 0x04	; 4
+     238:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC1);
+     23a:	85 b3       	in	r24, 0x15	; 21
+     23c:	82 60       	ori	r24, 0x02	; 2
+     23e:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC0);    // Fan1  Speed 3
+     240:	85 b3       	in	r24, 0x15	; 21
+     242:	81 60       	ori	r24, 0x01	; 1
+     244:	85 bb       	out	0x15, r24	; 21
+	
+	PORTG &= ~(1 << PG1);
+     246:	c5 e6       	ldi	r28, 0x65	; 101
+     248:	d0 e0       	ldi	r29, 0x00	; 0
+     24a:	88 81       	ld	r24, Y
+     24c:	8d 7f       	andi	r24, 0xFD	; 253
+     24e:	88 83       	st	Y, r24
+	PORTG &= ~(1 << PG0);
+     250:	88 81       	ld	r24, Y
+     252:	8e 7f       	andi	r24, 0xFE	; 254
+     254:	88 83       	st	Y, r24
+
+	PORTC &= ~(1 << PC7);
+     256:	85 b3       	in	r24, 0x15	; 21
+     258:	8f 77       	andi	r24, 0x7F	; 127
+     25a:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     25c:	88 ec       	ldi	r24, 0xC8	; 200
+     25e:	90 e0       	ldi	r25, 0x00	; 0
+     260:	00 d2       	rcall	.+1024   	; 0x662 <custom_delay_ms>
+	PORTG |= (1 << PG2);      // 4.3K
+     262:	88 81       	ld	r24, Y
+     264:	84 60       	ori	r24, 0x04	; 4
+     266:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     268:	88 ec       	ldi	r24, 0xC8	; 200
+     26a:	90 e0       	ldi	r25, 0x00	; 0
+     26c:	fa d1       	rcall	.+1012   	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA7);
+     26e:	8b b3       	in	r24, 0x1b	; 27
+     270:	8f 77       	andi	r24, 0x7F	; 127
+     272:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     274:	88 ec       	ldi	r24, 0xC8	; 200
+     276:	90 e0       	ldi	r25, 0x00	; 0
+     278:	f4 d1       	rcall	.+1000   	; 0x662 <custom_delay_ms>
+	
+	PORTA |= (1 << PA6);
+     27a:	8b b3       	in	r24, 0x1b	; 27
+     27c:	80 64       	ori	r24, 0x40	; 64
+	custom_delay_ms(200);
+     27e:	8b bb       	out	0x1b, r24	; 27
+     280:	88 ec       	ldi	r24, 0xC8	; 200
+     282:	90 e0       	ldi	r25, 0x00	; 0
+     284:	ee d1       	rcall	.+988    	; 0x662 <custom_delay_ms>
+}
+     286:	df 91       	pop	r29
+     288:	cf 91       	pop	r28
+     28a:	08 95       	ret
+
+0000028c <as4>:
+
+void as4() {
+     28c:	cf 93       	push	r28
+     28e:	df 93       	push	r29
+	PORTC |= (1 << PC2);
+     290:	85 b3       	in	r24, 0x15	; 21
+     292:	84 60       	ori	r24, 0x04	; 4
+     294:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC1);
+     296:	85 b3       	in	r24, 0x15	; 21
+     298:	82 60       	ori	r24, 0x02	; 2
+     29a:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC0);    // Fan1  Speed 4
+     29c:	85 b3       	in	r24, 0x15	; 21
+     29e:	81 60       	ori	r24, 0x01	; 1
+     2a0:	85 bb       	out	0x15, r24	; 21
+	PORTG |= (1 << PG1);
+     2a2:	c5 e6       	ldi	r28, 0x65	; 101
+     2a4:	d0 e0       	ldi	r29, 0x00	; 0
+     2a6:	88 81       	ld	r24, Y
+     2a8:	82 60       	ori	r24, 0x02	; 2
+     2aa:	88 83       	st	Y, r24
+
+	PORTG &= ~(1 << PG0);
+     2ac:	88 81       	ld	r24, Y
+     2ae:	8e 7f       	andi	r24, 0xFE	; 254
+     2b0:	88 83       	st	Y, r24
+
+	PORTC &= ~(1 << PC7);
+     2b2:	85 b3       	in	r24, 0x15	; 21
+     2b4:	8f 77       	andi	r24, 0x7F	; 127
+     2b6:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     2b8:	88 ec       	ldi	r24, 0xC8	; 200
+     2ba:	90 e0       	ldi	r25, 0x00	; 0
+     2bc:	d2 d1       	rcall	.+932    	; 0x662 <custom_delay_ms>
+	PORTG &= ~(1 << PG2);
+     2be:	88 81       	ld	r24, Y
+     2c0:	8b 7f       	andi	r24, 0xFB	; 251
+     2c2:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     2c4:	88 ec       	ldi	r24, 0xC8	; 200
+     2c6:	90 e0       	ldi	r25, 0x00	; 0
+     2c8:	cc d1       	rcall	.+920    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA7);   //5.5K
+     2ca:	8b b3       	in	r24, 0x1b	; 27
+     2cc:	80 68       	ori	r24, 0x80	; 128
+     2ce:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     2d0:	88 ec       	ldi	r24, 0xC8	; 200
+     2d2:	90 e0       	ldi	r25, 0x00	; 0
+     2d4:	c6 d1       	rcall	.+908    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA6);
+     2d6:	8b b3       	in	r24, 0x1b	; 27
+     2d8:	80 64       	ori	r24, 0x40	; 64
+	custom_delay_ms(200);
+     2da:	8b bb       	out	0x1b, r24	; 27
+     2dc:	88 ec       	ldi	r24, 0xC8	; 200
+     2de:	90 e0       	ldi	r25, 0x00	; 0
+     2e0:	c0 d1       	rcall	.+896    	; 0x662 <custom_delay_ms>
+}
+     2e2:	df 91       	pop	r29
+     2e4:	cf 91       	pop	r28
+     2e6:	08 95       	ret
+
+000002e8 <as5>:
+
+void as5() {
+     2e8:	cf 93       	push	r28
+     2ea:	df 93       	push	r29
+	PORTC |= (1 << PC2);
+     2ec:	85 b3       	in	r24, 0x15	; 21
+     2ee:	84 60       	ori	r24, 0x04	; 4
+     2f0:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC1);
+     2f2:	85 b3       	in	r24, 0x15	; 21
+     2f4:	82 60       	ori	r24, 0x02	; 2
+     2f6:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC0);    // Fan1  Speed 5
+     2f8:	85 b3       	in	r24, 0x15	; 21
+     2fa:	81 60       	ori	r24, 0x01	; 1
+     2fc:	85 bb       	out	0x15, r24	; 21
+	PORTG |= (1 << PG1);
+     2fe:	c5 e6       	ldi	r28, 0x65	; 101
+     300:	d0 e0       	ldi	r29, 0x00	; 0
+     302:	88 81       	ld	r24, Y
+     304:	82 60       	ori	r24, 0x02	; 2
+     306:	88 83       	st	Y, r24
+	PORTG |= (1 << PG0);
+     308:	88 81       	ld	r24, Y
+     30a:	81 60       	ori	r24, 0x01	; 1
+     30c:	88 83       	st	Y, r24
+
+
+	PORTC |= (1 << PC7);     //Direct
+     30e:	85 b3       	in	r24, 0x15	; 21
+     310:	80 68       	ori	r24, 0x80	; 128
+     312:	85 bb       	out	0x15, r24	; 21
+	custom_delay_ms(200);
+     314:	88 ec       	ldi	r24, 0xC8	; 200
+     316:	90 e0       	ldi	r25, 0x00	; 0
+     318:	a4 d1       	rcall	.+840    	; 0x662 <custom_delay_ms>
+	PORTG &= ~(1 << PG2);
+     31a:	88 81       	ld	r24, Y
+     31c:	8b 7f       	andi	r24, 0xFB	; 251
+     31e:	88 83       	st	Y, r24
+	custom_delay_ms(200);
+     320:	88 ec       	ldi	r24, 0xC8	; 200
+     322:	90 e0       	ldi	r25, 0x00	; 0
+     324:	9e d1       	rcall	.+828    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA7);
+     326:	8b b3       	in	r24, 0x1b	; 27
+     328:	8f 77       	andi	r24, 0x7F	; 127
+     32a:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     32c:	88 ec       	ldi	r24, 0xC8	; 200
+     32e:	90 e0       	ldi	r25, 0x00	; 0
+     330:	98 d1       	rcall	.+816    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA6);
+     332:	8b b3       	in	r24, 0x1b	; 27
+     334:	8f 7b       	andi	r24, 0xBF	; 191
+	custom_delay_ms(200);
+     336:	8b bb       	out	0x1b, r24	; 27
+     338:	88 ec       	ldi	r24, 0xC8	; 200
+     33a:	90 e0       	ldi	r25, 0x00	; 0
+     33c:	92 d1       	rcall	.+804    	; 0x662 <custom_delay_ms>
+	
+}
+     33e:	df 91       	pop	r29
+     340:	cf 91       	pop	r28
+     342:	08 95       	ret
+
+00000344 <af0>:
+
+//fan2 speed function
+
+void af0() {
+	PORTD &=~ (1 << PD5);
+     344:	82 b3       	in	r24, 0x12	; 18
+     346:	8f 7d       	andi	r24, 0xDF	; 223
+     348:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD4);
+     34a:	82 b3       	in	r24, 0x12	; 18
+     34c:	8f 7e       	andi	r24, 0xEF	; 239
+     34e:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD3);    /// Fan2  Speed 0
+     350:	82 b3       	in	r24, 0x12	; 18
+     352:	87 7f       	andi	r24, 0xF7	; 247
+     354:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD2);
+     356:	82 b3       	in	r24, 0x12	; 18
+     358:	8b 7f       	andi	r24, 0xFB	; 251
+     35a:	82 bb       	out	0x12, r24	; 18
+	PORTG &= ~(1 << PG4);
+     35c:	e5 e6       	ldi	r30, 0x65	; 101
+     35e:	f0 e0       	ldi	r31, 0x00	; 0
+     360:	80 81       	ld	r24, Z
+     362:	8f 7e       	andi	r24, 0xEF	; 239
+     364:	80 83       	st	Z, r24
+
+	PORTA &=~ (1 << PA3);
+     366:	8b b3       	in	r24, 0x1b	; 27
+     368:	87 7f       	andi	r24, 0xF7	; 247
+     36a:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     36c:	88 ec       	ldi	r24, 0xC8	; 200
+     36e:	90 e0       	ldi	r25, 0x00	; 0
+     370:	78 d1       	rcall	.+752    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA2);
+     372:	8b b3       	in	r24, 0x1b	; 27
+     374:	8b 7f       	andi	r24, 0xFB	; 251
+     376:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     378:	88 ec       	ldi	r24, 0xC8	; 200
+     37a:	90 e0       	ldi	r25, 0x00	; 0
+     37c:	72 d1       	rcall	.+740    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA1);
+     37e:	8b b3       	in	r24, 0x1b	; 27
+     380:	8d 7f       	andi	r24, 0xFD	; 253
+     382:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     384:	88 ec       	ldi	r24, 0xC8	; 200
+     386:	90 e0       	ldi	r25, 0x00	; 0
+     388:	6c d1       	rcall	.+728    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA0);
+     38a:	8b b3       	in	r24, 0x1b	; 27
+     38c:	8e 7f       	andi	r24, 0xFE	; 254
+	custom_delay_ms(200);
+     38e:	8b bb       	out	0x1b, r24	; 27
+     390:	88 ec       	ldi	r24, 0xC8	; 200
+     392:	90 e0       	ldi	r25, 0x00	; 0
+     394:	66 c1       	rjmp	.+716    	; 0x662 <custom_delay_ms>
+     396:	08 95       	ret
+
+00000398 <af1>:
+}
+
+void af1() {
+	PORTD |= (1 << PD5);
+     398:	82 b3       	in	r24, 0x12	; 18
+     39a:	80 62       	ori	r24, 0x20	; 32
+     39c:	82 bb       	out	0x12, r24	; 18
+
+	PORTD &= ~(1 << PD4);
+     39e:	82 b3       	in	r24, 0x12	; 18
+     3a0:	8f 7e       	andi	r24, 0xEF	; 239
+     3a2:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD3);    /// Fan2  Speed 1
+     3a4:	82 b3       	in	r24, 0x12	; 18
+     3a6:	87 7f       	andi	r24, 0xF7	; 247
+     3a8:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD2);
+     3aa:	82 b3       	in	r24, 0x12	; 18
+     3ac:	8b 7f       	andi	r24, 0xFB	; 251
+     3ae:	82 bb       	out	0x12, r24	; 18
+	PORTG &= ~(1 << PG4);
+     3b0:	e5 e6       	ldi	r30, 0x65	; 101
+     3b2:	f0 e0       	ldi	r31, 0x00	; 0
+     3b4:	80 81       	ld	r24, Z
+     3b6:	8f 7e       	andi	r24, 0xEF	; 239
+     3b8:	80 83       	st	Z, r24
+	
+	PORTA &=~ (1 << PA3);
+     3ba:	8b b3       	in	r24, 0x1b	; 27
+     3bc:	87 7f       	andi	r24, 0xF7	; 247
+     3be:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     3c0:	88 ec       	ldi	r24, 0xC8	; 200
+     3c2:	90 e0       	ldi	r25, 0x00	; 0
+     3c4:	4e d1       	rcall	.+668    	; 0x662 <custom_delay_ms>
+	PORTA &=~ (1 << PA2);
+     3c6:	8b b3       	in	r24, 0x1b	; 27
+     3c8:	8b 7f       	andi	r24, 0xFB	; 251
+     3ca:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     3cc:	88 ec       	ldi	r24, 0xC8	; 200
+     3ce:	90 e0       	ldi	r25, 0x00	; 0
+     3d0:	48 d1       	rcall	.+656    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA1);    //2.2K
+     3d2:	8b b3       	in	r24, 0x1b	; 27
+     3d4:	82 60       	ori	r24, 0x02	; 2
+     3d6:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     3d8:	88 ec       	ldi	r24, 0xC8	; 200
+     3da:	90 e0       	ldi	r25, 0x00	; 0
+     3dc:	42 d1       	rcall	.+644    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA0);
+     3de:	8b b3       	in	r24, 0x1b	; 27
+     3e0:	8e 7f       	andi	r24, 0xFE	; 254
+	custom_delay_ms(200);
+     3e2:	8b bb       	out	0x1b, r24	; 27
+     3e4:	88 ec       	ldi	r24, 0xC8	; 200
+     3e6:	90 e0       	ldi	r25, 0x00	; 0
+     3e8:	3c c1       	rjmp	.+632    	; 0x662 <custom_delay_ms>
+     3ea:	08 95       	ret
+
+000003ec <af2>:
+}
+
+void af2() {
+	PORTD |= (1 << PD5);
+     3ec:	82 b3       	in	r24, 0x12	; 18
+     3ee:	80 62       	ori	r24, 0x20	; 32
+     3f0:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD4);    // Fan2  Speed 2
+     3f2:	82 b3       	in	r24, 0x12	; 18
+     3f4:	80 61       	ori	r24, 0x10	; 16
+     3f6:	82 bb       	out	0x12, r24	; 18
+	
+	PORTD &= ~(1 << PD3);
+     3f8:	82 b3       	in	r24, 0x12	; 18
+     3fa:	87 7f       	andi	r24, 0xF7	; 247
+     3fc:	82 bb       	out	0x12, r24	; 18
+	PORTD &= ~(1 << PD2);
+     3fe:	82 b3       	in	r24, 0x12	; 18
+     400:	8b 7f       	andi	r24, 0xFB	; 251
+     402:	82 bb       	out	0x12, r24	; 18
+	PORTG &= ~(1 << PG4);
+     404:	e5 e6       	ldi	r30, 0x65	; 101
+     406:	f0 e0       	ldi	r31, 0x00	; 0
+     408:	80 81       	ld	r24, Z
+     40a:	8f 7e       	andi	r24, 0xEF	; 239
+     40c:	80 83       	st	Z, r24
+	
+	PORTA &= ~(1 << PA3);
+     40e:	8b b3       	in	r24, 0x1b	; 27
+     410:	87 7f       	andi	r24, 0xF7	; 247
+     412:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     414:	88 ec       	ldi	r24, 0xC8	; 200
+     416:	90 e0       	ldi	r25, 0x00	; 0
+     418:	24 d1       	rcall	.+584    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA2);
+     41a:	8b b3       	in	r24, 0x1b	; 27
+     41c:	8b 7f       	andi	r24, 0xFB	; 251
+     41e:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     420:	88 ec       	ldi	r24, 0xC8	; 200
+     422:	90 e0       	ldi	r25, 0x00	; 0
+     424:	1e d1       	rcall	.+572    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA1);
+     426:	8b b3       	in	r24, 0x1b	; 27
+     428:	8d 7f       	andi	r24, 0xFD	; 253
+     42a:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     42c:	88 ec       	ldi	r24, 0xC8	; 200
+     42e:	90 e0       	ldi	r25, 0x00	; 0
+     430:	18 d1       	rcall	.+560    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA0);   //3.3K
+     432:	8b b3       	in	r24, 0x1b	; 27
+     434:	81 60       	ori	r24, 0x01	; 1
+	custom_delay_ms(200);
+     436:	8b bb       	out	0x1b, r24	; 27
+     438:	88 ec       	ldi	r24, 0xC8	; 200
+     43a:	90 e0       	ldi	r25, 0x00	; 0
+     43c:	12 c1       	rjmp	.+548    	; 0x662 <custom_delay_ms>
+     43e:	08 95       	ret
+
+00000440 <af3>:
+}
+
+void af3() {
+	PORTD |= (1 << PD5);
+     440:	82 b3       	in	r24, 0x12	; 18
+     442:	80 62       	ori	r24, 0x20	; 32
+     444:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD4);
+     446:	82 b3       	in	r24, 0x12	; 18
+     448:	80 61       	ori	r24, 0x10	; 16
+     44a:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD3);      // Fan2  Speed 3
+     44c:	82 b3       	in	r24, 0x12	; 18
+     44e:	88 60       	ori	r24, 0x08	; 8
+     450:	82 bb       	out	0x12, r24	; 18
+	
+	PORTD &= ~(1 << PD2);
+     452:	82 b3       	in	r24, 0x12	; 18
+     454:	8b 7f       	andi	r24, 0xFB	; 251
+     456:	82 bb       	out	0x12, r24	; 18
+	PORTG &= ~(1 << PG4);
+     458:	e5 e6       	ldi	r30, 0x65	; 101
+     45a:	f0 e0       	ldi	r31, 0x00	; 0
+     45c:	80 81       	ld	r24, Z
+     45e:	8f 7e       	andi	r24, 0xEF	; 239
+     460:	80 83       	st	Z, r24
+
+	PORTA &= ~(1 << PA3);
+     462:	8b b3       	in	r24, 0x1b	; 27
+     464:	87 7f       	andi	r24, 0xF7	; 247
+     466:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     468:	88 ec       	ldi	r24, 0xC8	; 200
+     46a:	90 e0       	ldi	r25, 0x00	; 0
+     46c:	fa d0       	rcall	.+500    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA2);  //1K+3.3K = 4.3K
+     46e:	8b b3       	in	r24, 0x1b	; 27
+     470:	84 60       	ori	r24, 0x04	; 4
+     472:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     474:	88 ec       	ldi	r24, 0xC8	; 200
+     476:	90 e0       	ldi	r25, 0x00	; 0
+     478:	f4 d0       	rcall	.+488    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA1);
+     47a:	8b b3       	in	r24, 0x1b	; 27
+     47c:	8d 7f       	andi	r24, 0xFD	; 253
+     47e:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     480:	88 ec       	ldi	r24, 0xC8	; 200
+     482:	90 e0       	ldi	r25, 0x00	; 0
+     484:	ee d0       	rcall	.+476    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA0);
+     486:	8b b3       	in	r24, 0x1b	; 27
+     488:	81 60       	ori	r24, 0x01	; 1
+	custom_delay_ms(200);
+     48a:	8b bb       	out	0x1b, r24	; 27
+     48c:	88 ec       	ldi	r24, 0xC8	; 200
+     48e:	90 e0       	ldi	r25, 0x00	; 0
+     490:	e8 c0       	rjmp	.+464    	; 0x662 <custom_delay_ms>
+     492:	08 95       	ret
+
+00000494 <af4>:
+}
+
+void af4() {
+	PORTD |= (1 << PD5);
+     494:	82 b3       	in	r24, 0x12	; 18
+     496:	80 62       	ori	r24, 0x20	; 32
+     498:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD4);
+     49a:	82 b3       	in	r24, 0x12	; 18
+     49c:	80 61       	ori	r24, 0x10	; 16
+     49e:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD3);      // Fan2  Speed 4
+     4a0:	82 b3       	in	r24, 0x12	; 18
+     4a2:	88 60       	ori	r24, 0x08	; 8
+     4a4:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD2);
+     4a6:	82 b3       	in	r24, 0x12	; 18
+     4a8:	84 60       	ori	r24, 0x04	; 4
+     4aa:	82 bb       	out	0x12, r24	; 18
+
+	PORTG &= ~(1 << PG4);
+     4ac:	e5 e6       	ldi	r30, 0x65	; 101
+     4ae:	f0 e0       	ldi	r31, 0x00	; 0
+     4b0:	80 81       	ld	r24, Z
+     4b2:	8f 7e       	andi	r24, 0xEF	; 239
+     4b4:	80 83       	st	Z, r24
+	
+	PORTA &=~ (1 << PA3);
+     4b6:	8b b3       	in	r24, 0x1b	; 27
+     4b8:	87 7f       	andi	r24, 0xF7	; 247
+     4ba:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     4bc:	88 ec       	ldi	r24, 0xC8	; 200
+     4be:	90 e0       	ldi	r25, 0x00	; 0
+     4c0:	d0 d0       	rcall	.+416    	; 0x662 <custom_delay_ms>
+	PORTA &=~ (1 << PA2);
+     4c2:	8b b3       	in	r24, 0x1b	; 27
+     4c4:	8b 7f       	andi	r24, 0xFB	; 251
+     4c6:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     4c8:	88 ec       	ldi	r24, 0xC8	; 200
+     4ca:	90 e0       	ldi	r25, 0x00	; 0
+     4cc:	ca d0       	rcall	.+404    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA1);  //2.2K +3.3K = 5.5K
+     4ce:	8b b3       	in	r24, 0x1b	; 27
+     4d0:	82 60       	ori	r24, 0x02	; 2
+     4d2:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     4d4:	88 ec       	ldi	r24, 0xC8	; 200
+     4d6:	90 e0       	ldi	r25, 0x00	; 0
+     4d8:	c4 d0       	rcall	.+392    	; 0x662 <custom_delay_ms>
+	PORTA |= (1 << PA0);
+     4da:	8b b3       	in	r24, 0x1b	; 27
+     4dc:	81 60       	ori	r24, 0x01	; 1
+	custom_delay_ms(200);
+     4de:	8b bb       	out	0x1b, r24	; 27
+     4e0:	88 ec       	ldi	r24, 0xC8	; 200
+     4e2:	90 e0       	ldi	r25, 0x00	; 0
+     4e4:	be c0       	rjmp	.+380    	; 0x662 <custom_delay_ms>
+     4e6:	08 95       	ret
+
+000004e8 <af5>:
+}
+
+void af5() {
+	PORTD |= (1 << PD5);
+     4e8:	82 b3       	in	r24, 0x12	; 18
+     4ea:	80 62       	ori	r24, 0x20	; 32
+     4ec:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD4);
+     4ee:	82 b3       	in	r24, 0x12	; 18
+     4f0:	80 61       	ori	r24, 0x10	; 16
+     4f2:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD3);      // Fan2  Speed 5
+     4f4:	82 b3       	in	r24, 0x12	; 18
+     4f6:	88 60       	ori	r24, 0x08	; 8
+     4f8:	82 bb       	out	0x12, r24	; 18
+	PORTD |= (1 << PD2);
+     4fa:	82 b3       	in	r24, 0x12	; 18
+     4fc:	84 60       	ori	r24, 0x04	; 4
+     4fe:	82 bb       	out	0x12, r24	; 18
+	PORTG |= (1 << PG4);
+     500:	e5 e6       	ldi	r30, 0x65	; 101
+     502:	f0 e0       	ldi	r31, 0x00	; 0
+     504:	80 81       	ld	r24, Z
+     506:	80 61       	ori	r24, 0x10	; 16
+     508:	80 83       	st	Z, r24
+
+	PORTA |= (1 << PA3);
+     50a:	8b b3       	in	r24, 0x1b	; 27
+     50c:	88 60       	ori	r24, 0x08	; 8
+     50e:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);     //Direct
+     510:	88 ec       	ldi	r24, 0xC8	; 200
+     512:	90 e0       	ldi	r25, 0x00	; 0
+     514:	a6 d0       	rcall	.+332    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA2);
+     516:	8b b3       	in	r24, 0x1b	; 27
+     518:	8b 7f       	andi	r24, 0xFB	; 251
+     51a:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     51c:	88 ec       	ldi	r24, 0xC8	; 200
+     51e:	90 e0       	ldi	r25, 0x00	; 0
+     520:	a0 d0       	rcall	.+320    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA1);
+     522:	8b b3       	in	r24, 0x1b	; 27
+     524:	8d 7f       	andi	r24, 0xFD	; 253
+     526:	8b bb       	out	0x1b, r24	; 27
+	custom_delay_ms(200);
+     528:	88 ec       	ldi	r24, 0xC8	; 200
+     52a:	90 e0       	ldi	r25, 0x00	; 0
+     52c:	9a d0       	rcall	.+308    	; 0x662 <custom_delay_ms>
+	PORTA &= ~(1 << PA0);
+     52e:	8b b3       	in	r24, 0x1b	; 27
+     530:	8e 7f       	andi	r24, 0xFE	; 254
+	custom_delay_ms(200);
+     532:	8b bb       	out	0x1b, r24	; 27
+     534:	88 ec       	ldi	r24, 0xC8	; 200
+     536:	90 e0       	ldi	r25, 0x00	; 0
+     538:	94 c0       	rjmp	.+296    	; 0x662 <custom_delay_ms>
+     53a:	08 95       	ret
+
+0000053c <i2c_init>:
+
+uint8_t i2c_read_ack(void) {
+	TWCR = (1<<TWEN) | (1<<TWINT) | (1<<TWEA);
+	while (!(TWCR & (1<<TWINT)));
+	return TWDR;
+}
+     53c:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <__TEXT_REGION_LENGTH__+0x7e0071>
+     540:	88 e4       	ldi	r24, 0x48	; 72
+     542:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__TEXT_REGION_LENGTH__+0x7e0070>
+     546:	08 95       	ret
+
+00000548 <i2c_start>:
+     548:	84 ea       	ldi	r24, 0xA4	; 164
+     54a:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     54e:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     552:	88 23       	and	r24, r24
+     554:	e4 f7       	brge	.-8      	; 0x54e <i2c_start+0x6>
+     556:	08 95       	ret
+
+00000558 <i2c_stop>:
+     558:	84 e9       	ldi	r24, 0x94	; 148
+     55a:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     55e:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     562:	84 fd       	sbrc	r24, 4
+     564:	fc cf       	rjmp	.-8      	; 0x55e <i2c_stop+0x6>
+     566:	08 95       	ret
+
+00000568 <i2c_write>:
+     568:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+     56c:	84 e8       	ldi	r24, 0x84	; 132
+     56e:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     572:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     576:	88 23       	and	r24, r24
+     578:	e4 f7       	brge	.-8      	; 0x572 <i2c_write+0xa>
+     57a:	08 95       	ret
+
+0000057c <i2c_read_nack>:
+
+uint8_t i2c_read_nack(void) {
+	TWCR = (1<<TWEN) | (1<<TWINT);
+     57c:	84 e8       	ldi	r24, 0x84	; 132
+     57e:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!(TWCR & (1<<TWINT)));
+     582:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+     586:	88 23       	and	r24, r24
+     588:	e4 f7       	brge	.-8      	; 0x582 <i2c_read_nack+0x6>
+	return TWDR;
+     58a:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+}
+     58e:	08 95       	ret
+
+00000590 <light1_ON>:
+
+#include "main.h"
+#include "lights.h"
+
+void light1_ON(){
+	PORTD |= (1 << PD7);
+     590:	82 b3       	in	r24, 0x12	; 18
+     592:	80 68       	ori	r24, 0x80	; 128
+     594:	82 bb       	out	0x12, r24	; 18
+	PORTC |= (1 << PC5);
+     596:	85 b3       	in	r24, 0x15	; 21
+     598:	80 62       	ori	r24, 0x20	; 32
+     59a:	85 bb       	out	0x15, r24	; 21
+	lastStates_t.light1state = 1;
+     59c:	81 e0       	ldi	r24, 0x01	; 1
+     59e:	80 93 5d 01 	sts	0x015D, r24	; 0x80015d <lastStates_t>
+     5a2:	08 95       	ret
+
+000005a4 <light1_OFF>:
+}
+  
+void light1_OFF(){
+	PORTD &= ~(1 << PD7);
+     5a4:	82 b3       	in	r24, 0x12	; 18
+     5a6:	8f 77       	andi	r24, 0x7F	; 127
+     5a8:	82 bb       	out	0x12, r24	; 18
+	PORTC &= ~(1 << PC5);
+     5aa:	85 b3       	in	r24, 0x15	; 21
+     5ac:	8f 7d       	andi	r24, 0xDF	; 223
+     5ae:	85 bb       	out	0x15, r24	; 21
+	lastStates_t.light1state = 0;
+     5b0:	10 92 5d 01 	sts	0x015D, r1	; 0x80015d <lastStates_t>
+     5b4:	08 95       	ret
+
+000005b6 <light2_ON>:
+}
+
+void light2_ON(){
+	PORTC |= (1 << PC3);
+     5b6:	85 b3       	in	r24, 0x15	; 21
+     5b8:	88 60       	ori	r24, 0x08	; 8
+     5ba:	85 bb       	out	0x15, r24	; 21
+	PORTC |= (1 << PC6);
+     5bc:	85 b3       	in	r24, 0x15	; 21
+     5be:	80 64       	ori	r24, 0x40	; 64
+     5c0:	85 bb       	out	0x15, r24	; 21
+	lastStates_t.light2state = 1;
+     5c2:	81 e0       	ldi	r24, 0x01	; 1
+     5c4:	80 93 5e 01 	sts	0x015E, r24	; 0x80015e <lastStates_t+0x1>
+     5c8:	08 95       	ret
+
+000005ca <light2_OFF>:
+}
+
+void light2_OFF(){
+	PORTC &= ~(1 << PC3);
+     5ca:	85 b3       	in	r24, 0x15	; 21
+     5cc:	87 7f       	andi	r24, 0xF7	; 247
+     5ce:	85 bb       	out	0x15, r24	; 21
+	PORTC &= ~(1 << PC6);
+     5d0:	85 b3       	in	r24, 0x15	; 21
+     5d2:	8f 7b       	andi	r24, 0xBF	; 191
+     5d4:	85 bb       	out	0x15, r24	; 21
+	lastStates_t.light2state = 0;
+     5d6:	10 92 5e 01 	sts	0x015E, r1	; 0x80015e <lastStates_t+0x1>
+     5da:	08 95       	ret
+
+000005dc <light3_ON>:
+}
+
+void light3_ON(){
+	PORTD |= (1 << PD6);
+     5dc:	82 b3       	in	r24, 0x12	; 18
+     5de:	80 64       	ori	r24, 0x40	; 64
+     5e0:	82 bb       	out	0x12, r24	; 18
+	PORTA |= (1 << PA5);
+     5e2:	8b b3       	in	r24, 0x1b	; 27
+     5e4:	80 62       	ori	r24, 0x20	; 32
+     5e6:	8b bb       	out	0x1b, r24	; 27
+	lastStates_t.light3state = 1;
+     5e8:	81 e0       	ldi	r24, 0x01	; 1
+     5ea:	80 93 5f 01 	sts	0x015F, r24	; 0x80015f <lastStates_t+0x2>
+     5ee:	08 95       	ret
+
+000005f0 <light3_OFF>:
+}
+
+void light3_OFF(){
+	PORTD &= ~(1 << PD6);
+     5f0:	82 b3       	in	r24, 0x12	; 18
+     5f2:	8f 7b       	andi	r24, 0xBF	; 191
+     5f4:	82 bb       	out	0x12, r24	; 18
+	PORTA &= ~(1 << PA5);
+     5f6:	8b b3       	in	r24, 0x1b	; 27
+     5f8:	8f 7d       	andi	r24, 0xDF	; 223
+     5fa:	8b bb       	out	0x1b, r24	; 27
+	lastStates_t.light3state = 0;
+     5fc:	10 92 5f 01 	sts	0x015F, r1	; 0x80015f <lastStates_t+0x2>
+     600:	08 95       	ret
+
+00000602 <light4_ON>:
+}
+
+void light4_ON(){
+	PORTC |= (1 << PC4);
+     602:	85 b3       	in	r24, 0x15	; 21
+     604:	80 61       	ori	r24, 0x10	; 16
+     606:	85 bb       	out	0x15, r24	; 21
+	PORTA |= (1 << PA4);
+     608:	8b b3       	in	r24, 0x1b	; 27
+     60a:	80 61       	ori	r24, 0x10	; 16
+     60c:	8b bb       	out	0x1b, r24	; 27
+	lastStates_t.light4state = 1;
+     60e:	81 e0       	ldi	r24, 0x01	; 1
+     610:	80 93 60 01 	sts	0x0160, r24	; 0x800160 <lastStates_t+0x3>
+     614:	08 95       	ret
+
+00000616 <light4_OFF>:
+}
+
+void light4_OFF(){
+	PORTC &= ~(1 << PC4);
+     616:	85 b3       	in	r24, 0x15	; 21
+     618:	8f 7e       	andi	r24, 0xEF	; 239
+     61a:	85 bb       	out	0x15, r24	; 21
+	PORTA &= ~(1 << PA4);
+     61c:	8b b3       	in	r24, 0x1b	; 27
+     61e:	8f 7e       	andi	r24, 0xEF	; 239
+     620:	8b bb       	out	0x1b, r24	; 27
+	lastStates_t.light4state = 0;
+     622:	10 92 60 01 	sts	0x0160, r1	; 0x800160 <lastStates_t+0x3>
+     626:	08 95       	ret
+
+00000628 <timer1_init>:
+	}
+	return 0;
+}
+
+void timer1_init() {
+	TCCR1B |= (1 << WGM12);
+     628:	8e b5       	in	r24, 0x2e	; 46
+     62a:	88 60       	ori	r24, 0x08	; 8
+     62c:	8e bd       	out	0x2e, r24	; 46
+	OCR1A = 3624;
+     62e:	88 e2       	ldi	r24, 0x28	; 40
+     630:	9e e0       	ldi	r25, 0x0E	; 14
+     632:	9b bd       	out	0x2b, r25	; 43
+     634:	8a bd       	out	0x2a, r24	; 42
+	TIMSK |= (1 << OCIE1A);
+     636:	87 b7       	in	r24, 0x37	; 55
+     638:	80 61       	ori	r24, 0x10	; 16
+     63a:	87 bf       	out	0x37, r24	; 55
+	TCCR1B |= (1 << CS12) | (1 << CS10);
+     63c:	8e b5       	in	r24, 0x2e	; 46
+     63e:	85 60       	ori	r24, 0x05	; 5
+     640:	8e bd       	out	0x2e, r24	; 46
+     642:	08 95       	ret
+
+00000644 <__vector_12>:
+}
+
+ISR(TIMER1_COMPA_vect) {
+     644:	1f 92       	push	r1
+     646:	0f 92       	push	r0
+     648:	0f b6       	in	r0, 0x3f	; 63
+     64a:	0f 92       	push	r0
+     64c:	11 24       	eor	r1, r1
+     64e:	8f 93       	push	r24
+	timer_flag = 1;
+     650:	81 e0       	ldi	r24, 0x01	; 1
+     652:	80 93 5c 01 	sts	0x015C, r24	; 0x80015c <timer_flag>
+}
+     656:	8f 91       	pop	r24
+     658:	0f 90       	pop	r0
+     65a:	0f be       	out	0x3f, r0	; 63
+     65c:	0f 90       	pop	r0
+     65e:	1f 90       	pop	r1
+     660:	18 95       	reti
+
+00000662 <custom_delay_ms>:
+
+void custom_delay_ms(uint16_t ms) {  
+     662:	ac 01       	movw	r20, r24
+	static uint16_t counter = 0;
+	if (timer_flag) {
+     664:	90 91 5c 01 	lds	r25, 0x015C	; 0x80015c <timer_flag>
+     668:	99 23       	and	r25, r25
+     66a:	99 f0       	breq	.+38     	; 0x692 <custom_delay_ms+0x30>
+		timer_flag = 0;
+     66c:	10 92 5c 01 	sts	0x015C, r1	; 0x80015c <timer_flag>
+		counter++;
+     670:	20 91 56 01 	lds	r18, 0x0156	; 0x800156 <counter.2013>
+     674:	30 91 57 01 	lds	r19, 0x0157	; 0x800157 <counter.2013+0x1>
+     678:	2f 5f       	subi	r18, 0xFF	; 255
+     67a:	3f 4f       	sbci	r19, 0xFF	; 255
+     67c:	30 93 57 01 	sts	0x0157, r19	; 0x800157 <counter.2013+0x1>
+     680:	20 93 56 01 	sts	0x0156, r18	; 0x800156 <counter.2013>
+		if (counter >= ms) {
+     684:	24 17       	cp	r18, r20
+     686:	35 07       	cpc	r19, r21
+     688:	20 f0       	brcs	.+8      	; 0x692 <custom_delay_ms+0x30>
+			counter = 0;
+     68a:	10 92 57 01 	sts	0x0157, r1	; 0x800157 <counter.2013+0x1>
+     68e:	10 92 56 01 	sts	0x0156, r1	; 0x800156 <counter.2013>
+     692:	08 95       	ret
+
+00000694 <__vector_17>:
+		}
+	}
+}
+
+ISR(SPI_STC_vect) {
+     694:	1f 92       	push	r1
+     696:	0f 92       	push	r0
+     698:	0f b6       	in	r0, 0x3f	; 63
+     69a:	0f 92       	push	r0
+     69c:	11 24       	eor	r1, r1
+     69e:	0b b6       	in	r0, 0x3b	; 59
+     6a0:	0f 92       	push	r0
+     6a2:	2f 93       	push	r18
+     6a4:	3f 93       	push	r19
+     6a6:	4f 93       	push	r20
+     6a8:	5f 93       	push	r21
+     6aa:	6f 93       	push	r22
+     6ac:	7f 93       	push	r23
+     6ae:	8f 93       	push	r24
+     6b0:	9f 93       	push	r25
+     6b2:	af 93       	push	r26
+     6b4:	bf 93       	push	r27
+     6b6:	ef 93       	push	r30
+     6b8:	ff 93       	push	r31
+	uint8_t receivedData = SPDR;                    // Read received data from SPI data register
+     6ba:	9f b1       	in	r25, 0x0f	; 15
+	static char receivedBytes[3];
+	static uint8_t byteIndex = 0;
+	if (byteIndex < 2) {
+     6bc:	80 91 55 01 	lds	r24, 0x0155	; 0x800155 <byteIndex.2021>
+     6c0:	82 30       	cpi	r24, 0x02	; 2
+     6c2:	88 f4       	brcc	.+34     	; 0x6e6 <__vector_17+0x52>
+		receivedBytes[byteIndex] = receivedData;
+     6c4:	e8 2f       	mov	r30, r24
+     6c6:	f0 e0       	ldi	r31, 0x00	; 0
+     6c8:	ee 5a       	subi	r30, 0xAE	; 174
+     6ca:	fe 4f       	sbci	r31, 0xFE	; 254
+     6cc:	90 83       	st	Z, r25
+		byteIndex++;
+     6ce:	8f 5f       	subi	r24, 0xFF	; 255
+     6d0:	80 93 55 01 	sts	0x0155, r24	; 0x800155 <byteIndex.2021>
+		if (byteIndex == 2) {
+     6d4:	82 30       	cpi	r24, 0x02	; 2
+     6d6:	39 f4       	brne	.+14     	; 0x6e6 <__vector_17+0x52>
+			receivedBytes[2] = '\0';
+     6d8:	10 92 54 01 	sts	0x0154, r1	; 0x800154 <__data_end+0x2>
+			SPIprocessCommand(receivedBytes);          // Process the received command
+     6dc:	82 e5       	ldi	r24, 0x52	; 82
+     6de:	91 e0       	ldi	r25, 0x01	; 1
+     6e0:	f7 d2       	rcall	.+1518   	; 0xcd0 <SPIprocessCommand>
+			byteIndex = 0;
+     6e2:	10 92 55 01 	sts	0x0155, r1	; 0x800155 <byteIndex.2021>
+		}
+	}
+	SPSR |= (1 << SPIF);
+     6e6:	8e b1       	in	r24, 0x0e	; 14
+     6e8:	80 68       	ori	r24, 0x80	; 128
+     6ea:	8e b9       	out	0x0e, r24	; 14
+}
+     6ec:	ff 91       	pop	r31
+     6ee:	ef 91       	pop	r30
+     6f0:	bf 91       	pop	r27
+     6f2:	af 91       	pop	r26
+     6f4:	9f 91       	pop	r25
+     6f6:	8f 91       	pop	r24
+     6f8:	7f 91       	pop	r23
+     6fa:	6f 91       	pop	r22
+     6fc:	5f 91       	pop	r21
+     6fe:	4f 91       	pop	r20
+     700:	3f 91       	pop	r19
+     702:	2f 91       	pop	r18
+     704:	0f 90       	pop	r0
+     706:	0b be       	out	0x3b, r0	; 59
+     708:	0f 90       	pop	r0
+     70a:	0f be       	out	0x3f, r0	; 63
+     70c:	0f 90       	pop	r0
+     70e:	1f 90       	pop	r1
+     710:	18 95       	reti
+
+00000712 <__vector_18>:
+
+ISR(USART0_RX_vect){
+     712:	1f 92       	push	r1
+     714:	0f 92       	push	r0
+     716:	0f b6       	in	r0, 0x3f	; 63
+     718:	0f 92       	push	r0
+     71a:	11 24       	eor	r1, r1
+     71c:	0b b6       	in	r0, 0x3b	; 59
+     71e:	0f 92       	push	r0
+     720:	2f 93       	push	r18
+     722:	3f 93       	push	r19
+     724:	4f 93       	push	r20
+     726:	5f 93       	push	r21
+     728:	6f 93       	push	r22
+     72a:	7f 93       	push	r23
+     72c:	8f 93       	push	r24
+     72e:	9f 93       	push	r25
+     730:	af 93       	push	r26
+     732:	bf 93       	push	r27
+     734:	ef 93       	push	r30
+     736:	ff 93       	push	r31
+	unsigned char receivedData = UDR0;
+     738:	8c b1       	in	r24, 0x0c	; 12
+	UARTprocessCommand(receivedData);
+     73a:	87 d5       	rcall	.+2830   	; 0x124a <UARTprocessCommand>
+}
+     73c:	ff 91       	pop	r31
+     73e:	ef 91       	pop	r30
+     740:	bf 91       	pop	r27
+     742:	af 91       	pop	r26
+     744:	9f 91       	pop	r25
+     746:	8f 91       	pop	r24
+     748:	7f 91       	pop	r23
+     74a:	6f 91       	pop	r22
+     74c:	5f 91       	pop	r21
+     74e:	4f 91       	pop	r20
+     750:	3f 91       	pop	r19
+     752:	2f 91       	pop	r18
+     754:	0f 90       	pop	r0
+     756:	0b be       	out	0x3b, r0	; 59
+     758:	0f 90       	pop	r0
+     75a:	0f be       	out	0x3f, r0	; 63
+     75c:	0f 90       	pop	r0
+     75e:	1f 90       	pop	r1
+     760:	18 95       	reti
+
+00000762 <readLastStatesFromEEPROM>:
+
+void readLastStatesFromEEPROM(void) {
+     762:	ef 92       	push	r14
+     764:	ff 92       	push	r15
+     766:	1f 93       	push	r17
+     768:	cf 93       	push	r28
+     76a:	df 93       	push	r29
+     76c:	cd b7       	in	r28, 0x3d	; 61
+     76e:	de b7       	in	r29, 0x3e	; 62
+     770:	2c 97       	sbiw	r28, 0x0c	; 12
+     772:	0f b6       	in	r0, 0x3f	; 63
+     774:	f8 94       	cli
+     776:	de bf       	out	0x3e, r29	; 62
+     778:	0f be       	out	0x3f, r0	; 63
+     77a:	cd bf       	out	0x3d, r28	; 61
+	uint16_t addresses[] = {light1_address, light2_address, light3_address, light4_address, fan1_address, fan2_address};
+     77c:	80 91 58 01 	lds	r24, 0x0158	; 0x800158 <light1_address>
+     780:	90 91 59 01 	lds	r25, 0x0159	; 0x800159 <light1_address+0x1>
+     784:	9a 83       	std	Y+2, r25	; 0x02
+     786:	89 83       	std	Y+1, r24	; 0x01
+     788:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <light2_address>
+     78c:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <light2_address+0x1>
+     790:	9c 83       	std	Y+4, r25	; 0x04
+     792:	8b 83       	std	Y+3, r24	; 0x03
+     794:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <light3_address>
+     798:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <light3_address+0x1>
+     79c:	9e 83       	std	Y+6, r25	; 0x06
+     79e:	8d 83       	std	Y+5, r24	; 0x05
+     7a0:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light4_address>
+     7a4:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light4_address+0x1>
+     7a8:	98 87       	std	Y+8, r25	; 0x08
+     7aa:	8f 83       	std	Y+7, r24	; 0x07
+     7ac:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+     7b0:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+     7b4:	9a 87       	std	Y+10, r25	; 0x0a
+     7b6:	89 87       	std	Y+9, r24	; 0x09
+     7b8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+     7bc:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+     7c0:	9c 87       	std	Y+12, r25	; 0x0c
+     7c2:	8b 87       	std	Y+11, r24	; 0x0b
+	uint8_t *state_ptr = (uint8_t *)&lastStates_t;
+	for (uint8_t i = 0; i < sizeof(lastStates_t); i++) {
+     7c4:	10 e0       	ldi	r17, 0x00	; 0
+     7c6:	14 c0       	rjmp	.+40     	; 0x7f0 <readLastStatesFromEEPROM+0x8e>
+		state_ptr[i] = eeprom_read(addresses[i]);
+     7c8:	81 2f       	mov	r24, r17
+     7ca:	90 e0       	ldi	r25, 0x00	; 0
+     7cc:	9c 01       	movw	r18, r24
+     7ce:	23 5a       	subi	r18, 0xA3	; 163
+     7d0:	3e 4f       	sbci	r19, 0xFE	; 254
+     7d2:	79 01       	movw	r14, r18
+     7d4:	88 0f       	add	r24, r24
+     7d6:	99 1f       	adc	r25, r25
+     7d8:	e1 e0       	ldi	r30, 0x01	; 1
+     7da:	f0 e0       	ldi	r31, 0x00	; 0
+     7dc:	ec 0f       	add	r30, r28
+     7de:	fd 1f       	adc	r31, r29
+     7e0:	e8 0f       	add	r30, r24
+     7e2:	f9 1f       	adc	r31, r25
+     7e4:	80 81       	ld	r24, Z
+     7e6:	91 81       	ldd	r25, Z+1	; 0x01
+     7e8:	84 dc       	rcall	.-1784   	; 0xf2 <eeprom_read>
+     7ea:	f7 01       	movw	r30, r14
+     7ec:	80 83       	st	Z, r24
+}
+
+void readLastStatesFromEEPROM(void) {
+	uint16_t addresses[] = {light1_address, light2_address, light3_address, light4_address, fan1_address, fan2_address};
+	uint8_t *state_ptr = (uint8_t *)&lastStates_t;
+	for (uint8_t i = 0; i < sizeof(lastStates_t); i++) {
+     7ee:	1f 5f       	subi	r17, 0xFF	; 255
+     7f0:	16 30       	cpi	r17, 0x06	; 6
+     7f2:	50 f3       	brcs	.-44     	; 0x7c8 <readLastStatesFromEEPROM+0x66>
+		state_ptr[i] = eeprom_read(addresses[i]);
+	}
+}
+     7f4:	2c 96       	adiw	r28, 0x0c	; 12
+     7f6:	0f b6       	in	r0, 0x3f	; 63
+     7f8:	f8 94       	cli
+     7fa:	de bf       	out	0x3e, r29	; 62
+     7fc:	0f be       	out	0x3f, r0	; 63
+     7fe:	cd bf       	out	0x3d, r28	; 61
+     800:	df 91       	pop	r29
+     802:	cf 91       	pop	r28
+     804:	1f 91       	pop	r17
+     806:	ff 90       	pop	r15
+     808:	ef 90       	pop	r14
+     80a:	08 95       	ret
+
+0000080c <retain_Lights_State_From_EEPROM>:
+
+void retain_Lights_State_From_EEPROM(void){
+     80c:	ef 92       	push	r14
+     80e:	ff 92       	push	r15
+     810:	0f 93       	push	r16
+     812:	1f 93       	push	r17
+     814:	cf 93       	push	r28
+     816:	df 93       	push	r29
+     818:	cd b7       	in	r28, 0x3d	; 61
+     81a:	de b7       	in	r29, 0x3e	; 62
+     81c:	a0 97       	sbiw	r28, 0x20	; 32
+     81e:	0f b6       	in	r0, 0x3f	; 63
+     820:	f8 94       	cli
+     822:	de bf       	out	0x3e, r29	; 62
+     824:	0f be       	out	0x3f, r0	; 63
+     826:	cd bf       	out	0x3d, r28	; 61
+	pin_map_t lightMapping[4][2] = {
+     828:	88 e1       	ldi	r24, 0x18	; 24
+     82a:	ea e0       	ldi	r30, 0x0A	; 10
+     82c:	f1 e0       	ldi	r31, 0x01	; 1
+     82e:	de 01       	movw	r26, r28
+     830:	11 96       	adiw	r26, 0x01	; 1
+     832:	01 90       	ld	r0, Z+
+     834:	0d 92       	st	X+, r0
+     836:	8a 95       	dec	r24
+     838:	e1 f7       	brne	.-8      	; 0x832 <retain_Lights_State_From_EEPROM+0x26>
+		{{&PORTC, PC3}, {&PORTC, PC6}},  // light2state
+		{{&PORTD, PD6}, {&PORTA, PA5}},  // light3state
+		{{&PORTC, PC4}, {&PORTA, PA4}}   // light4state
+	};
+
+	volatile uint8_t *lightStates[4] = {
+     83a:	88 e0       	ldi	r24, 0x08	; 8
+     83c:	e2 e2       	ldi	r30, 0x22	; 34
+     83e:	f1 e0       	ldi	r31, 0x01	; 1
+     840:	de 01       	movw	r26, r28
+     842:	59 96       	adiw	r26, 0x19	; 25
+     844:	01 90       	ld	r0, Z+
+     846:	0d 92       	st	X+, r0
+     848:	8a 95       	dec	r24
+     84a:	e1 f7       	brne	.-8      	; 0x844 <retain_Lights_State_From_EEPROM+0x38>
+		&lastStates_t.light2state,
+		&lastStates_t.light3state,
+		&lastStates_t.light4state
+	};
+
+	for(uint8_t i = 0; i < 4; i++) {
+     84c:	20 e0       	ldi	r18, 0x00	; 0
+     84e:	46 c0       	rjmp	.+140    	; 0x8dc <retain_Lights_State_From_EEPROM+0xd0>
+		if(*lightStates[i]) {
+     850:	82 2f       	mov	r24, r18
+     852:	90 e0       	ldi	r25, 0x00	; 0
+     854:	fc 01       	movw	r30, r24
+     856:	ee 0f       	add	r30, r30
+     858:	ff 1f       	adc	r31, r31
+     85a:	41 e0       	ldi	r20, 0x01	; 1
+     85c:	50 e0       	ldi	r21, 0x00	; 0
+     85e:	4c 0f       	add	r20, r28
+     860:	5d 1f       	adc	r21, r29
+     862:	e4 0f       	add	r30, r20
+     864:	f5 1f       	adc	r31, r21
+     866:	00 8c       	ldd	r0, Z+24	; 0x18
+     868:	f1 8d       	ldd	r31, Z+25	; 0x19
+     86a:	e0 2d       	mov	r30, r0
+     86c:	30 81       	ld	r19, Z
+     86e:	33 23       	and	r19, r19
+     870:	a1 f1       	breq	.+104    	; 0x8da <retain_Lights_State_From_EEPROM+0xce>
+			*lightMapping[i][0].port ^= (1 << lightMapping[i][0].pin);
+     872:	7c 01       	movw	r14, r24
+     874:	ee 0c       	add	r14, r14
+     876:	ff 1c       	adc	r15, r15
+     878:	d7 01       	movw	r26, r14
+     87a:	a8 0f       	add	r26, r24
+     87c:	b9 1f       	adc	r27, r25
+     87e:	aa 0f       	add	r26, r26
+     880:	bb 1f       	adc	r27, r27
+     882:	a4 0f       	add	r26, r20
+     884:	b5 1f       	adc	r27, r21
+     886:	0d 91       	ld	r16, X+
+     888:	1c 91       	ld	r17, X
+     88a:	11 97       	sbiw	r26, 0x01	; 1
+     88c:	f8 01       	movw	r30, r16
+     88e:	30 81       	ld	r19, Z
+     890:	41 e0       	ldi	r20, 0x01	; 1
+     892:	50 e0       	ldi	r21, 0x00	; 0
+     894:	ba 01       	movw	r22, r20
+     896:	12 96       	adiw	r26, 0x02	; 2
+     898:	0c 90       	ld	r0, X
+     89a:	12 97       	sbiw	r26, 0x02	; 2
+     89c:	02 c0       	rjmp	.+4      	; 0x8a2 <retain_Lights_State_From_EEPROM+0x96>
+     89e:	66 0f       	add	r22, r22
+     8a0:	77 1f       	adc	r23, r23
+     8a2:	0a 94       	dec	r0
+     8a4:	e2 f7       	brpl	.-8      	; 0x89e <retain_Lights_State_From_EEPROM+0x92>
+     8a6:	63 27       	eor	r22, r19
+     8a8:	60 83       	st	Z, r22
+			*lightMapping[i][1].port ^= (1 << lightMapping[i][1].pin);
+     8aa:	13 96       	adiw	r26, 0x03	; 3
+     8ac:	0d 90       	ld	r0, X+
+     8ae:	bc 91       	ld	r27, X
+     8b0:	a0 2d       	mov	r26, r0
+     8b2:	3c 91       	ld	r19, X
+     8b4:	f7 01       	movw	r30, r14
+     8b6:	e8 0f       	add	r30, r24
+     8b8:	f9 1f       	adc	r31, r25
+     8ba:	ee 0f       	add	r30, r30
+     8bc:	ff 1f       	adc	r31, r31
+     8be:	81 e0       	ldi	r24, 0x01	; 1
+     8c0:	90 e0       	ldi	r25, 0x00	; 0
+     8c2:	8c 0f       	add	r24, r28
+     8c4:	9d 1f       	adc	r25, r29
+     8c6:	e8 0f       	add	r30, r24
+     8c8:	f9 1f       	adc	r31, r25
+     8ca:	05 80       	ldd	r0, Z+5	; 0x05
+     8cc:	02 c0       	rjmp	.+4      	; 0x8d2 <retain_Lights_State_From_EEPROM+0xc6>
+     8ce:	44 0f       	add	r20, r20
+     8d0:	55 1f       	adc	r21, r21
+     8d2:	0a 94       	dec	r0
+     8d4:	e2 f7       	brpl	.-8      	; 0x8ce <retain_Lights_State_From_EEPROM+0xc2>
+     8d6:	43 27       	eor	r20, r19
+     8d8:	4c 93       	st	X, r20
+		&lastStates_t.light2state,
+		&lastStates_t.light3state,
+		&lastStates_t.light4state
+	};
+
+	for(uint8_t i = 0; i < 4; i++) {
+     8da:	2f 5f       	subi	r18, 0xFF	; 255
+     8dc:	24 30       	cpi	r18, 0x04	; 4
+     8de:	08 f4       	brcc	.+2      	; 0x8e2 <retain_Lights_State_From_EEPROM+0xd6>
+     8e0:	b7 cf       	rjmp	.-146    	; 0x850 <retain_Lights_State_From_EEPROM+0x44>
+		if(*lightStates[i]) {
+			*lightMapping[i][0].port ^= (1 << lightMapping[i][0].pin);
+			*lightMapping[i][1].port ^= (1 << lightMapping[i][1].pin);
+		}
+	}
+}
+     8e2:	a0 96       	adiw	r28, 0x20	; 32
+     8e4:	0f b6       	in	r0, 0x3f	; 63
+     8e6:	f8 94       	cli
+     8e8:	de bf       	out	0x3e, r29	; 62
+     8ea:	0f be       	out	0x3f, r0	; 63
+     8ec:	cd bf       	out	0x3d, r28	; 61
+     8ee:	df 91       	pop	r29
+     8f0:	cf 91       	pop	r28
+     8f2:	1f 91       	pop	r17
+     8f4:	0f 91       	pop	r16
+     8f6:	ff 90       	pop	r15
+     8f8:	ef 90       	pop	r14
+     8fa:	08 95       	ret
+
+000008fc <retain_Fan1_State_From_EEPROM>:
+
+void retain_Fan1_State_From_EEPROM() {
+	switch (lastStates_t.lastF1state){
+     8fc:	80 91 61 01 	lds	r24, 0x0161	; 0x800161 <lastStates_t+0x4>
+     900:	82 30       	cpi	r24, 0x02	; 2
+     902:	a9 f0       	breq	.+42     	; 0x92e <retain_Fan1_State_From_EEPROM+0x32>
+     904:	28 f4       	brcc	.+10     	; 0x910 <retain_Fan1_State_From_EEPROM+0x14>
+     906:	88 23       	and	r24, r24
+     908:	49 f0       	breq	.+18     	; 0x91c <retain_Fan1_State_From_EEPROM+0x20>
+     90a:	81 30       	cpi	r24, 0x01	; 1
+     90c:	59 f0       	breq	.+22     	; 0x924 <retain_Fan1_State_From_EEPROM+0x28>
+     90e:	23 c0       	rjmp	.+70     	; 0x956 <retain_Fan1_State_From_EEPROM+0x5a>
+     910:	84 30       	cpi	r24, 0x04	; 4
+     912:	b9 f0       	breq	.+46     	; 0x942 <retain_Fan1_State_From_EEPROM+0x46>
+     914:	88 f0       	brcs	.+34     	; 0x938 <retain_Fan1_State_From_EEPROM+0x3c>
+     916:	85 30       	cpi	r24, 0x05	; 5
+     918:	c9 f0       	breq	.+50     	; 0x94c <retain_Fan1_State_From_EEPROM+0x50>
+     91a:	1d c0       	rjmp	.+58     	; 0x956 <retain_Fan1_State_From_EEPROM+0x5a>
+		case 0: as0(); lastStates_t.lastF1state = 0; break;
+     91c:	ff db       	rcall	.-2050   	; 0x11c <as0>
+     91e:	10 92 61 01 	sts	0x0161, r1	; 0x800161 <lastStates_t+0x4>
+     922:	08 95       	ret
+		case 1: as1(); lastStates_t.lastF1state = 1; break;
+     924:	29 dc       	rcall	.-1966   	; 0x178 <as1>
+     926:	81 e0       	ldi	r24, 0x01	; 1
+     928:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     92c:	08 95       	ret
+		case 2: as2(); lastStates_t.lastF1state = 2; break;
+     92e:	52 dc       	rcall	.-1884   	; 0x1d4 <as2>
+     930:	82 e0       	ldi	r24, 0x02	; 2
+     932:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     936:	08 95       	ret
+		case 3: as3(); lastStates_t.lastF1state = 3; break;
+     938:	7b dc       	rcall	.-1802   	; 0x230 <as3>
+     93a:	83 e0       	ldi	r24, 0x03	; 3
+     93c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     940:	08 95       	ret
+		case 4: as4(); lastStates_t.lastF1state = 4; break;
+     942:	a4 dc       	rcall	.-1720   	; 0x28c <as4>
+     944:	84 e0       	ldi	r24, 0x04	; 4
+     946:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     94a:	08 95       	ret
+		case 5: as5(); lastStates_t.lastF1state = 5; break;
+     94c:	cd dc       	rcall	.-1638   	; 0x2e8 <as5>
+     94e:	85 e0       	ldi	r24, 0x05	; 5
+     950:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     954:	08 95       	ret
+		default:as0(); lastStates_t.lastF1state = 0; break;
+     956:	e2 db       	rcall	.-2108   	; 0x11c <as0>
+     958:	10 92 61 01 	sts	0x0161, r1	; 0x800161 <lastStates_t+0x4>
+     95c:	08 95       	ret
+
+0000095e <retain_Fan2_State_From_EEPROM>:
+     95e:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <lastStates_t+0x5>
+	}
+	
+}
+
+void retain_Fan2_State_From_EEPROM(){
+	switch(lastStates_t.lastF2state){
+     962:	82 30       	cpi	r24, 0x02	; 2
+     964:	a9 f0       	breq	.+42     	; 0x990 <retain_Fan2_State_From_EEPROM+0x32>
+     966:	28 f4       	brcc	.+10     	; 0x972 <retain_Fan2_State_From_EEPROM+0x14>
+     968:	88 23       	and	r24, r24
+     96a:	49 f0       	breq	.+18     	; 0x97e <retain_Fan2_State_From_EEPROM+0x20>
+     96c:	81 30       	cpi	r24, 0x01	; 1
+     96e:	59 f0       	breq	.+22     	; 0x986 <retain_Fan2_State_From_EEPROM+0x28>
+     970:	23 c0       	rjmp	.+70     	; 0x9b8 <retain_Fan2_State_From_EEPROM+0x5a>
+     972:	84 30       	cpi	r24, 0x04	; 4
+     974:	b9 f0       	breq	.+46     	; 0x9a4 <retain_Fan2_State_From_EEPROM+0x46>
+     976:	88 f0       	brcs	.+34     	; 0x99a <retain_Fan2_State_From_EEPROM+0x3c>
+     978:	85 30       	cpi	r24, 0x05	; 5
+     97a:	c9 f0       	breq	.+50     	; 0x9ae <retain_Fan2_State_From_EEPROM+0x50>
+     97c:	1d c0       	rjmp	.+58     	; 0x9b8 <retain_Fan2_State_From_EEPROM+0x5a>
+		case 0: af0(); lastStates_t.lastF2state = 0; break;
+     97e:	e2 dc       	rcall	.-1596   	; 0x344 <af0>
+     980:	10 92 62 01 	sts	0x0162, r1	; 0x800162 <lastStates_t+0x5>
+     984:	08 95       	ret
+		case 1: af1(); lastStates_t.lastF2state = 1; break;
+     986:	08 dd       	rcall	.-1520   	; 0x398 <af1>
+     988:	81 e0       	ldi	r24, 0x01	; 1
+     98a:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     98e:	08 95       	ret
+		case 2: af2(); lastStates_t.lastF2state = 2; break;
+     990:	2d dd       	rcall	.-1446   	; 0x3ec <af2>
+     992:	82 e0       	ldi	r24, 0x02	; 2
+     994:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     998:	08 95       	ret
+		case 3: af3(); lastStates_t.lastF2state = 3; break;
+     99a:	52 dd       	rcall	.-1372   	; 0x440 <af3>
+     99c:	83 e0       	ldi	r24, 0x03	; 3
+     99e:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     9a2:	08 95       	ret
+		case 4: af4(); lastStates_t.lastF2state = 4; break;
+     9a4:	77 dd       	rcall	.-1298   	; 0x494 <af4>
+     9a6:	84 e0       	ldi	r24, 0x04	; 4
+     9a8:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     9ac:	08 95       	ret
+		case 5: af5(); lastStates_t.lastF2state = 5; break;
+     9ae:	9c dd       	rcall	.-1224   	; 0x4e8 <af5>
+     9b0:	85 e0       	ldi	r24, 0x05	; 5
+     9b2:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     9b6:	08 95       	ret
+		default:af0(); lastStates_t.lastF2state = 0; break;
+     9b8:	c5 dc       	rcall	.-1654   	; 0x344 <af0>
+     9ba:	10 92 62 01 	sts	0x0162, r1	; 0x800162 <lastStates_t+0x5>
+     9be:	08 95       	ret
+
+000009c0 <setup>:
+     9c0:	78 94       	sei
+	}
+}
+
+void setup(){
+	sei();
+	i2c_init();
+     9c2:	bc dd       	rcall	.-1160   	; 0x53c <i2c_init>
+	timer1_init();
+     9c4:	31 de       	rcall	.-926    	; 0x628 <timer1_init>
+	SPI_init_slave(); // Initialize SPI as a slave
+     9c6:	7a d1       	rcall	.+756    	; 0xcbc <SPI_init_slave>
+	USART_Init(MYUBRR); //Initialize Uart
+     9c8:	87 e6       	ldi	r24, 0x67	; 103
+     9ca:	90 e0       	ldi	r25, 0x00	; 0
+     9cc:	2a d4       	rcall	.+2132   	; 0x1222 <USART_Init>
+     9ce:	81 b3       	in	r24, 0x11	; 17
+	
+	DDRD |= (1 << PD1) |(1 << PD2) |(1 << PD3) |(1 << PD4) |(1 << PD5) |(1 << PD6) |(1 << PD7);              // Set PORTD pins as output
+     9d0:	8e 6f       	ori	r24, 0xFE	; 254
+     9d2:	81 bb       	out	0x11, r24	; 17
+     9d4:	e4 e6       	ldi	r30, 0x64	; 100
+	DDRG |= (1 << PG0) | (1 << PG1)| (1 << PG2)|(1 << PG4);                                                             // Set PORTG pins 0 and 1 as output for LEDs
+     9d6:	f0 e0       	ldi	r31, 0x00	; 0
+     9d8:	80 81       	ld	r24, Z
+     9da:	87 61       	ori	r24, 0x17	; 23
+     9dc:	80 83       	st	Z, r24
+     9de:	84 b3       	in	r24, 0x14	; 20
+	DDRC |= (1 << PC5) | (1 << PC6)| (1 << PC7)| (1 << PC0)| (1 << PC1)| (1 << PC2)| (1 << PC3)| (1 << PC4); // Set PORTC pins as output
+     9e0:	8f ef       	ldi	r24, 0xFF	; 255
+     9e2:	84 bb       	out	0x14, r24	; 20
+     9e4:	9a b3       	in	r25, 0x1a	; 26
+	DDRA |= (1 << PA5) | (1 << PA4)|(1 << PA7) | (1 << PA6)| (1 << PA3)|(1 << PA2) | (1 << PA1)| (1 << PA0); // Set PORTA pins as output
+     9e6:	8a bb       	out	0x1a, r24	; 26
+     9e8:	08 95       	ret
+
+000009ea <main>:
+     9ea:	ea df       	rcall	.-44     	; 0x9c0 <setup>
+uint16_t fan1_address   = 0x0004;
+uint16_t fan2_address   = 0x0005;
+
+int main(void){
+	setup();
+	readLastStatesFromEEPROM();
+     9ec:	ba de       	rcall	.-652    	; 0x762 <readLastStatesFromEEPROM>
+	retain_Lights_State_From_EEPROM();
+     9ee:	0e df       	rcall	.-484    	; 0x80c <retain_Lights_State_From_EEPROM>
+	retain_Fan1_State_From_EEPROM();
+     9f0:	85 df       	rcall	.-246    	; 0x8fc <retain_Fan1_State_From_EEPROM>
+     9f2:	b5 df       	rcall	.-150    	; 0x95e <retain_Fan2_State_From_EEPROM>
+	retain_Fan2_State_From_EEPROM();
+     9f4:	ff cf       	rjmp	.-2      	; 0x9f4 <main+0xa>
+
+000009f6 <handle_All_ON>:
+     9f6:	cc dd       	rcall	.-1128   	; 0x590 <light1_ON>
+     9f8:	de dd       	rcall	.-1092   	; 0x5b6 <light2_ON>
+}
+
+void handle_All_ON() {
+	light1_ON();
+	light2_ON();
+	light3_ON();
+     9fa:	f0 dd       	rcall	.-1056   	; 0x5dc <light3_ON>
+     9fc:	02 de       	rcall	.-1020   	; 0x602 <light4_ON>
+	light4_ON();
+     9fe:	80 91 61 01 	lds	r24, 0x0161	; 0x800161 <lastStates_t+0x4>
+	switch(lastStates_t.lastF1state){
+     a02:	83 30       	cpi	r24, 0x03	; 3
+     a04:	e9 f0       	breq	.+58     	; 0xa40 <handle_All_ON+0x4a>
+     a06:	28 f4       	brcc	.+10     	; 0xa12 <handle_All_ON+0x1c>
+     a08:	81 30       	cpi	r24, 0x01	; 1
+     a0a:	41 f0       	breq	.+16     	; 0xa1c <handle_All_ON+0x26>
+     a0c:	82 30       	cpi	r24, 0x02	; 2
+     a0e:	79 f0       	breq	.+30     	; 0xa2e <handle_All_ON+0x38>
+     a10:	32 c0       	rjmp	.+100    	; 0xa76 <handle_All_ON+0x80>
+     a12:	84 30       	cpi	r24, 0x04	; 4
+     a14:	f1 f0       	breq	.+60     	; 0xa52 <handle_All_ON+0x5c>
+     a16:	85 30       	cpi	r24, 0x05	; 5
+     a18:	29 f1       	breq	.+74     	; 0xa64 <handle_All_ON+0x6e>
+     a1a:	2d c0       	rjmp	.+90     	; 0xa76 <handle_All_ON+0x80>
+		case 1: as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; fan1_speed = 1; break;
+     a1c:	ad db       	rcall	.-2214   	; 0x178 <as1>
+     a1e:	81 e4       	ldi	r24, 0x41	; 65
+     a20:	0c d4       	rcall	.+2072   	; 0x123a <USART_Transmit>
+     a22:	81 e0       	ldi	r24, 0x01	; 1
+     a24:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     a28:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     a2c:	68 c0       	rjmp	.+208    	; 0xafe <handle_All_ON+0x108>
+		case 2: as2(); USART_Transmit('C'); lastStates_t.lastF1state = 2; fan1_speed = 2; break;
+     a2e:	d2 db       	rcall	.-2140   	; 0x1d4 <as2>
+     a30:	83 e4       	ldi	r24, 0x43	; 67
+     a32:	03 d4       	rcall	.+2054   	; 0x123a <USART_Transmit>
+     a34:	82 e0       	ldi	r24, 0x02	; 2
+     a36:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     a3a:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     a3e:	5f c0       	rjmp	.+190    	; 0xafe <handle_All_ON+0x108>
+		case 3: as3(); USART_Transmit('D'); lastStates_t.lastF1state = 3; fan1_speed = 3; break;
+     a40:	f7 db       	rcall	.-2066   	; 0x230 <as3>
+     a42:	84 e4       	ldi	r24, 0x44	; 68
+     a44:	fa d3       	rcall	.+2036   	; 0x123a <USART_Transmit>
+     a46:	83 e0       	ldi	r24, 0x03	; 3
+     a48:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     a4c:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     a50:	56 c0       	rjmp	.+172    	; 0xafe <handle_All_ON+0x108>
+		case 4: as4(); USART_Transmit('E'); lastStates_t.lastF1state = 4; fan1_speed = 4; break;
+     a52:	1c dc       	rcall	.-1992   	; 0x28c <as4>
+     a54:	85 e4       	ldi	r24, 0x45	; 69
+     a56:	f1 d3       	rcall	.+2018   	; 0x123a <USART_Transmit>
+     a58:	84 e0       	ldi	r24, 0x04	; 4
+     a5a:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     a5e:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     a62:	4d c0       	rjmp	.+154    	; 0xafe <handle_All_ON+0x108>
+     a64:	41 dc       	rcall	.-1918   	; 0x2e8 <as5>
+		case 5: as5(); USART_Transmit('F'); lastStates_t.lastF1state = 5; fan1_speed = 5; break;
+     a66:	86 e4       	ldi	r24, 0x46	; 70
+     a68:	e8 d3       	rcall	.+2000   	; 0x123a <USART_Transmit>
+     a6a:	85 e0       	ldi	r24, 0x05	; 5
+     a6c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     a70:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     a74:	44 c0       	rjmp	.+136    	; 0xafe <handle_All_ON+0x108>
+     a76:	80 91 5b 01 	lds	r24, 0x015B	; 0x80015b <fan1_speed>
+     a7a:	83 30       	cpi	r24, 0x03	; 3
+		default:
+		switch(fan1_speed){
+     a7c:	e9 f0       	breq	.+58     	; 0xab8 <handle_All_ON+0xc2>
+     a7e:	28 f4       	brcc	.+10     	; 0xa8a <handle_All_ON+0x94>
+     a80:	81 30       	cpi	r24, 0x01	; 1
+     a82:	41 f0       	breq	.+16     	; 0xa94 <handle_All_ON+0x9e>
+     a84:	82 30       	cpi	r24, 0x02	; 2
+     a86:	79 f0       	breq	.+30     	; 0xaa6 <handle_All_ON+0xb0>
+     a88:	32 c0       	rjmp	.+100    	; 0xaee <handle_All_ON+0xf8>
+     a8a:	84 30       	cpi	r24, 0x04	; 4
+     a8c:	f1 f0       	breq	.+60     	; 0xaca <handle_All_ON+0xd4>
+     a8e:	85 30       	cpi	r24, 0x05	; 5
+     a90:	29 f1       	breq	.+74     	; 0xadc <handle_All_ON+0xe6>
+     a92:	2d c0       	rjmp	.+90     	; 0xaee <handle_All_ON+0xf8>
+			case 1: as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; fan1_speed = 1; break;
+     a94:	71 db       	rcall	.-2334   	; 0x178 <as1>
+     a96:	81 e4       	ldi	r24, 0x41	; 65
+     a98:	d0 d3       	rcall	.+1952   	; 0x123a <USART_Transmit>
+     a9a:	81 e0       	ldi	r24, 0x01	; 1
+     a9c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     aa0:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     aa4:	2c c0       	rjmp	.+88     	; 0xafe <handle_All_ON+0x108>
+			case 2: as2(); USART_Transmit('C'); lastStates_t.lastF1state = 2; fan1_speed = 2; break;
+     aa6:	96 db       	rcall	.-2260   	; 0x1d4 <as2>
+     aa8:	83 e4       	ldi	r24, 0x43	; 67
+     aaa:	c7 d3       	rcall	.+1934   	; 0x123a <USART_Transmit>
+     aac:	82 e0       	ldi	r24, 0x02	; 2
+     aae:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ab2:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     ab6:	23 c0       	rjmp	.+70     	; 0xafe <handle_All_ON+0x108>
+			case 3: as3(); USART_Transmit('D'); lastStates_t.lastF1state = 3; fan1_speed = 3; break;
+     ab8:	bb db       	rcall	.-2186   	; 0x230 <as3>
+     aba:	84 e4       	ldi	r24, 0x44	; 68
+     abc:	be d3       	rcall	.+1916   	; 0x123a <USART_Transmit>
+     abe:	83 e0       	ldi	r24, 0x03	; 3
+     ac0:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ac4:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     ac8:	1a c0       	rjmp	.+52     	; 0xafe <handle_All_ON+0x108>
+			case 4: as4(); USART_Transmit('E'); lastStates_t.lastF1state = 4; fan1_speed = 4; break;
+     aca:	e0 db       	rcall	.-2112   	; 0x28c <as4>
+     acc:	85 e4       	ldi	r24, 0x45	; 69
+     ace:	b5 d3       	rcall	.+1898   	; 0x123a <USART_Transmit>
+     ad0:	84 e0       	ldi	r24, 0x04	; 4
+     ad2:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ad6:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     ada:	11 c0       	rjmp	.+34     	; 0xafe <handle_All_ON+0x108>
+     adc:	05 dc       	rcall	.-2038   	; 0x2e8 <as5>
+			case 5: as5(); USART_Transmit('F'); lastStates_t.lastF1state = 5; fan1_speed = 5; break;
+     ade:	86 e4       	ldi	r24, 0x46	; 70
+     ae0:	ac d3       	rcall	.+1880   	; 0x123a <USART_Transmit>
+     ae2:	85 e0       	ldi	r24, 0x05	; 5
+     ae4:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ae8:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     aec:	08 c0       	rjmp	.+16     	; 0xafe <handle_All_ON+0x108>
+     aee:	44 db       	rcall	.-2424   	; 0x178 <as1>
+     af0:	81 e4       	ldi	r24, 0x41	; 65
+			default:as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; fan1_speed = 1; break;
+     af2:	a3 d3       	rcall	.+1862   	; 0x123a <USART_Transmit>
+     af4:	81 e0       	ldi	r24, 0x01	; 1
+     af6:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     afa:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+     afe:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <lastStates_t+0x5>
+		}
+		break;
+	}
+	switch(lastStates_t.lastF2state){
+     b02:	83 30       	cpi	r24, 0x03	; 3
+     b04:	e9 f0       	breq	.+58     	; 0xb40 <handle_All_ON+0x14a>
+     b06:	28 f4       	brcc	.+10     	; 0xb12 <handle_All_ON+0x11c>
+     b08:	81 30       	cpi	r24, 0x01	; 1
+     b0a:	41 f0       	breq	.+16     	; 0xb1c <handle_All_ON+0x126>
+     b0c:	82 30       	cpi	r24, 0x02	; 2
+     b0e:	79 f0       	breq	.+30     	; 0xb2e <handle_All_ON+0x138>
+     b10:	32 c0       	rjmp	.+100    	; 0xb76 <handle_All_ON+0x180>
+     b12:	84 30       	cpi	r24, 0x04	; 4
+     b14:	f1 f0       	breq	.+60     	; 0xb52 <handle_All_ON+0x15c>
+     b16:	85 30       	cpi	r24, 0x05	; 5
+     b18:	29 f1       	breq	.+74     	; 0xb64 <handle_All_ON+0x16e>
+		case 1: af1(); USART_Transmit('K'); lastStates_t.lastF2state = 1; fan2_speed = 1; break;
+     b1a:	2d c0       	rjmp	.+90     	; 0xb76 <handle_All_ON+0x180>
+     b1c:	3d dc       	rcall	.-1926   	; 0x398 <af1>
+     b1e:	8b e4       	ldi	r24, 0x4B	; 75
+     b20:	8c d3       	rcall	.+1816   	; 0x123a <USART_Transmit>
+     b22:	81 e0       	ldi	r24, 0x01	; 1
+     b24:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     b28:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+		case 2: af2(); USART_Transmit('Z'); lastStates_t.lastF2state = 2; fan2_speed = 2; break;
+     b2c:	08 95       	ret
+     b2e:	5e dc       	rcall	.-1860   	; 0x3ec <af2>
+     b30:	8a e5       	ldi	r24, 0x5A	; 90
+     b32:	83 d3       	rcall	.+1798   	; 0x123a <USART_Transmit>
+     b34:	82 e0       	ldi	r24, 0x02	; 2
+     b36:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     b3a:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     b3e:	08 95       	ret
+		case 3: af3(); USART_Transmit('X'); lastStates_t.lastF2state = 3; fan2_speed = 3; break;
+     b40:	7f dc       	rcall	.-1794   	; 0x440 <af3>
+     b42:	88 e5       	ldi	r24, 0x58	; 88
+     b44:	7a d3       	rcall	.+1780   	; 0x123a <USART_Transmit>
+     b46:	83 e0       	ldi	r24, 0x03	; 3
+     b48:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     b4c:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     b50:	08 95       	ret
+     b52:	a0 dc       	rcall	.-1728   	; 0x494 <af4>
+     b54:	89 e4       	ldi	r24, 0x49	; 73
+		case 4: af4(); USART_Transmit('I'); lastStates_t.lastF2state = 4; fan2_speed = 4; break;
+     b56:	71 d3       	rcall	.+1762   	; 0x123a <USART_Transmit>
+     b58:	84 e0       	ldi	r24, 0x04	; 4
+     b5a:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     b5e:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     b62:	08 95       	ret
+     b64:	c1 dc       	rcall	.-1662   	; 0x4e8 <af5>
+     b66:	8a e4       	ldi	r24, 0x4A	; 74
+		case 5: af5(); USART_Transmit('J'); lastStates_t.lastF2state = 5; fan2_speed = 5; break;
+     b68:	68 d3       	rcall	.+1744   	; 0x123a <USART_Transmit>
+     b6a:	85 e0       	ldi	r24, 0x05	; 5
+     b6c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     b70:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     b74:	08 95       	ret
+     b76:	80 91 5a 01 	lds	r24, 0x015A	; 0x80015a <fan2_speed>
+		default:
+		switch(fan2_speed){
+     b7a:	83 30       	cpi	r24, 0x03	; 3
+     b7c:	e9 f0       	breq	.+58     	; 0xbb8 <handle_All_ON+0x1c2>
+     b7e:	28 f4       	brcc	.+10     	; 0xb8a <handle_All_ON+0x194>
+     b80:	81 30       	cpi	r24, 0x01	; 1
+     b82:	41 f0       	breq	.+16     	; 0xb94 <handle_All_ON+0x19e>
+     b84:	82 30       	cpi	r24, 0x02	; 2
+     b86:	79 f0       	breq	.+30     	; 0xba6 <handle_All_ON+0x1b0>
+     b88:	32 c0       	rjmp	.+100    	; 0xbee <handle_All_ON+0x1f8>
+     b8a:	84 30       	cpi	r24, 0x04	; 4
+     b8c:	f1 f0       	breq	.+60     	; 0xbca <handle_All_ON+0x1d4>
+     b8e:	85 30       	cpi	r24, 0x05	; 5
+     b90:	29 f1       	breq	.+74     	; 0xbdc <handle_All_ON+0x1e6>
+     b92:	2d c0       	rjmp	.+90     	; 0xbee <handle_All_ON+0x1f8>
+			case 1: af1(); USART_Transmit('K'); lastStates_t.lastF2state = 1; fan2_speed = 1; break;
+     b94:	01 dc       	rcall	.-2046   	; 0x398 <af1>
+     b96:	8b e4       	ldi	r24, 0x4B	; 75
+     b98:	50 d3       	rcall	.+1696   	; 0x123a <USART_Transmit>
+     b9a:	81 e0       	ldi	r24, 0x01	; 1
+     b9c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     ba0:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     ba4:	08 95       	ret
+			case 2: af2(); USART_Transmit('Z'); lastStates_t.lastF2state = 2; fan2_speed = 2; break;
+     ba6:	22 dc       	rcall	.-1980   	; 0x3ec <af2>
+     ba8:	8a e5       	ldi	r24, 0x5A	; 90
+     baa:	47 d3       	rcall	.+1678   	; 0x123a <USART_Transmit>
+     bac:	82 e0       	ldi	r24, 0x02	; 2
+     bae:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     bb2:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     bb6:	08 95       	ret
+     bb8:	43 dc       	rcall	.-1914   	; 0x440 <af3>
+			case 3: af3(); USART_Transmit('X'); lastStates_t.lastF2state = 3; fan2_speed = 3; break;
+     bba:	88 e5       	ldi	r24, 0x58	; 88
+     bbc:	3e d3       	rcall	.+1660   	; 0x123a <USART_Transmit>
+     bbe:	83 e0       	ldi	r24, 0x03	; 3
+     bc0:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     bc4:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     bc8:	08 95       	ret
+     bca:	64 dc       	rcall	.-1848   	; 0x494 <af4>
+     bcc:	89 e4       	ldi	r24, 0x49	; 73
+     bce:	35 d3       	rcall	.+1642   	; 0x123a <USART_Transmit>
+			case 4: af4(); USART_Transmit('I'); lastStates_t.lastF2state = 4; fan2_speed = 4; break;
+     bd0:	84 e0       	ldi	r24, 0x04	; 4
+     bd2:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     bd6:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     bda:	08 95       	ret
+     bdc:	85 dc       	rcall	.-1782   	; 0x4e8 <af5>
+     bde:	8a e4       	ldi	r24, 0x4A	; 74
+     be0:	2c d3       	rcall	.+1624   	; 0x123a <USART_Transmit>
+     be2:	85 e0       	ldi	r24, 0x05	; 5
+     be4:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			case 5: af5(); USART_Transmit('J'); lastStates_t.lastF2state = 5; fan2_speed = 5; break;
+     be8:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+     bec:	08 95       	ret
+     bee:	d4 db       	rcall	.-2136   	; 0x398 <af1>
+     bf0:	8b e4       	ldi	r24, 0x4B	; 75
+     bf2:	23 d3       	rcall	.+1606   	; 0x123a <USART_Transmit>
+     bf4:	81 e0       	ldi	r24, 0x01	; 1
+     bf6:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     bfa:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+			default: af1();USART_Transmit('K'); lastStates_t.lastF2state = 1; fan2_speed = 1; break;
+     bfe:	08 95       	ret
+
+00000c00 <handle_All_OFF>:
+     c00:	d1 dc       	rcall	.-1630   	; 0x5a4 <light1_OFF>
+     c02:	e3 dc       	rcall	.-1594   	; 0x5ca <light2_OFF>
+     c04:	f5 dc       	rcall	.-1558   	; 0x5f0 <light3_OFF>
+     c06:	07 dd       	rcall	.-1522   	; 0x616 <light4_OFF>
+     c08:	89 da       	rcall	.-2798   	; 0x11c <as0>
+     c0a:	9c db       	rcall	.-2248   	; 0x344 <af0>
+     c0c:	ed e5       	ldi	r30, 0x5D	; 93
+     c0e:	f1 e0       	ldi	r31, 0x01	; 1
+     c10:	14 82       	std	Z+4, r1	; 0x04
+	light2_OFF();
+	light3_OFF();
+	light4_OFF();
+	as0();
+	af0();
+	lastStates_t.lastF1state = 0;
+     c12:	15 82       	std	Z+5, r1	; 0x05
+     c14:	08 95       	ret
+
+00000c16 <write_All_States_ToEEPROM>:
+     c16:	0f 93       	push	r16
+	lastStates_t.lastF2state = 0;
+     c18:	1f 93       	push	r17
+     c1a:	cf 93       	push	r28
+}
+
+void write_All_States_ToEEPROM(){
+     c1c:	df 93       	push	r29
+     c1e:	cd b7       	in	r28, 0x3d	; 61
+     c20:	de b7       	in	r29, 0x3e	; 62
+     c22:	2c 97       	sbiw	r28, 0x0c	; 12
+     c24:	0f b6       	in	r0, 0x3f	; 63
+     c26:	f8 94       	cli
+     c28:	de bf       	out	0x3e, r29	; 62
+     c2a:	0f be       	out	0x3f, r0	; 63
+     c2c:	cd bf       	out	0x3d, r28	; 61
+	uint16_t eeprom_addresses[] = {light1_address, light2_address, light3_address, light4_address, fan1_address, fan2_address};
+     c2e:	80 91 58 01 	lds	r24, 0x0158	; 0x800158 <light1_address>
+     c32:	90 91 59 01 	lds	r25, 0x0159	; 0x800159 <light1_address+0x1>
+     c36:	9a 83       	std	Y+2, r25	; 0x02
+     c38:	89 83       	std	Y+1, r24	; 0x01
+     c3a:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <light2_address>
+     c3e:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <light2_address+0x1>
+     c42:	9c 83       	std	Y+4, r25	; 0x04
+     c44:	8b 83       	std	Y+3, r24	; 0x03
+     c46:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <light3_address>
+     c4a:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <light3_address+0x1>
+     c4e:	9e 83       	std	Y+6, r25	; 0x06
+     c50:	8d 83       	std	Y+5, r24	; 0x05
+     c52:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light4_address>
+     c56:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light4_address+0x1>
+     c5a:	98 87       	std	Y+8, r25	; 0x08
+     c5c:	8f 83       	std	Y+7, r24	; 0x07
+     c5e:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+     c62:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+     c66:	9a 87       	std	Y+10, r25	; 0x0a
+     c68:	89 87       	std	Y+9, r24	; 0x09
+     c6a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+     c6e:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+     c72:	9c 87       	std	Y+12, r25	; 0x0c
+     c74:	8b 87       	std	Y+11, r24	; 0x0b
+	uint8_t *state_ptr = (uint8_t *)&lastStates_t;
+	for (int i = 0; i < 6; i++) {
+     c76:	00 e0       	ldi	r16, 0x00	; 0
+     c78:	10 e0       	ldi	r17, 0x00	; 0
+     c7a:	12 c0       	rjmp	.+36     	; 0xca0 <write_All_States_ToEEPROM+0x8a>
+		eeprom_write(eeprom_addresses[i], state_ptr[i]);
+     c7c:	d8 01       	movw	r26, r16
+     c7e:	a3 5a       	subi	r26, 0xA3	; 163
+     c80:	be 4f       	sbci	r27, 0xFE	; 254
+     c82:	f8 01       	movw	r30, r16
+     c84:	ee 0f       	add	r30, r30
+     c86:	ff 1f       	adc	r31, r31
+     c88:	81 e0       	ldi	r24, 0x01	; 1
+     c8a:	90 e0       	ldi	r25, 0x00	; 0
+     c8c:	8c 0f       	add	r24, r28
+     c8e:	9d 1f       	adc	r25, r29
+     c90:	e8 0f       	add	r30, r24
+     c92:	f9 1f       	adc	r31, r25
+     c94:	6c 91       	ld	r22, X
+     c96:	80 81       	ld	r24, Z
+     c98:	91 81       	ldd	r25, Z+1	; 0x01
+     c9a:	17 da       	rcall	.-3026   	; 0xca <eeprom_write>
+}
+
+void write_All_States_ToEEPROM(){
+	uint16_t eeprom_addresses[] = {light1_address, light2_address, light3_address, light4_address, fan1_address, fan2_address};
+	uint8_t *state_ptr = (uint8_t *)&lastStates_t;
+	for (int i = 0; i < 6; i++) {
+     c9c:	0f 5f       	subi	r16, 0xFF	; 255
+     c9e:	1f 4f       	sbci	r17, 0xFF	; 255
+     ca0:	06 30       	cpi	r16, 0x06	; 6
+     ca2:	11 05       	cpc	r17, r1
+     ca4:	5c f3       	brlt	.-42     	; 0xc7c <write_All_States_ToEEPROM+0x66>
+		eeprom_write(eeprom_addresses[i], state_ptr[i]);
+	}
+     ca6:	2c 96       	adiw	r28, 0x0c	; 12
+     ca8:	0f b6       	in	r0, 0x3f	; 63
+     caa:	f8 94       	cli
+     cac:	de bf       	out	0x3e, r29	; 62
+     cae:	0f be       	out	0x3f, r0	; 63
+     cb0:	cd bf       	out	0x3d, r28	; 61
+     cb2:	df 91       	pop	r29
+     cb4:	cf 91       	pop	r28
+     cb6:	1f 91       	pop	r17
+     cb8:	0f 91       	pop	r16
+     cba:	08 95       	ret
+
+00000cbc <SPI_init_slave>:
+
+
+#include "spiDataProcess.h"
+
+void SPI_init_slave() {
+	DDRB |= (1 << DDB4);
+     cbc:	87 b3       	in	r24, 0x17	; 23
+     cbe:	80 61       	ori	r24, 0x10	; 16
+     cc0:	87 bb       	out	0x17, r24	; 23
+	SPCR |= (1 << SPE);
+     cc2:	8d b1       	in	r24, 0x0d	; 13
+     cc4:	80 64       	ori	r24, 0x40	; 64
+     cc6:	8d b9       	out	0x0d, r24	; 13
+	SPCR |= (1 << SPIE);
+     cc8:	8d b1       	in	r24, 0x0d	; 13
+     cca:	80 68       	ori	r24, 0x80	; 128
+     ccc:	8d b9       	out	0x0d, r24	; 13
+     cce:	08 95       	ret
+
+00000cd0 <SPIprocessCommand>:
+}
+
+void SPIprocessCommand(const char* command){
+     cd0:	cf 93       	push	r28
+     cd2:	df 93       	push	r29
+     cd4:	ec 01       	movw	r28, r24
+	
+	if(strcmp(command, "P1") == 0){     //Network Hard Reset
+     cd6:	6a e2       	ldi	r22, 0x2A	; 42
+     cd8:	71 e0       	ldi	r23, 0x01	; 1
+     cda:	ab d3       	rcall	.+1878   	; 0x1432 <strcmp>
+     cdc:	89 2b       	or	r24, r25
+     cde:	19 f4       	brne	.+6      	; 0xce6 <SPIprocessCommand+0x16>
+		USART_Transmit('Q');
+     ce0:	81 e5       	ldi	r24, 0x51	; 81
+     ce2:	ab d2       	rcall	.+1366   	; 0x123a <USART_Transmit>
+     ce4:	9b c2       	rjmp	.+1334   	; 0x121c <__stack+0x11d>
+	
+	/*else if(strcmp(command, "R1") == 0){
+		USART_Transmit('x');             //ESP Restart
+	}*/
+	
+	else if(strcmp(command, "L1") == 0){      // Light 1
+     ce6:	6d e2       	ldi	r22, 0x2D	; 45
+     ce8:	71 e0       	ldi	r23, 0x01	; 1
+     cea:	ce 01       	movw	r24, r28
+     cec:	a2 d3       	rcall	.+1860   	; 0x1432 <strcmp>
+     cee:	89 2b       	or	r24, r25
+     cf0:	11 f5       	brne	.+68     	; 0xd36 <SPIprocessCommand+0x66>
+		PORTD ^= (1 << PD7);
+     cf2:	82 b3       	in	r24, 0x12	; 18
+     cf4:	80 58       	subi	r24, 0x80	; 128
+     cf6:	82 bb       	out	0x12, r24	; 18
+		PORTC ^= (1 << PC5);   
+     cf8:	95 b3       	in	r25, 0x15	; 21
+     cfa:	80 e2       	ldi	r24, 0x20	; 32
+     cfc:	89 27       	eor	r24, r25
+     cfe:	85 bb       	out	0x15, r24	; 21
+		uint8_t newLightState_1 = (lastStates_t.light1state == 0) ? 1 : 0;
+     d00:	90 91 5d 01 	lds	r25, 0x015D	; 0x80015d <lastStates_t>
+     d04:	81 e0       	ldi	r24, 0x01	; 1
+     d06:	91 11       	cpse	r25, r1
+     d08:	80 e0       	ldi	r24, 0x00	; 0
+		if(newLightState_1 != lastStates_t.light1state){
+     d0a:	90 91 5d 01 	lds	r25, 0x015D	; 0x80015d <lastStates_t>
+     d0e:	89 17       	cp	r24, r25
+     d10:	09 f4       	brne	.+2      	; 0xd14 <SPIprocessCommand+0x44>
+     d12:	84 c2       	rjmp	.+1288   	; 0x121c <__stack+0x11d>
+			lastStates_t.light1state = newLightState_1;
+     d14:	cd e5       	ldi	r28, 0x5D	; 93
+     d16:	d1 e0       	ldi	r29, 0x01	; 1
+     d18:	88 83       	st	Y, r24
+			eeprom_write(light1_address, lastStates_t.light1state);
+     d1a:	68 81       	ld	r22, Y
+     d1c:	80 91 58 01 	lds	r24, 0x0158	; 0x800158 <light1_address>
+     d20:	90 91 59 01 	lds	r25, 0x0159	; 0x800159 <light1_address+0x1>
+     d24:	d2 d9       	rcall	.-3164   	; 0xca <eeprom_write>
+			USART_Transmit(lastStates_t.light1state == 1 ? 'S': 's'); 
+     d26:	88 81       	ld	r24, Y
+     d28:	81 30       	cpi	r24, 0x01	; 1
+     d2a:	11 f4       	brne	.+4      	; 0xd30 <SPIprocessCommand+0x60>
+     d2c:	83 e5       	ldi	r24, 0x53	; 83
+     d2e:	01 c0       	rjmp	.+2      	; 0xd32 <SPIprocessCommand+0x62>
+     d30:	83 e7       	ldi	r24, 0x73	; 115
+     d32:	83 d2       	rcall	.+1286   	; 0x123a <USART_Transmit>
+		}
+	}
+	
+	else if(strcmp(command, "L2") == 0){      //Light 2
+     d34:	73 c2       	rjmp	.+1254   	; 0x121c <__stack+0x11d>
+     d36:	60 e3       	ldi	r22, 0x30	; 48
+     d38:	71 e0       	ldi	r23, 0x01	; 1
+     d3a:	ce 01       	movw	r24, r28
+     d3c:	7a d3       	rcall	.+1780   	; 0x1432 <strcmp>
+     d3e:	89 2b       	or	r24, r25
+     d40:	19 f5       	brne	.+70     	; 0xd88 <SPIprocessCommand+0xb8>
+		PORTC ^= (1 << PC3);
+     d42:	95 b3       	in	r25, 0x15	; 21
+     d44:	88 e0       	ldi	r24, 0x08	; 8
+     d46:	89 27       	eor	r24, r25
+     d48:	85 bb       	out	0x15, r24	; 21
+		PORTC ^= (1 << PC6);
+     d4a:	95 b3       	in	r25, 0x15	; 21
+     d4c:	80 e4       	ldi	r24, 0x40	; 64
+     d4e:	89 27       	eor	r24, r25
+     d50:	85 bb       	out	0x15, r24	; 21
+		uint8_t newLightState_2 = ( lastStates_t.light2state == 0) ? 1 : 0;
+     d52:	90 91 5e 01 	lds	r25, 0x015E	; 0x80015e <lastStates_t+0x1>
+     d56:	81 e0       	ldi	r24, 0x01	; 1
+     d58:	91 11       	cpse	r25, r1
+     d5a:	80 e0       	ldi	r24, 0x00	; 0
+		if(newLightState_2 != lastStates_t.light2state){
+     d5c:	90 91 5e 01 	lds	r25, 0x015E	; 0x80015e <lastStates_t+0x1>
+     d60:	89 17       	cp	r24, r25
+     d62:	09 f4       	brne	.+2      	; 0xd66 <SPIprocessCommand+0x96>
+     d64:	5b c2       	rjmp	.+1206   	; 0x121c <__stack+0x11d>
+			lastStates_t.light2state = newLightState_2;
+     d66:	cd e5       	ldi	r28, 0x5D	; 93
+     d68:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light2_address, lastStates_t.light2state);
+     d6a:	89 83       	std	Y+1, r24	; 0x01
+     d6c:	69 81       	ldd	r22, Y+1	; 0x01
+     d6e:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <light2_address>
+     d72:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <light2_address+0x1>
+			USART_Transmit(lastStates_t.light2state == 1 ? 'P' : 'p');
+     d76:	a9 d9       	rcall	.-3246   	; 0xca <eeprom_write>
+     d78:	89 81       	ldd	r24, Y+1	; 0x01
+     d7a:	81 30       	cpi	r24, 0x01	; 1
+     d7c:	11 f4       	brne	.+4      	; 0xd82 <SPIprocessCommand+0xb2>
+     d7e:	80 e5       	ldi	r24, 0x50	; 80
+     d80:	01 c0       	rjmp	.+2      	; 0xd84 <SPIprocessCommand+0xb4>
+     d82:	80 e7       	ldi	r24, 0x70	; 112
+     d84:	5a d2       	rcall	.+1204   	; 0x123a <USART_Transmit>
+		}
+	}
+	
+	else if (strcmp(command, "L3") == 0) {     //Light 3
+     d86:	4a c2       	rjmp	.+1172   	; 0x121c <__stack+0x11d>
+     d88:	63 e3       	ldi	r22, 0x33	; 51
+     d8a:	71 e0       	ldi	r23, 0x01	; 1
+     d8c:	ce 01       	movw	r24, r28
+     d8e:	51 d3       	rcall	.+1698   	; 0x1432 <strcmp>
+     d90:	89 2b       	or	r24, r25
+     d92:	19 f5       	brne	.+70     	; 0xdda <SPIprocessCommand+0x10a>
+		PORTD ^= (1 << PD6);
+     d94:	92 b3       	in	r25, 0x12	; 18
+     d96:	80 e4       	ldi	r24, 0x40	; 64
+     d98:	89 27       	eor	r24, r25
+     d9a:	82 bb       	out	0x12, r24	; 18
+		PORTA ^= (1 << PA5);
+     d9c:	9b b3       	in	r25, 0x1b	; 27
+     d9e:	80 e2       	ldi	r24, 0x20	; 32
+     da0:	89 27       	eor	r24, r25
+     da2:	8b bb       	out	0x1b, r24	; 27
+		uint8_t newLightState_3 = (lastStates_t.light3state == 0) ? 1 : 0;
+     da4:	90 91 5f 01 	lds	r25, 0x015F	; 0x80015f <lastStates_t+0x2>
+     da8:	81 e0       	ldi	r24, 0x01	; 1
+     daa:	91 11       	cpse	r25, r1
+     dac:	80 e0       	ldi	r24, 0x00	; 0
+		if (newLightState_3 != lastStates_t.light3state){
+     dae:	90 91 5f 01 	lds	r25, 0x015F	; 0x80015f <lastStates_t+0x2>
+     db2:	89 17       	cp	r24, r25
+     db4:	09 f4       	brne	.+2      	; 0xdb8 <SPIprocessCommand+0xe8>
+			lastStates_t.light3state = newLightState_3;
+     db6:	32 c2       	rjmp	.+1124   	; 0x121c <__stack+0x11d>
+     db8:	cd e5       	ldi	r28, 0x5D	; 93
+     dba:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light3_address, lastStates_t.light3state);
+     dbc:	8a 83       	std	Y+2, r24	; 0x02
+     dbe:	6a 81       	ldd	r22, Y+2	; 0x02
+     dc0:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <light3_address>
+     dc4:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <light3_address+0x1>
+			USART_Transmit(lastStates_t.light3state == 1 ? 'R' : 'r');
+     dc8:	80 d9       	rcall	.-3328   	; 0xca <eeprom_write>
+     dca:	8a 81       	ldd	r24, Y+2	; 0x02
+     dcc:	81 30       	cpi	r24, 0x01	; 1
+     dce:	11 f4       	brne	.+4      	; 0xdd4 <SPIprocessCommand+0x104>
+     dd0:	82 e5       	ldi	r24, 0x52	; 82
+     dd2:	01 c0       	rjmp	.+2      	; 0xdd6 <SPIprocessCommand+0x106>
+     dd4:	82 e7       	ldi	r24, 0x72	; 114
+     dd6:	31 d2       	rcall	.+1122   	; 0x123a <USART_Transmit>
+		}
+	}
+	
+	else if (strcmp(command, "L4") == 0) {    //Light 4
+     dd8:	21 c2       	rjmp	.+1090   	; 0x121c <__stack+0x11d>
+     dda:	66 e3       	ldi	r22, 0x36	; 54
+     ddc:	71 e0       	ldi	r23, 0x01	; 1
+     dde:	ce 01       	movw	r24, r28
+     de0:	28 d3       	rcall	.+1616   	; 0x1432 <strcmp>
+     de2:	89 2b       	or	r24, r25
+     de4:	11 f5       	brne	.+68     	; 0xe2a <SPIprocessCommand+0x15a>
+		PORTC ^= (1 << PC4);
+     de6:	95 b3       	in	r25, 0x15	; 21
+     de8:	80 e1       	ldi	r24, 0x10	; 16
+     dea:	98 27       	eor	r25, r24
+     dec:	95 bb       	out	0x15, r25	; 21
+		PORTA ^= (1 << PA4); 
+     dee:	9b b3       	in	r25, 0x1b	; 27
+     df0:	89 27       	eor	r24, r25
+     df2:	8b bb       	out	0x1b, r24	; 27
+		uint8_t newLightState_4 = (lastStates_t.light4state == 0) ? 1 : 0;
+     df4:	90 91 60 01 	lds	r25, 0x0160	; 0x800160 <lastStates_t+0x3>
+     df8:	81 e0       	ldi	r24, 0x01	; 1
+     dfa:	91 11       	cpse	r25, r1
+     dfc:	80 e0       	ldi	r24, 0x00	; 0
+		if (newLightState_4 != lastStates_t.light4state){
+     dfe:	90 91 60 01 	lds	r25, 0x0160	; 0x800160 <lastStates_t+0x3>
+     e02:	89 17       	cp	r24, r25
+     e04:	09 f4       	brne	.+2      	; 0xe08 <SPIprocessCommand+0x138>
+			lastStates_t.light4state = newLightState_4;
+     e06:	0a c2       	rjmp	.+1044   	; 0x121c <__stack+0x11d>
+     e08:	cd e5       	ldi	r28, 0x5D	; 93
+     e0a:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light4_address, lastStates_t.light4state);
+     e0c:	8b 83       	std	Y+3, r24	; 0x03
+     e0e:	6b 81       	ldd	r22, Y+3	; 0x03
+     e10:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light4_address>
+     e14:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light4_address+0x1>
+			USART_Transmit(lastStates_t.light4state == 1 ? 'G' : 'g');
+     e18:	58 d9       	rcall	.-3408   	; 0xca <eeprom_write>
+     e1a:	8b 81       	ldd	r24, Y+3	; 0x03
+     e1c:	81 30       	cpi	r24, 0x01	; 1
+     e1e:	11 f4       	brne	.+4      	; 0xe24 <SPIprocessCommand+0x154>
+     e20:	87 e4       	ldi	r24, 0x47	; 71
+     e22:	01 c0       	rjmp	.+2      	; 0xe26 <SPIprocessCommand+0x156>
+     e24:	87 e6       	ldi	r24, 0x67	; 103
+     e26:	09 d2       	rcall	.+1042   	; 0x123a <USART_Transmit>
+		}
+	}
+	
+	else if (strcmp(command, "F0") == 0) {      // Fan 1 ON
+     e28:	f9 c1       	rjmp	.+1010   	; 0x121c <__stack+0x11d>
+     e2a:	69 e3       	ldi	r22, 0x39	; 57
+     e2c:	71 e0       	ldi	r23, 0x01	; 1
+     e2e:	ce 01       	movw	r24, r28
+     e30:	00 d3       	rcall	.+1536   	; 0x1432 <strcmp>
+     e32:	89 2b       	or	r24, r25
+     e34:	09 f0       	breq	.+2      	; 0xe38 <SPIprocessCommand+0x168>
+     e36:	72 c0       	rjmp	.+228    	; 0xf1c <SPIprocessCommand+0x24c>
+		switch(lastStates_t.lastF1state){
+     e38:	80 91 61 01 	lds	r24, 0x0161	; 0x800161 <lastStates_t+0x4>
+     e3c:	83 30       	cpi	r24, 0x03	; 3
+     e3e:	c9 f0       	breq	.+50     	; 0xe72 <SPIprocessCommand+0x1a2>
+     e40:	28 f4       	brcc	.+10     	; 0xe4c <SPIprocessCommand+0x17c>
+     e42:	81 30       	cpi	r24, 0x01	; 1
+     e44:	41 f0       	breq	.+16     	; 0xe56 <SPIprocessCommand+0x186>
+     e46:	82 30       	cpi	r24, 0x02	; 2
+     e48:	69 f0       	breq	.+26     	; 0xe64 <SPIprocessCommand+0x194>
+     e4a:	28 c0       	rjmp	.+80     	; 0xe9c <SPIprocessCommand+0x1cc>
+     e4c:	84 30       	cpi	r24, 0x04	; 4
+			case 1: as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; break;
+     e4e:	c1 f0       	breq	.+48     	; 0xe80 <SPIprocessCommand+0x1b0>
+     e50:	85 30       	cpi	r24, 0x05	; 5
+     e52:	e9 f0       	breq	.+58     	; 0xe8e <SPIprocessCommand+0x1be>
+     e54:	23 c0       	rjmp	.+70     	; 0xe9c <SPIprocessCommand+0x1cc>
+     e56:	90 d9       	rcall	.-3296   	; 0x178 <as1>
+     e58:	81 e4       	ldi	r24, 0x41	; 65
+     e5a:	ef d1       	rcall	.+990    	; 0x123a <USART_Transmit>
+			case 2: as2(); USART_Transmit('C'); lastStates_t.lastF1state = 2; break;
+     e5c:	81 e0       	ldi	r24, 0x01	; 1
+     e5e:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     e62:	54 c0       	rjmp	.+168    	; 0xf0c <SPIprocessCommand+0x23c>
+     e64:	b7 d9       	rcall	.-3218   	; 0x1d4 <as2>
+     e66:	83 e4       	ldi	r24, 0x43	; 67
+     e68:	e8 d1       	rcall	.+976    	; 0x123a <USART_Transmit>
+			case 3: as3(); USART_Transmit('D'); lastStates_t.lastF1state = 3; break;
+     e6a:	82 e0       	ldi	r24, 0x02	; 2
+     e6c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     e70:	4d c0       	rjmp	.+154    	; 0xf0c <SPIprocessCommand+0x23c>
+     e72:	de d9       	rcall	.-3140   	; 0x230 <as3>
+     e74:	84 e4       	ldi	r24, 0x44	; 68
+     e76:	e1 d1       	rcall	.+962    	; 0x123a <USART_Transmit>
+     e78:	83 e0       	ldi	r24, 0x03	; 3
+     e7a:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			case 4: as4(); USART_Transmit('E'); lastStates_t.lastF1state = 4; break;
+     e7e:	46 c0       	rjmp	.+140    	; 0xf0c <SPIprocessCommand+0x23c>
+     e80:	05 da       	rcall	.-3062   	; 0x28c <as4>
+     e82:	85 e4       	ldi	r24, 0x45	; 69
+     e84:	da d1       	rcall	.+948    	; 0x123a <USART_Transmit>
+     e86:	84 e0       	ldi	r24, 0x04	; 4
+     e88:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			case 5: as5(); USART_Transmit('F'); lastStates_t.lastF1state = 5; break;
+     e8c:	3f c0       	rjmp	.+126    	; 0xf0c <SPIprocessCommand+0x23c>
+     e8e:	2c da       	rcall	.-2984   	; 0x2e8 <as5>
+     e90:	86 e4       	ldi	r24, 0x46	; 70
+     e92:	d3 d1       	rcall	.+934    	; 0x123a <USART_Transmit>
+     e94:	85 e0       	ldi	r24, 0x05	; 5
+     e96:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			default:
+			switch(fan1_speed){
+     e9a:	38 c0       	rjmp	.+112    	; 0xf0c <SPIprocessCommand+0x23c>
+     e9c:	80 91 5b 01 	lds	r24, 0x015B	; 0x80015b <fan1_speed>
+     ea0:	83 30       	cpi	r24, 0x03	; 3
+     ea2:	c9 f0       	breq	.+50     	; 0xed6 <SPIprocessCommand+0x206>
+     ea4:	28 f4       	brcc	.+10     	; 0xeb0 <SPIprocessCommand+0x1e0>
+     ea6:	81 30       	cpi	r24, 0x01	; 1
+     ea8:	41 f0       	breq	.+16     	; 0xeba <SPIprocessCommand+0x1ea>
+     eaa:	82 30       	cpi	r24, 0x02	; 2
+     eac:	69 f0       	breq	.+26     	; 0xec8 <SPIprocessCommand+0x1f8>
+     eae:	28 c0       	rjmp	.+80     	; 0xf00 <SPIprocessCommand+0x230>
+     eb0:	84 30       	cpi	r24, 0x04	; 4
+				case 1: as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; break;
+     eb2:	c1 f0       	breq	.+48     	; 0xee4 <SPIprocessCommand+0x214>
+     eb4:	85 30       	cpi	r24, 0x05	; 5
+     eb6:	e9 f0       	breq	.+58     	; 0xef2 <SPIprocessCommand+0x222>
+     eb8:	23 c0       	rjmp	.+70     	; 0xf00 <SPIprocessCommand+0x230>
+     eba:	5e d9       	rcall	.-3396   	; 0x178 <as1>
+     ebc:	81 e4       	ldi	r24, 0x41	; 65
+     ebe:	bd d1       	rcall	.+890    	; 0x123a <USART_Transmit>
+				case 2: as2(); USART_Transmit('C'); lastStates_t.lastF1state = 2; break;
+     ec0:	81 e0       	ldi	r24, 0x01	; 1
+     ec2:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ec6:	22 c0       	rjmp	.+68     	; 0xf0c <SPIprocessCommand+0x23c>
+     ec8:	85 d9       	rcall	.-3318   	; 0x1d4 <as2>
+     eca:	83 e4       	ldi	r24, 0x43	; 67
+     ecc:	b6 d1       	rcall	.+876    	; 0x123a <USART_Transmit>
+				case 3: as3(); USART_Transmit('D'); lastStates_t.lastF1state = 3; break;
+     ece:	82 e0       	ldi	r24, 0x02	; 2
+     ed0:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ed4:	1b c0       	rjmp	.+54     	; 0xf0c <SPIprocessCommand+0x23c>
+     ed6:	ac d9       	rcall	.-3240   	; 0x230 <as3>
+     ed8:	84 e4       	ldi	r24, 0x44	; 68
+     eda:	af d1       	rcall	.+862    	; 0x123a <USART_Transmit>
+     edc:	83 e0       	ldi	r24, 0x03	; 3
+				case 4: as4(); USART_Transmit('E'); lastStates_t.lastF1state = 4; break;
+     ede:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ee2:	14 c0       	rjmp	.+40     	; 0xf0c <SPIprocessCommand+0x23c>
+     ee4:	d3 d9       	rcall	.-3162   	; 0x28c <as4>
+     ee6:	85 e4       	ldi	r24, 0x45	; 69
+     ee8:	a8 d1       	rcall	.+848    	; 0x123a <USART_Transmit>
+				case 5: as5(); USART_Transmit('F'); lastStates_t.lastF1state = 5; break;
+     eea:	84 e0       	ldi	r24, 0x04	; 4
+     eec:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     ef0:	0d c0       	rjmp	.+26     	; 0xf0c <SPIprocessCommand+0x23c>
+     ef2:	fa d9       	rcall	.-3084   	; 0x2e8 <as5>
+     ef4:	86 e4       	ldi	r24, 0x46	; 70
+     ef6:	a1 d1       	rcall	.+834    	; 0x123a <USART_Transmit>
+				default:as1(); USART_Transmit('A'); lastStates_t.lastF1state = 1; break;
+     ef8:	85 e0       	ldi	r24, 0x05	; 5
+     efa:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     efe:	06 c0       	rjmp	.+12     	; 0xf0c <SPIprocessCommand+0x23c>
+     f00:	3b d9       	rcall	.-3466   	; 0x178 <as1>
+     f02:	81 e4       	ldi	r24, 0x41	; 65
+     f04:	9a d1       	rcall	.+820    	; 0x123a <USART_Transmit>
+     f06:	81 e0       	ldi	r24, 0x01	; 1
+			}
+			break;
+		}
+		eeprom_write(fan1_address, lastStates_t.lastF1state);
+     f08:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+     f0c:	60 91 61 01 	lds	r22, 0x0161	; 0x800161 <lastStates_t+0x4>
+     f10:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+     f14:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+     f18:	d8 d8       	rcall	.-3664   	; 0xca <eeprom_write>
+	}
+	else if (strcmp(command, "F1") == 0) {      //Fan 1 OFF
+     f1a:	80 c1       	rjmp	.+768    	; 0x121c <__stack+0x11d>
+     f1c:	6c e3       	ldi	r22, 0x3C	; 60
+     f1e:	71 e0       	ldi	r23, 0x01	; 1
+     f20:	ce 01       	movw	r24, r28
+     f22:	87 d2       	rcall	.+1294   	; 0x1432 <strcmp>
+		USART_Transmit('B');
+     f24:	89 2b       	or	r24, r25
+     f26:	51 f4       	brne	.+20     	; 0xf3c <SPIprocessCommand+0x26c>
+		as0();
+     f28:	82 e4       	ldi	r24, 0x42	; 66
+     f2a:	87 d1       	rcall	.+782    	; 0x123a <USART_Transmit>
+		eeprom_write(fan1_address, 0);
+     f2c:	f7 d8       	rcall	.-3602   	; 0x11c <as0>
+     f2e:	60 e0       	ldi	r22, 0x00	; 0
+     f30:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+     f34:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+	}
+	else if (strcmp(command, "F2") == 0) {         // Fan 2 ON
+     f38:	c8 d8       	rcall	.-3696   	; 0xca <eeprom_write>
+     f3a:	70 c1       	rjmp	.+736    	; 0x121c <__stack+0x11d>
+     f3c:	6f e3       	ldi	r22, 0x3F	; 63
+     f3e:	71 e0       	ldi	r23, 0x01	; 1
+     f40:	ce 01       	movw	r24, r28
+     f42:	77 d2       	rcall	.+1262   	; 0x1432 <strcmp>
+		switch(lastStates_t.lastF2state){
+     f44:	89 2b       	or	r24, r25
+     f46:	09 f0       	breq	.+2      	; 0xf4a <SPIprocessCommand+0x27a>
+     f48:	72 c0       	rjmp	.+228    	; 0x102e <__DATA_REGION_LENGTH__+0x2e>
+     f4a:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <lastStates_t+0x5>
+     f4e:	83 30       	cpi	r24, 0x03	; 3
+     f50:	c9 f0       	breq	.+50     	; 0xf84 <SPIprocessCommand+0x2b4>
+     f52:	28 f4       	brcc	.+10     	; 0xf5e <SPIprocessCommand+0x28e>
+     f54:	81 30       	cpi	r24, 0x01	; 1
+     f56:	41 f0       	breq	.+16     	; 0xf68 <SPIprocessCommand+0x298>
+     f58:	82 30       	cpi	r24, 0x02	; 2
+     f5a:	69 f0       	breq	.+26     	; 0xf76 <SPIprocessCommand+0x2a6>
+     f5c:	28 c0       	rjmp	.+80     	; 0xfae <SPIprocessCommand+0x2de>
+			case 1: af1(); USART_Transmit('K'); lastStates_t.lastF2state = 1; break;
+     f5e:	84 30       	cpi	r24, 0x04	; 4
+     f60:	c1 f0       	breq	.+48     	; 0xf92 <SPIprocessCommand+0x2c2>
+     f62:	85 30       	cpi	r24, 0x05	; 5
+     f64:	e9 f0       	breq	.+58     	; 0xfa0 <SPIprocessCommand+0x2d0>
+     f66:	23 c0       	rjmp	.+70     	; 0xfae <SPIprocessCommand+0x2de>
+     f68:	17 da       	rcall	.-3026   	; 0x398 <af1>
+     f6a:	8b e4       	ldi	r24, 0x4B	; 75
+     f6c:	66 d1       	rcall	.+716    	; 0x123a <USART_Transmit>
+			case 2: af2(); USART_Transmit('Z'); lastStates_t.lastF2state = 2; break;
+     f6e:	81 e0       	ldi	r24, 0x01	; 1
+     f70:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     f74:	54 c0       	rjmp	.+168    	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     f76:	3a da       	rcall	.-2956   	; 0x3ec <af2>
+     f78:	8a e5       	ldi	r24, 0x5A	; 90
+     f7a:	5f d1       	rcall	.+702    	; 0x123a <USART_Transmit>
+			case 3: af3(); USART_Transmit('X'); lastStates_t.lastF2state = 3; break;
+     f7c:	82 e0       	ldi	r24, 0x02	; 2
+     f7e:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     f82:	4d c0       	rjmp	.+154    	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     f84:	5d da       	rcall	.-2886   	; 0x440 <af3>
+     f86:	88 e5       	ldi	r24, 0x58	; 88
+     f88:	58 d1       	rcall	.+688    	; 0x123a <USART_Transmit>
+			case 4: af4(); USART_Transmit('I'); lastStates_t.lastF2state = 4; break;
+     f8a:	83 e0       	ldi	r24, 0x03	; 3
+     f8c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     f90:	46 c0       	rjmp	.+140    	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     f92:	80 da       	rcall	.-2816   	; 0x494 <af4>
+     f94:	89 e4       	ldi	r24, 0x49	; 73
+     f96:	51 d1       	rcall	.+674    	; 0x123a <USART_Transmit>
+			case 5: af5(); USART_Transmit('J'); lastStates_t.lastF2state = 5; break;
+     f98:	84 e0       	ldi	r24, 0x04	; 4
+     f9a:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     f9e:	3f c0       	rjmp	.+126    	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     fa0:	a3 da       	rcall	.-2746   	; 0x4e8 <af5>
+     fa2:	8a e4       	ldi	r24, 0x4A	; 74
+     fa4:	4a d1       	rcall	.+660    	; 0x123a <USART_Transmit>
+			default:
+			switch(fan2_speed){
+     fa6:	85 e0       	ldi	r24, 0x05	; 5
+     fa8:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     fac:	38 c0       	rjmp	.+112    	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     fae:	80 91 5a 01 	lds	r24, 0x015A	; 0x80015a <fan2_speed>
+     fb2:	83 30       	cpi	r24, 0x03	; 3
+     fb4:	c9 f0       	breq	.+50     	; 0xfe8 <SPIprocessCommand+0x318>
+     fb6:	28 f4       	brcc	.+10     	; 0xfc2 <SPIprocessCommand+0x2f2>
+     fb8:	81 30       	cpi	r24, 0x01	; 1
+     fba:	41 f0       	breq	.+16     	; 0xfcc <SPIprocessCommand+0x2fc>
+     fbc:	82 30       	cpi	r24, 0x02	; 2
+     fbe:	69 f0       	breq	.+26     	; 0xfda <SPIprocessCommand+0x30a>
+     fc0:	28 c0       	rjmp	.+80     	; 0x1012 <__DATA_REGION_LENGTH__+0x12>
+				case 1: af1(); USART_Transmit('K'); lastStates_t.lastF2state = 1; break;
+     fc2:	84 30       	cpi	r24, 0x04	; 4
+     fc4:	c1 f0       	breq	.+48     	; 0xff6 <SPIprocessCommand+0x326>
+     fc6:	85 30       	cpi	r24, 0x05	; 5
+     fc8:	e9 f0       	breq	.+58     	; 0x1004 <__DATA_REGION_LENGTH__+0x4>
+     fca:	23 c0       	rjmp	.+70     	; 0x1012 <__DATA_REGION_LENGTH__+0x12>
+     fcc:	e5 d9       	rcall	.-3126   	; 0x398 <af1>
+				case 2: af2(); USART_Transmit('Z'); lastStates_t.lastF2state = 2; break;
+     fce:	8b e4       	ldi	r24, 0x4B	; 75
+     fd0:	34 d1       	rcall	.+616    	; 0x123a <USART_Transmit>
+     fd2:	81 e0       	ldi	r24, 0x01	; 1
+     fd4:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     fd8:	22 c0       	rjmp	.+68     	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     fda:	08 da       	rcall	.-3056   	; 0x3ec <af2>
+				case 3: af3(); USART_Transmit('X'); lastStates_t.lastF2state = 3; break;
+     fdc:	8a e5       	ldi	r24, 0x5A	; 90
+     fde:	2d d1       	rcall	.+602    	; 0x123a <USART_Transmit>
+     fe0:	82 e0       	ldi	r24, 0x02	; 2
+     fe2:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     fe6:	1b c0       	rjmp	.+54     	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     fe8:	2b da       	rcall	.-2986   	; 0x440 <af3>
+				case 4: af4(); USART_Transmit('I'); lastStates_t.lastF2state = 4; break;
+     fea:	88 e5       	ldi	r24, 0x58	; 88
+     fec:	26 d1       	rcall	.+588    	; 0x123a <USART_Transmit>
+     fee:	83 e0       	ldi	r24, 0x03	; 3
+     ff0:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+     ff4:	14 c0       	rjmp	.+40     	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+     ff6:	4e da       	rcall	.-2916   	; 0x494 <af4>
+     ff8:	89 e4       	ldi	r24, 0x49	; 73
+				case 5: af5(); USART_Transmit('J'); lastStates_t.lastF2state = 5; break;
+     ffa:	1f d1       	rcall	.+574    	; 0x123a <USART_Transmit>
+     ffc:	84 e0       	ldi	r24, 0x04	; 4
+     ffe:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    1002:	0d c0       	rjmp	.+26     	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+    1004:	71 da       	rcall	.-2846   	; 0x4e8 <af5>
+    1006:	8a e4       	ldi	r24, 0x4A	; 74
+    1008:	18 d1       	rcall	.+560    	; 0x123a <USART_Transmit>
+				default: af1();USART_Transmit('K'); lastStates_t.lastF2state = 1; break;
+    100a:	85 e0       	ldi	r24, 0x05	; 5
+    100c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    1010:	06 c0       	rjmp	.+12     	; 0x101e <__DATA_REGION_LENGTH__+0x1e>
+    1012:	c2 d9       	rcall	.-3196   	; 0x398 <af1>
+    1014:	8b e4       	ldi	r24, 0x4B	; 75
+    1016:	11 d1       	rcall	.+546    	; 0x123a <USART_Transmit>
+    1018:	81 e0       	ldi	r24, 0x01	; 1
+			}
+			break;
+		}
+		eeprom_write(fan2_address, lastStates_t.lastF2state);
+    101a:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    101e:	60 91 62 01 	lds	r22, 0x0162	; 0x800162 <lastStates_t+0x5>
+    1022:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    1026:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+	}
+	
+	else if (strcmp(command, "F3") == 0) {     //Fan 2 OFF
+    102a:	4f d8       	rcall	.-3938   	; 0xca <eeprom_write>
+    102c:	f7 c0       	rjmp	.+494    	; 0x121c <__stack+0x11d>
+    102e:	62 e4       	ldi	r22, 0x42	; 66
+    1030:	71 e0       	ldi	r23, 0x01	; 1
+		USART_Transmit('W');
+    1032:	ce 01       	movw	r24, r28
+    1034:	fe d1       	rcall	.+1020   	; 0x1432 <strcmp>
+    1036:	89 2b       	or	r24, r25
+		af0();
+    1038:	51 f4       	brne	.+20     	; 0x104e <__DATA_REGION_LENGTH__+0x4e>
+		eeprom_write(fan2_address, 0);
+    103a:	87 e5       	ldi	r24, 0x57	; 87
+    103c:	fe d0       	rcall	.+508    	; 0x123a <USART_Transmit>
+    103e:	82 d9       	rcall	.-3324   	; 0x344 <af0>
+    1040:	60 e0       	ldi	r22, 0x00	; 0
+    1042:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    1046:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+	}
+	
+	else if (strcmp(command, "U1") == 0) {     //Fan 1 Increment
+    104a:	3f d8       	rcall	.-3970   	; 0xca <eeprom_write>
+    104c:	e7 c0       	rjmp	.+462    	; 0x121c <__stack+0x11d>
+    104e:	65 e4       	ldi	r22, 0x45	; 69
+    1050:	71 e0       	ldi	r23, 0x01	; 1
+    1052:	ce 01       	movw	r24, r28
+    1054:	ee d1       	rcall	.+988    	; 0x1432 <strcmp>
+    1056:	89 2b       	or	r24, r25
+		if ((PORTC & (1 << PC2)) == 0) {
+    1058:	09 f0       	breq	.+2      	; 0x105c <__DATA_REGION_LENGTH__+0x5c>
+			USART_Transmit('A');
+    105a:	38 c0       	rjmp	.+112    	; 0x10cc <__DATA_REGION_LENGTH__+0xcc>
+    105c:	aa 99       	sbic	0x15, 2	; 21
+    105e:	07 c0       	rjmp	.+14     	; 0x106e <__DATA_REGION_LENGTH__+0x6e>
+			as1();
+    1060:	81 e4       	ldi	r24, 0x41	; 65
+    1062:	eb d0       	rcall	.+470    	; 0x123a <USART_Transmit>
+			lastStates_t.lastF1state = 1;
+    1064:	89 d8       	rcall	.-3822   	; 0x178 <as1>
+    1066:	81 e0       	ldi	r24, 0x01	; 1
+		}
+		else if ((PORTC & (1 << PC1)) == 0) {
+    1068:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			USART_Transmit('C');
+    106c:	27 c0       	rjmp	.+78     	; 0x10bc <__DATA_REGION_LENGTH__+0xbc>
+    106e:	a9 99       	sbic	0x15, 1	; 21
+    1070:	07 c0       	rjmp	.+14     	; 0x1080 <__DATA_REGION_LENGTH__+0x80>
+			as2();
+    1072:	83 e4       	ldi	r24, 0x43	; 67
+			lastStates_t.lastF1state = 2;
+    1074:	e2 d0       	rcall	.+452    	; 0x123a <USART_Transmit>
+    1076:	ae d8       	rcall	.-3748   	; 0x1d4 <as2>
+    1078:	82 e0       	ldi	r24, 0x02	; 2
+		}
+		else if ((PORTC & (1 << PC0)) == 0) {
+    107a:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			USART_Transmit('D');
+    107e:	1e c0       	rjmp	.+60     	; 0x10bc <__DATA_REGION_LENGTH__+0xbc>
+    1080:	a8 99       	sbic	0x15, 0	; 21
+			as3();
+    1082:	07 c0       	rjmp	.+14     	; 0x1092 <__DATA_REGION_LENGTH__+0x92>
+			lastStates_t.lastF1state = 3;
+    1084:	84 e4       	ldi	r24, 0x44	; 68
+    1086:	d9 d0       	rcall	.+434    	; 0x123a <USART_Transmit>
+    1088:	d3 d8       	rcall	.-3674   	; 0x230 <as3>
+    108a:	83 e0       	ldi	r24, 0x03	; 3
+		}
+		else if ((PORTG & (1 << PG1)) == 0) {
+    108c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    1090:	15 c0       	rjmp	.+42     	; 0x10bc <__DATA_REGION_LENGTH__+0xbc>
+    1092:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			USART_Transmit('E');
+			as4();
+    1096:	81 fd       	sbrc	r24, 1
+    1098:	07 c0       	rjmp	.+14     	; 0x10a8 <__DATA_REGION_LENGTH__+0xa8>
+			lastStates_t.lastF1state = 4;
+    109a:	85 e4       	ldi	r24, 0x45	; 69
+    109c:	ce d0       	rcall	.+412    	; 0x123a <USART_Transmit>
+    109e:	f6 d8       	rcall	.-3604   	; 0x28c <as4>
+    10a0:	84 e0       	ldi	r24, 0x04	; 4
+		}
+		else if ((PORTG & (1 << PG0)) == 0) {
+    10a2:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    10a6:	0a c0       	rjmp	.+20     	; 0x10bc <__DATA_REGION_LENGTH__+0xbc>
+    10a8:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			USART_Transmit('F');
+    10ac:	80 fd       	sbrc	r24, 0
+    10ae:	06 c0       	rjmp	.+12     	; 0x10bc <__DATA_REGION_LENGTH__+0xbc>
+			as5();
+    10b0:	86 e4       	ldi	r24, 0x46	; 70
+			lastStates_t.lastF1state = 5;
+    10b2:	c3 d0       	rcall	.+390    	; 0x123a <USART_Transmit>
+    10b4:	19 d9       	rcall	.-3534   	; 0x2e8 <as5>
+    10b6:	85 e0       	ldi	r24, 0x05	; 5
+		}
+		eeprom_write(fan1_address, lastStates_t.lastF1state);
+    10b8:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    10bc:	60 91 61 01 	lds	r22, 0x0161	; 0x800161 <lastStates_t+0x4>
+    10c0:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+    10c4:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+	}
+	
+	else if (strcmp(command, "U2") == 0) {        // Fan 2 Increment
+    10c8:	00 d8       	rcall	.-4096   	; 0xca <eeprom_write>
+    10ca:	a8 c0       	rjmp	.+336    	; 0x121c <__stack+0x11d>
+    10cc:	68 e4       	ldi	r22, 0x48	; 72
+    10ce:	71 e0       	ldi	r23, 0x01	; 1
+    10d0:	ce 01       	movw	r24, r28
+		if ((PORTD & (1 << PD5)) == 0) {
+    10d2:	af d1       	rcall	.+862    	; 0x1432 <strcmp>
+    10d4:	89 2b       	or	r24, r25
+			USART_Transmit('K');
+    10d6:	09 f0       	breq	.+2      	; 0x10da <__DATA_REGION_LENGTH__+0xda>
+    10d8:	37 c0       	rjmp	.+110    	; 0x1148 <__stack+0x49>
+			af1();
+    10da:	95 99       	sbic	0x12, 5	; 18
+    10dc:	07 c0       	rjmp	.+14     	; 0x10ec <__DATA_REGION_LENGTH__+0xec>
+			lastStates_t.lastF2state = 1;
+    10de:	8b e4       	ldi	r24, 0x4B	; 75
+    10e0:	ac d0       	rcall	.+344    	; 0x123a <USART_Transmit>
+    10e2:	5a d9       	rcall	.-3404   	; 0x398 <af1>
+		}
+		else if ((PORTD & (1 << PD4)) == 0) {
+    10e4:	81 e0       	ldi	r24, 0x01	; 1
+    10e6:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			USART_Transmit('Z');
+    10ea:	25 c0       	rjmp	.+74     	; 0x1136 <__stack+0x37>
+    10ec:	94 99       	sbic	0x12, 4	; 18
+			af2();
+    10ee:	07 c0       	rjmp	.+14     	; 0x10fe <__DATA_REGION_LENGTH__+0xfe>
+    10f0:	8a e5       	ldi	r24, 0x5A	; 90
+			lastStates_t.lastF2state = 2;
+    10f2:	a3 d0       	rcall	.+326    	; 0x123a <USART_Transmit>
+    10f4:	7b d9       	rcall	.-3338   	; 0x3ec <af2>
+    10f6:	82 e0       	ldi	r24, 0x02	; 2
+		}
+		
+		else if ((PORTD & (1 << PD3)) == 0) {
+    10f8:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			USART_Transmit('X');
+    10fc:	1c c0       	rjmp	.+56     	; 0x1136 <__stack+0x37>
+    10fe:	93 99       	sbic	0x12, 3	; 18
+    1100:	07 c0       	rjmp	.+14     	; 0x1110 <__stack+0x11>
+			af3();
+    1102:	88 e5       	ldi	r24, 0x58	; 88
+    1104:	9a d0       	rcall	.+308    	; 0x123a <USART_Transmit>
+			lastStates_t.lastF2state = 3;
+    1106:	9c d9       	rcall	.-3272   	; 0x440 <af3>
+    1108:	83 e0       	ldi	r24, 0x03	; 3
+    110a:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+		}
+		else if ((PORTD & (1 << PD2)) == 0) {
+    110e:	13 c0       	rjmp	.+38     	; 0x1136 <__stack+0x37>
+    1110:	92 99       	sbic	0x12, 2	; 18
+			USART_Transmit('I');
+    1112:	07 c0       	rjmp	.+14     	; 0x1122 <__stack+0x23>
+    1114:	89 e4       	ldi	r24, 0x49	; 73
+			af4();
+    1116:	91 d0       	rcall	.+290    	; 0x123a <USART_Transmit>
+    1118:	bd d9       	rcall	.-3206   	; 0x494 <af4>
+			lastStates_t.lastF2state = 4;
+    111a:	84 e0       	ldi	r24, 0x04	; 4
+    111c:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    1120:	0a c0       	rjmp	.+20     	; 0x1136 <__stack+0x37>
+		}
+		
+		else if ((PORTG & (1 << PG4)) == 0) {
+    1122:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			USART_Transmit('J');
+    1126:	84 fd       	sbrc	r24, 4
+    1128:	06 c0       	rjmp	.+12     	; 0x1136 <__stack+0x37>
+    112a:	8a e4       	ldi	r24, 0x4A	; 74
+			af5();
+    112c:	86 d0       	rcall	.+268    	; 0x123a <USART_Transmit>
+    112e:	dc d9       	rcall	.-3144   	; 0x4e8 <af5>
+			lastStates_t.lastF2state = 5;
+    1130:	85 e0       	ldi	r24, 0x05	; 5
+		}
+		eeprom_write(fan2_address, lastStates_t.lastF2state);
+    1132:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    1136:	60 91 62 01 	lds	r22, 0x0162	; 0x800162 <lastStates_t+0x5>
+    113a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    113e:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+	}
+	
+	else if (strcmp(command, "D1") == 0) {    // Fan 1 Decrement
+    1142:	0e 94 65 00 	call	0xca	; 0xca <eeprom_write>
+    1146:	6a c0       	rjmp	.+212    	; 0x121c <__stack+0x11d>
+    1148:	6b e4       	ldi	r22, 0x4B	; 75
+    114a:	71 e0       	ldi	r23, 0x01	; 1
+		if ((PORTG & (1 << PG0)) != 0) {
+    114c:	ce 01       	movw	r24, r28
+    114e:	71 d1       	rcall	.+738    	; 0x1432 <strcmp>
+    1150:	89 2b       	or	r24, r25
+			USART_Transmit('E');
+    1152:	89 f5       	brne	.+98     	; 0x11b6 <__stack+0xb7>
+    1154:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			as4();
+    1158:	80 ff       	sbrs	r24, 0
+    115a:	07 c0       	rjmp	.+14     	; 0x116a <__stack+0x6b>
+			lastStates_t.lastF1state = 4;
+    115c:	85 e4       	ldi	r24, 0x45	; 69
+    115e:	6d d0       	rcall	.+218    	; 0x123a <USART_Transmit>
+    1160:	95 d8       	rcall	.-3798   	; 0x28c <as4>
+    1162:	84 e0       	ldi	r24, 0x04	; 4
+		}
+		else if ((PORTG & (1 << PG1)) != 0) {
+    1164:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    1168:	1d c0       	rjmp	.+58     	; 0x11a4 <__stack+0xa5>
+    116a:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			USART_Transmit('D');
+    116e:	81 ff       	sbrs	r24, 1
+    1170:	07 c0       	rjmp	.+14     	; 0x1180 <__stack+0x81>
+			as3();
+    1172:	84 e4       	ldi	r24, 0x44	; 68
+    1174:	62 d0       	rcall	.+196    	; 0x123a <USART_Transmit>
+			lastStates_t.lastF1state = 3;
+    1176:	5c d8       	rcall	.-3912   	; 0x230 <as3>
+    1178:	83 e0       	ldi	r24, 0x03	; 3
+    117a:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+		}
+		else if ((PORTC & (1 << PC0)) != 0) {
+    117e:	12 c0       	rjmp	.+36     	; 0x11a4 <__stack+0xa5>
+    1180:	a8 9b       	sbis	0x15, 0	; 21
+			USART_Transmit('C');
+    1182:	07 c0       	rjmp	.+14     	; 0x1192 <__stack+0x93>
+    1184:	83 e4       	ldi	r24, 0x43	; 67
+    1186:	59 d0       	rcall	.+178    	; 0x123a <USART_Transmit>
+			as2();
+    1188:	25 d8       	rcall	.-4022   	; 0x1d4 <as2>
+    118a:	82 e0       	ldi	r24, 0x02	; 2
+			lastStates_t.lastF1state = 2;
+    118c:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    1190:	09 c0       	rjmp	.+18     	; 0x11a4 <__stack+0xa5>
+    1192:	a9 9b       	sbis	0x15, 1	; 21
+		}
+		else if ((PORTC & (1 << PC1)) != 0) {
+    1194:	07 c0       	rjmp	.+14     	; 0x11a4 <__stack+0xa5>
+    1196:	81 e4       	ldi	r24, 0x41	; 65
+			USART_Transmit('A');
+    1198:	50 d0       	rcall	.+160    	; 0x123a <USART_Transmit>
+    119a:	0e 94 bc 00 	call	0x178	; 0x178 <as1>
+			as1();
+    119e:	81 e0       	ldi	r24, 0x01	; 1
+    11a0:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			lastStates_t.lastF1state = 1;
+    11a4:	60 91 61 01 	lds	r22, 0x0161	; 0x800161 <lastStates_t+0x4>
+		}
+		eeprom_write(fan1_address,lastStates_t.lastF1state);
+    11a8:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+    11ac:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+    11b0:	0e 94 65 00 	call	0xca	; 0xca <eeprom_write>
+    11b4:	33 c0       	rjmp	.+102    	; 0x121c <__stack+0x11d>
+    11b6:	6e e4       	ldi	r22, 0x4E	; 78
+    11b8:	71 e0       	ldi	r23, 0x01	; 1
+	}
+	
+	else if (strcmp(command, "D2") == 0) {  //Fan 2 Decrement
+    11ba:	ce 01       	movw	r24, r28
+    11bc:	3a d1       	rcall	.+628    	; 0x1432 <strcmp>
+    11be:	89 2b       	or	r24, r25
+    11c0:	69 f5       	brne	.+90     	; 0x121c <__stack+0x11d>
+    11c2:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+    11c6:	84 ff       	sbrs	r24, 4
+		if ((PORTG & (1 << PG4)) != 0) {
+    11c8:	07 c0       	rjmp	.+14     	; 0x11d8 <__stack+0xd9>
+    11ca:	89 e4       	ldi	r24, 0x49	; 73
+    11cc:	36 d0       	rcall	.+108    	; 0x123a <USART_Transmit>
+    11ce:	62 d9       	rcall	.-3388   	; 0x494 <af4>
+			USART_Transmit('I');
+    11d0:	84 e0       	ldi	r24, 0x04	; 4
+    11d2:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			af4();
+    11d6:	1a c0       	rjmp	.+52     	; 0x120c <__stack+0x10d>
+    11d8:	92 9b       	sbis	0x12, 2	; 18
+			lastStates_t.lastF2state = 4;
+    11da:	07 c0       	rjmp	.+14     	; 0x11ea <__stack+0xeb>
+    11dc:	88 e5       	ldi	r24, 0x58	; 88
+    11de:	2d d0       	rcall	.+90     	; 0x123a <USART_Transmit>
+    11e0:	2f d9       	rcall	.-3490   	; 0x440 <af3>
+		}
+		else if ((PORTD & (1 << PD2)) != 0) {
+    11e2:	83 e0       	ldi	r24, 0x03	; 3
+    11e4:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			USART_Transmit('X');
+    11e8:	11 c0       	rjmp	.+34     	; 0x120c <__stack+0x10d>
+    11ea:	93 9b       	sbis	0x12, 3	; 18
+			af3();
+    11ec:	07 c0       	rjmp	.+14     	; 0x11fc <__stack+0xfd>
+    11ee:	8a e5       	ldi	r24, 0x5A	; 90
+			lastStates_t.lastF2state = 3;
+    11f0:	24 d0       	rcall	.+72     	; 0x123a <USART_Transmit>
+    11f2:	fc d8       	rcall	.-3592   	; 0x3ec <af2>
+    11f4:	82 e0       	ldi	r24, 0x02	; 2
+    11f6:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+		}
+		else if ((PORTD & (1 << PD3)) != 0) {
+    11fa:	08 c0       	rjmp	.+16     	; 0x120c <__stack+0x10d>
+			USART_Transmit('Z');
+    11fc:	94 9b       	sbis	0x12, 4	; 18
+    11fe:	06 c0       	rjmp	.+12     	; 0x120c <__stack+0x10d>
+    1200:	8b e4       	ldi	r24, 0x4B	; 75
+			af2();
+    1202:	1b d0       	rcall	.+54     	; 0x123a <USART_Transmit>
+    1204:	c9 d8       	rcall	.-3694   	; 0x398 <af1>
+			lastStates_t.lastF2state = 2;
+    1206:	81 e0       	ldi	r24, 0x01	; 1
+    1208:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    120c:	60 91 62 01 	lds	r22, 0x0162	; 0x800162 <lastStates_t+0x5>
+		}
+		else if ((PORTD & (1 << PD4)) != 0) {
+    1210:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+			USART_Transmit('K');
+    1214:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+			af1();
+    1218:	0e 94 65 00 	call	0xca	; 0xca <eeprom_write>
+			lastStates_t.lastF2state = 1;
+    121c:	df 91       	pop	r29
+    121e:	cf 91       	pop	r28
+    1220:	08 95       	ret
+
+00001222 <USART_Init>:
+#include "uart.h"
+#include "main.h"
+
+void USART_Init(unsigned int ubrr)
+{
+	UBRR0H = (unsigned char)(ubrr >> 8);
+    1222:	90 93 90 00 	sts	0x0090, r25	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+	UBRR0L = (unsigned char)ubrr;
+    1226:	89 b9       	out	0x09, r24	; 9
+	UCSR0B = (1 << RXEN0) | (1 << TXEN0);
+    1228:	88 e1       	ldi	r24, 0x18	; 24
+    122a:	8a b9       	out	0x0a, r24	; 10
+	UCSR0B |= (1<<RXCIE0);
+    122c:	8a b1       	in	r24, 0x0a	; 10
+    122e:	80 68       	ori	r24, 0x80	; 128
+    1230:	8a b9       	out	0x0a, r24	; 10
+	UCSR0C = (1 << USBS0) | (3 << UCSZ00);
+    1232:	8e e0       	ldi	r24, 0x0E	; 14
+    1234:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+    1238:	08 95       	ret
+
+0000123a <USART_Transmit>:
+}
+
+void USART_Transmit(uint8_t data) {
+	while (!(UCSR0A & (1 << UDRE0)));
+    123a:	5d 9b       	sbis	0x0b, 5	; 11
+    123c:	fe cf       	rjmp	.-4      	; 0x123a <USART_Transmit>
+	UDR0 = data;
+    123e:	8c b9       	out	0x0c, r24	; 12
+    1240:	08 95       	ret
+
+00001242 <USART_Receive>:
+}
+
+unsigned char USART_Receive(void)
+{
+	while (!(UCSR0A & (1 << RXC0)));
+    1242:	5f 9b       	sbis	0x0b, 7	; 11
+    1244:	fe cf       	rjmp	.-4      	; 0x1242 <USART_Receive>
+	return UDR0;
+    1246:	8c b1       	in	r24, 0x0c	; 12
+    1248:	08 95       	ret
+
+0000124a <UARTprocessCommand>:
+ */ 
+
+#include "uartDataProcess.h"
+
+void UARTprocessCommand(unsigned char receivedData){
+	if (receivedData == 'L') {
+    124a:	8c 34       	cpi	r24, 0x4C	; 76
+    124c:	89 f4       	brne	.+34     	; 0x1270 <UARTprocessCommand+0x26>
+		receivedData = USART_Receive();
+    124e:	f9 df       	rcall	.-14     	; 0x1242 <USART_Receive>
+		if (receivedData == '1') {
+    1250:	81 33       	cpi	r24, 0x31	; 49
+			light1_ON();
+    1252:	11 f4       	brne	.+4      	; 0x1258 <UARTprocessCommand+0xe>
+    1254:	9d d9       	rcall	.-3270   	; 0x590 <light1_ON>
+    1256:	03 c0       	rjmp	.+6      	; 0x125e <UARTprocessCommand+0x14>
+		}
+		else if (receivedData == '0') {
+    1258:	80 33       	cpi	r24, 0x30	; 48
+			light1_OFF();
+    125a:	09 f4       	brne	.+2      	; 0x125e <UARTprocessCommand+0x14>
+    125c:	a3 d9       	rcall	.-3258   	; 0x5a4 <light1_OFF>
+		}
+		eeprom_write(light1_address, lastStates_t.light1state);
+    125e:	60 91 5d 01 	lds	r22, 0x015D	; 0x80015d <lastStates_t>
+    1262:	80 91 58 01 	lds	r24, 0x0158	; 0x800158 <light1_address>
+    1266:	90 91 59 01 	lds	r25, 0x0159	; 0x800159 <light1_address+0x1>
+    126a:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+	}
+	else if (receivedData == 'M') {
+    126e:	08 95       	ret
+    1270:	8d 34       	cpi	r24, 0x4D	; 77
+		receivedData = USART_Receive();
+    1272:	89 f4       	brne	.+34     	; 0x1296 <UARTprocessCommand+0x4c>
+		if (receivedData == '1') {
+    1274:	e6 df       	rcall	.-52     	; 0x1242 <USART_Receive>
+    1276:	81 33       	cpi	r24, 0x31	; 49
+			light2_ON();
+    1278:	11 f4       	brne	.+4      	; 0x127e <UARTprocessCommand+0x34>
+    127a:	9d d9       	rcall	.-3270   	; 0x5b6 <light2_ON>
+		}
+		else if (receivedData == '0') {
+    127c:	03 c0       	rjmp	.+6      	; 0x1284 <UARTprocessCommand+0x3a>
+    127e:	80 33       	cpi	r24, 0x30	; 48
+			light2_OFF();
+    1280:	09 f4       	brne	.+2      	; 0x1284 <UARTprocessCommand+0x3a>
+    1282:	a3 d9       	rcall	.-3258   	; 0x5ca <light2_OFF>
+		}
+		eeprom_write(light2_address, lastStates_t.light2state);
+    1284:	60 91 5e 01 	lds	r22, 0x015E	; 0x80015e <lastStates_t+0x1>
+    1288:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <light2_address>
+    128c:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <light2_address+0x1>
+    1290:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+	}
+	else if (receivedData == 'N') {
+    1294:	08 95       	ret
+    1296:	8e 34       	cpi	r24, 0x4E	; 78
+		receivedData = USART_Receive();
+    1298:	89 f4       	brne	.+34     	; 0x12bc <UARTprocessCommand+0x72>
+		if (receivedData == '1') {
+    129a:	d3 df       	rcall	.-90     	; 0x1242 <USART_Receive>
+    129c:	81 33       	cpi	r24, 0x31	; 49
+			light3_ON();
+    129e:	11 f4       	brne	.+4      	; 0x12a4 <UARTprocessCommand+0x5a>
+    12a0:	9d d9       	rcall	.-3270   	; 0x5dc <light3_ON>
+    12a2:	03 c0       	rjmp	.+6      	; 0x12aa <UARTprocessCommand+0x60>
+		}
+		else if (receivedData == '0') {
+    12a4:	80 33       	cpi	r24, 0x30	; 48
+    12a6:	09 f4       	brne	.+2      	; 0x12aa <UARTprocessCommand+0x60>
+			light3_OFF();
+    12a8:	a3 d9       	rcall	.-3258   	; 0x5f0 <light3_OFF>
+    12aa:	60 91 5f 01 	lds	r22, 0x015F	; 0x80015f <lastStates_t+0x2>
+		}
+		eeprom_write(light3_address, lastStates_t.light3state);
+    12ae:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <light3_address>
+    12b2:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <light3_address+0x1>
+    12b6:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+	}
+	else if (receivedData == 'P') {
+    12ba:	08 95       	ret
+		receivedData = USART_Receive();
+    12bc:	80 35       	cpi	r24, 0x50	; 80
+    12be:	89 f4       	brne	.+34     	; 0x12e2 <UARTprocessCommand+0x98>
+		if (receivedData == '1') {
+    12c0:	c0 df       	rcall	.-128    	; 0x1242 <USART_Receive>
+    12c2:	81 33       	cpi	r24, 0x31	; 49
+			light4_ON();
+    12c4:	11 f4       	brne	.+4      	; 0x12ca <UARTprocessCommand+0x80>
+    12c6:	9d d9       	rcall	.-3270   	; 0x602 <light4_ON>
+    12c8:	03 c0       	rjmp	.+6      	; 0x12d0 <UARTprocessCommand+0x86>
+		}
+		else if (receivedData == '0') {
+    12ca:	80 33       	cpi	r24, 0x30	; 48
+    12cc:	09 f4       	brne	.+2      	; 0x12d0 <UARTprocessCommand+0x86>
+			light4_OFF();
+    12ce:	a3 d9       	rcall	.-3258   	; 0x616 <light4_OFF>
+    12d0:	60 91 60 01 	lds	r22, 0x0160	; 0x800160 <lastStates_t+0x3>
+		}
+		eeprom_write(light4_address, lastStates_t.light4state);
+    12d4:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light4_address>
+    12d8:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light4_address+0x1>
+    12dc:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+    12e0:	08 95       	ret
+	}
+	else if (receivedData == 'F') {
+    12e2:	86 34       	cpi	r24, 0x46	; 70
+    12e4:	09 f0       	breq	.+2      	; 0x12e8 <UARTprocessCommand+0x9e>
+		receivedData = USART_Receive();
+    12e6:	4e c0       	rjmp	.+156    	; 0x1384 <UARTprocessCommand+0x13a>
+		if (receivedData == '1') {
+    12e8:	ac df       	rcall	.-168    	; 0x1242 <USART_Receive>
+    12ea:	81 33       	cpi	r24, 0x31	; 49
+			as1();
+    12ec:	d9 f5       	brne	.+118    	; 0x1364 <UARTprocessCommand+0x11a>
+    12ee:	0e 94 bc 00 	call	0x178	; 0x178 <as1>
+			lastStates_t.lastF1state = 1;
+    12f2:	81 e0       	ldi	r24, 0x01	; 1
+    12f4:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+			fan1_speed = 1;
+    12f8:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+			receivedData = USART_Receive();
+    12fc:	a2 df       	rcall	.-188    	; 0x1242 <USART_Receive>
+			if (receivedData == 'U') {
+    12fe:	85 35       	cpi	r24, 0x55	; 85
+    1300:	41 f5       	brne	.+80     	; 0x1352 <UARTprocessCommand+0x108>
+				receivedData = USART_Receive();
+    1302:	9f df       	rcall	.-194    	; 0x1242 <USART_Receive>
+    1304:	82 33       	cpi	r24, 0x32	; 50
+				if (receivedData == '2') {
+    1306:	41 f4       	brne	.+16     	; 0x1318 <UARTprocessCommand+0xce>
+    1308:	0e 94 ea 00 	call	0x1d4	; 0x1d4 <as2>
+					as2();
+    130c:	82 e0       	ldi	r24, 0x02	; 2
+					lastStates_t.lastF1state = 2;
+    130e:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    1312:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+					fan1_speed = 2;
+    1316:	1d c0       	rjmp	.+58     	; 0x1352 <UARTprocessCommand+0x108>
+    1318:	83 33       	cpi	r24, 0x33	; 51
+				}
+				else if (receivedData == '3') {
+    131a:	41 f4       	brne	.+16     	; 0x132c <UARTprocessCommand+0xe2>
+    131c:	0e 94 18 01 	call	0x230	; 0x230 <as3>
+					as3();
+    1320:	83 e0       	ldi	r24, 0x03	; 3
+					lastStates_t.lastF1state = 3;
+    1322:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    1326:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+					fan1_speed = 3;
+    132a:	13 c0       	rjmp	.+38     	; 0x1352 <UARTprocessCommand+0x108>
+    132c:	84 33       	cpi	r24, 0x34	; 52
+				}
+				else if (receivedData == '4') {
+    132e:	41 f4       	brne	.+16     	; 0x1340 <UARTprocessCommand+0xf6>
+    1330:	0e 94 46 01 	call	0x28c	; 0x28c <as4>
+					as4();
+    1334:	84 e0       	ldi	r24, 0x04	; 4
+					lastStates_t.lastF1state = 4;
+    1336:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    133a:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+					fan1_speed = 4;
+    133e:	09 c0       	rjmp	.+18     	; 0x1352 <UARTprocessCommand+0x108>
+    1340:	85 33       	cpi	r24, 0x35	; 53
+				}
+				else if (receivedData == '5') {
+    1342:	39 f4       	brne	.+14     	; 0x1352 <UARTprocessCommand+0x108>
+    1344:	0e 94 74 01 	call	0x2e8	; 0x2e8 <as5>
+					as5();
+    1348:	85 e0       	ldi	r24, 0x05	; 5
+					lastStates_t.lastF1state = 5;
+    134a:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <lastStates_t+0x4>
+    134e:	80 93 5b 01 	sts	0x015B, r24	; 0x80015b <fan1_speed>
+					fan1_speed = 5;
+    1352:	60 91 61 01 	lds	r22, 0x0161	; 0x800161 <lastStates_t+0x4>
+				}
+			}
+			eeprom_write(fan1_address, lastStates_t.lastF1state);
+    1356:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+    135a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+    135e:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+    1362:	08 95       	ret
+    1364:	80 33       	cpi	r24, 0x30	; 48
+		}
+		else if (receivedData == '0') {
+    1366:	09 f0       	breq	.+2      	; 0x136a <UARTprocessCommand+0x120>
+    1368:	63 c0       	rjmp	.+198    	; 0x1430 <UARTprocessCommand+0x1e6>
+    136a:	0e 94 8e 00 	call	0x11c	; 0x11c <as0>
+			as0();
+			lastStates_t.lastF1state = 0;
+    136e:	ed e5       	ldi	r30, 0x5D	; 93
+    1370:	f1 e0       	ldi	r31, 0x01	; 1
+			eeprom_write(fan1_address, lastStates_t.lastF1state);
+    1372:	14 82       	std	Z+4, r1	; 0x04
+    1374:	64 81       	ldd	r22, Z+4	; 0x04
+    1376:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <fan1_address>
+    137a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <fan1_address+0x1>
+    137e:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+		}
+	}
+	
+	else if (receivedData == 'G') {
+    1382:	08 95       	ret
+		receivedData = USART_Receive();
+    1384:	87 34       	cpi	r24, 0x47	; 71
+		if (receivedData == '1') {
+    1386:	09 f0       	breq	.+2      	; 0x138a <UARTprocessCommand+0x140>
+    1388:	48 c0       	rjmp	.+144    	; 0x141a <UARTprocessCommand+0x1d0>
+			af1();
+    138a:	5b df       	rcall	.-330    	; 0x1242 <USART_Receive>
+    138c:	81 33       	cpi	r24, 0x31	; 49
+			lastStates_t.lastF2state = 1;
+    138e:	b1 f5       	brne	.+108    	; 0x13fc <UARTprocessCommand+0x1b2>
+    1390:	03 d8       	rcall	.-4090   	; 0x398 <af1>
+    1392:	81 e0       	ldi	r24, 0x01	; 1
+			fan2_speed = 1;
+    1394:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+			receivedData = USART_Receive();
+    1398:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+			if (receivedData == 'H') {
+    139c:	52 df       	rcall	.-348    	; 0x1242 <USART_Receive>
+				receivedData = USART_Receive();
+    139e:	88 34       	cpi	r24, 0x48	; 72
+    13a0:	21 f5       	brne	.+72     	; 0x13ea <UARTprocessCommand+0x1a0>
+				if (receivedData == '2') {
+    13a2:	4f df       	rcall	.-354    	; 0x1242 <USART_Receive>
+    13a4:	82 33       	cpi	r24, 0x32	; 50
+					af2();
+    13a6:	39 f4       	brne	.+14     	; 0x13b6 <UARTprocessCommand+0x16c>
+					lastStates_t.lastF2state = 2;
+    13a8:	21 d8       	rcall	.-4030   	; 0x3ec <af2>
+    13aa:	82 e0       	ldi	r24, 0x02	; 2
+    13ac:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+					fan2_speed = 2;
+    13b0:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+				}
+				else if (receivedData == '3') {
+    13b4:	1a c0       	rjmp	.+52     	; 0x13ea <UARTprocessCommand+0x1a0>
+					af3();
+    13b6:	83 33       	cpi	r24, 0x33	; 51
+    13b8:	39 f4       	brne	.+14     	; 0x13c8 <UARTprocessCommand+0x17e>
+					lastStates_t.lastF2state = 3;
+    13ba:	42 d8       	rcall	.-3964   	; 0x440 <af3>
+    13bc:	83 e0       	ldi	r24, 0x03	; 3
+    13be:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+					fan2_speed = 3;
+    13c2:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+				}
+				else if (receivedData == '4') {
+    13c6:	11 c0       	rjmp	.+34     	; 0x13ea <UARTprocessCommand+0x1a0>
+    13c8:	84 33       	cpi	r24, 0x34	; 52
+					af4();
+    13ca:	39 f4       	brne	.+14     	; 0x13da <UARTprocessCommand+0x190>
+    13cc:	63 d8       	rcall	.-3898   	; 0x494 <af4>
+					lastStates_t.lastF2state = 4;
+    13ce:	84 e0       	ldi	r24, 0x04	; 4
+    13d0:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+					fan2_speed = 4;
+    13d4:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+    13d8:	08 c0       	rjmp	.+16     	; 0x13ea <UARTprocessCommand+0x1a0>
+				}
+				else if (receivedData == '5') {
+    13da:	85 33       	cpi	r24, 0x35	; 53
+    13dc:	31 f4       	brne	.+12     	; 0x13ea <UARTprocessCommand+0x1a0>
+					af5();
+    13de:	84 d8       	rcall	.-3832   	; 0x4e8 <af5>
+    13e0:	85 e0       	ldi	r24, 0x05	; 5
+					lastStates_t.lastF2state = 5;
+    13e2:	80 93 62 01 	sts	0x0162, r24	; 0x800162 <lastStates_t+0x5>
+    13e6:	80 93 5a 01 	sts	0x015A, r24	; 0x80015a <fan2_speed>
+					fan2_speed = 5;
+    13ea:	60 91 62 01 	lds	r22, 0x0162	; 0x800162 <lastStates_t+0x5>
+				}
+			}
+			eeprom_write(fan2_address, lastStates_t.lastF2state);
+    13ee:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    13f2:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+    13f6:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+    13fa:	08 95       	ret
+		}
+		else if (receivedData == '0') {
+    13fc:	80 33       	cpi	r24, 0x30	; 48
+    13fe:	c1 f4       	brne	.+48     	; 0x1430 <UARTprocessCommand+0x1e6>
+			af0();
+    1400:	0e 94 a2 01 	call	0x344	; 0x344 <af0>
+			lastStates_t.lastF2state = 0;
+    1404:	ed e5       	ldi	r30, 0x5D	; 93
+			eeprom_write(fan2_address, lastStates_t.lastF2state);
+    1406:	f1 e0       	ldi	r31, 0x01	; 1
+    1408:	15 82       	std	Z+5, r1	; 0x05
+    140a:	65 81       	ldd	r22, Z+5	; 0x05
+    140c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    1410:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+		}
+	}
+	else if (receivedData == 'Z') {
+    1414:	0c 94 65 00 	jmp	0xca	; 0xca <eeprom_write>
+		receivedData = USART_Receive();
+    1418:	08 95       	ret
+    141a:	8a 35       	cpi	r24, 0x5A	; 90
+		if (receivedData == '1') {
+    141c:	49 f4       	brne	.+18     	; 0x1430 <UARTprocessCommand+0x1e6>
+    141e:	11 df       	rcall	.-478    	; 0x1242 <USART_Receive>
+			handle_All_ON();
+    1420:	81 33       	cpi	r24, 0x31	; 49
+    1422:	11 f4       	brne	.+4      	; 0x1428 <UARTprocessCommand+0x1de>
+    1424:	e8 da       	rcall	.-2608   	; 0x9f6 <handle_All_ON>
+		}else if (receivedData == '0') {
+    1426:	03 c0       	rjmp	.+6      	; 0x142e <UARTprocessCommand+0x1e4>
+    1428:	80 33       	cpi	r24, 0x30	; 48
+			handle_All_OFF();
+    142a:	09 f4       	brne	.+2      	; 0x142e <UARTprocessCommand+0x1e4>
+    142c:	e9 db       	rcall	.-2094   	; 0xc00 <handle_All_OFF>
+		}
+		write_All_States_ToEEPROM();
+    142e:	f3 cb       	rjmp	.-2074   	; 0xc16 <write_All_States_ToEEPROM>
+    1430:	08 95       	ret
+
+00001432 <strcmp>:
+    1432:	fb 01       	movw	r30, r22
+    1434:	dc 01       	movw	r26, r24
+    1436:	8d 91       	ld	r24, X+
+    1438:	01 90       	ld	r0, Z+
+    143a:	80 19       	sub	r24, r0
+    143c:	01 10       	cpse	r0, r1
+    143e:	d9 f3       	breq	.-10     	; 0x1436 <strcmp+0x4>
+    1440:	99 0b       	sbc	r25, r25
+    1442:	08 95       	ret
+
+00001444 <_exit>:
+    1444:	f8 94       	cli
+
+00001446 <__stop_program>:
+    1446:	ff cf       	rjmp	.-2      	; 0x1446 <__stop_program>

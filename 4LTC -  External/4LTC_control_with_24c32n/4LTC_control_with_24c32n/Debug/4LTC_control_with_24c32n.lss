@@ -1,0 +1,1447 @@
+
+4LTC_control_with_24c32n.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000036  00800100  0000085e  000008f2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000085e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000b  00800136  00800136  00000928  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000928  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000958  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001a8  00000000  00000000  00000998  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001882  00000000  00000000  00000b40  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d41  00000000  00000000  000023c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000e5c  00000000  00000000  00003103  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000003a4  00000000  00000000  00003f60  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000077f  00000000  00000000  00004304  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000783  00000000  00000000  00004a83  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000150  00000000  00000000  00005206  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	5e c1       	rjmp	.+700    	; 0x2ee <__vector_12>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	6d c1       	rjmp	.+730    	; 0x320 <__vector_17>
+  46:	00 00       	nop
+  48:	bd c1       	rjmp	.+890    	; 0x3c4 <__vector_18>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ee e5       	ldi	r30, 0x5E	; 94
+  a0:	f8 e0       	ldi	r31, 0x08	; 8
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a6 33       	cpi	r26, 0x36	; 54
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a6 e3       	ldi	r26, 0x36	; 54
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a1 34       	cpi	r26, 0x41	; 65
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	78 d2       	rcall	.+1264   	; 0x5b4 <main>
+  c4:	ca c3       	rjmp	.+1940   	; 0x85a <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <eeprom_write>:
+ */ 
+
+#include "eeprom.h"
+#include "main.h"
+
+void eeprom_write(uint16_t address, uint8_t data) {
+  c8:	1f 93       	push	r17
+  ca:	cf 93       	push	r28
+  cc:	df 93       	push	r29
+  ce:	d8 2f       	mov	r29, r24
+  d0:	19 2f       	mov	r17, r25
+  d2:	c6 2f       	mov	r28, r22
+	i2c_start();
+  d4:	28 d0       	rcall	.+80     	; 0x126 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 0);
+  d6:	80 ea       	ldi	r24, 0xA0	; 160
+  d8:	36 d0       	rcall	.+108    	; 0x146 <i2c_write>
+	i2c_write((address >> 8) & 0xFF);
+  da:	81 2f       	mov	r24, r17
+  dc:	34 d0       	rcall	.+104    	; 0x146 <i2c_write>
+	i2c_write(address & 0xFF);
+  de:	8d 2f       	mov	r24, r29
+	i2c_write(data);
+  e0:	32 d0       	rcall	.+100    	; 0x146 <i2c_write>
+  e2:	8c 2f       	mov	r24, r28
+  e4:	30 d0       	rcall	.+96     	; 0x146 <i2c_write>
+	i2c_stop();
+  e6:	27 d0       	rcall	.+78     	; 0x136 <i2c_stop>
+  e8:	df 91       	pop	r29
+}
+  ea:	cf 91       	pop	r28
+  ec:	1f 91       	pop	r17
+  ee:	08 95       	ret
+
+000000f0 <eeprom_read>:
+  f0:	cf 93       	push	r28
+
+uint8_t eeprom_read(uint16_t address) {
+  f2:	df 93       	push	r29
+  f4:	c8 2f       	mov	r28, r24
+  f6:	d9 2f       	mov	r29, r25
+	uint8_t data;
+	i2c_start();
+  f8:	16 d0       	rcall	.+44     	; 0x126 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 0);
+  fa:	80 ea       	ldi	r24, 0xA0	; 160
+  fc:	24 d0       	rcall	.+72     	; 0x146 <i2c_write>
+	i2c_write((address >> 8) & 0xFF);
+  fe:	8d 2f       	mov	r24, r29
+ 100:	22 d0       	rcall	.+68     	; 0x146 <i2c_write>
+	i2c_write(address & 0xFF);
+ 102:	8c 2f       	mov	r24, r28
+ 104:	20 d0       	rcall	.+64     	; 0x146 <i2c_write>
+	i2c_start();
+ 106:	0f d0       	rcall	.+30     	; 0x126 <i2c_start>
+	i2c_write((EEPROM_ADDR << 1) | 1);
+ 108:	81 ea       	ldi	r24, 0xA1	; 161
+ 10a:	1d d0       	rcall	.+58     	; 0x146 <i2c_write>
+ 10c:	26 d0       	rcall	.+76     	; 0x15a <i2c_read_nack>
+	data = i2c_read_nack();
+ 10e:	c8 2f       	mov	r28, r24
+ 110:	12 d0       	rcall	.+36     	; 0x136 <i2c_stop>
+ 112:	8c 2f       	mov	r24, r28
+	i2c_stop();
+ 114:	df 91       	pop	r29
+ 116:	cf 91       	pop	r28
+	return data;
+ 118:	08 95       	ret
+
+0000011a <i2c_init>:
+ 11a:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <__TEXT_REGION_LENGTH__+0x7e0071>
+ 11e:	88 e4       	ldi	r24, 0x48	; 72
+
+uint8_t i2c_read_ack(void) {
+	TWCR = (1<<TWEN) | (1<<TWINT) | (1<<TWEA);
+	while (!(TWCR & (1<<TWINT)));
+	return TWDR;
+}
+ 120:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__TEXT_REGION_LENGTH__+0x7e0070>
+ 124:	08 95       	ret
+
+00000126 <i2c_start>:
+ 126:	84 ea       	ldi	r24, 0xA4	; 164
+ 128:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 12c:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 130:	88 23       	and	r24, r24
+ 132:	e4 f7       	brge	.-8      	; 0x12c <i2c_start+0x6>
+ 134:	08 95       	ret
+
+00000136 <i2c_stop>:
+ 136:	84 e9       	ldi	r24, 0x94	; 148
+ 138:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 13c:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 140:	84 fd       	sbrc	r24, 4
+ 142:	fc cf       	rjmp	.-8      	; 0x13c <i2c_stop+0x6>
+ 144:	08 95       	ret
+
+00000146 <i2c_write>:
+ 146:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+ 14a:	84 e8       	ldi	r24, 0x84	; 132
+ 14c:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 150:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 154:	88 23       	and	r24, r24
+ 156:	e4 f7       	brge	.-8      	; 0x150 <i2c_write+0xa>
+ 158:	08 95       	ret
+
+0000015a <i2c_read_nack>:
+
+uint8_t i2c_read_nack(void) {
+	TWCR = (1<<TWEN) | (1<<TWINT);
+ 15a:	84 e8       	ldi	r24, 0x84	; 132
+ 15c:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!(TWCR & (1<<TWINT)));
+ 160:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+ 164:	88 23       	and	r24, r24
+ 166:	e4 f7       	brge	.-8      	; 0x160 <i2c_read_nack+0x6>
+	return TWDR;
+ 168:	80 91 73 00 	lds	r24, 0x0073	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+}
+ 16c:	08 95       	ret
+
+0000016e <light1_ON>:
+ */ 
+
+#include "light.h"
+
+void light1_ON(){
+	PORTD |= (1 << PD6);
+ 16e:	82 b3       	in	r24, 0x12	; 18
+ 170:	80 64       	ori	r24, 0x40	; 64
+ 172:	82 bb       	out	0x12, r24	; 18
+	PORTF |= (1 << PF3);
+ 174:	e2 e6       	ldi	r30, 0x62	; 98
+ 176:	f0 e0       	ldi	r31, 0x00	; 0
+ 178:	80 81       	ld	r24, Z
+ 17a:	88 60       	ori	r24, 0x08	; 8
+ 17c:	80 83       	st	Z, r24
+	lastState.lightState_1 = 1;
+ 17e:	ea e3       	ldi	r30, 0x3A	; 58
+ 180:	f1 e0       	ldi	r31, 0x01	; 1
+ 182:	81 e0       	ldi	r24, 0x01	; 1
+ 184:	80 83       	st	Z, r24
+	eeprom_write(light1_address, lastState.lightState_1);
+ 186:	60 81       	ld	r22, Z
+ 188:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 18c:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+ 190:	9b cf       	rjmp	.-202    	; 0xc8 <eeprom_write>
+ 192:	08 95       	ret
+
+00000194 <light1_OFF>:
+}
+
+void light1_OFF(){
+	PORTD &= ~(1 << PD6);
+ 194:	82 b3       	in	r24, 0x12	; 18
+ 196:	8f 7b       	andi	r24, 0xBF	; 191
+ 198:	82 bb       	out	0x12, r24	; 18
+	PORTF &= ~(1 << PF3);
+ 19a:	e2 e6       	ldi	r30, 0x62	; 98
+ 19c:	f0 e0       	ldi	r31, 0x00	; 0
+ 19e:	80 81       	ld	r24, Z
+ 1a0:	87 7f       	andi	r24, 0xF7	; 247
+ 1a2:	80 83       	st	Z, r24
+	lastState.lightState_1 = 0;
+ 1a4:	ea e3       	ldi	r30, 0x3A	; 58
+ 1a6:	f1 e0       	ldi	r31, 0x01	; 1
+ 1a8:	10 82       	st	Z, r1
+	eeprom_write(light1_address, lastState.lightState_1);
+ 1aa:	60 81       	ld	r22, Z
+ 1ac:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 1b0:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+ 1b4:	89 cf       	rjmp	.-238    	; 0xc8 <eeprom_write>
+ 1b6:	08 95       	ret
+
+000001b8 <light2_ON>:
+}
+
+void light2_ON(){
+	PORTD |= (1 << PD5);
+ 1b8:	82 b3       	in	r24, 0x12	; 18
+ 1ba:	80 62       	ori	r24, 0x20	; 32
+ 1bc:	82 bb       	out	0x12, r24	; 18
+	PORTF |= (1 << PF4);
+ 1be:	e2 e6       	ldi	r30, 0x62	; 98
+ 1c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1c2:	80 81       	ld	r24, Z
+ 1c4:	80 61       	ori	r24, 0x10	; 16
+ 1c6:	80 83       	st	Z, r24
+	lastState.lightState_2 = 1;
+ 1c8:	ea e3       	ldi	r30, 0x3A	; 58
+ 1ca:	f1 e0       	ldi	r31, 0x01	; 1
+ 1cc:	81 e0       	ldi	r24, 0x01	; 1
+ 1ce:	81 83       	std	Z+1, r24	; 0x01
+	eeprom_write(light2_address, lastState.lightState_2);
+ 1d0:	61 81       	ldd	r22, Z+1	; 0x01
+ 1d2:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 1d6:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+ 1da:	76 cf       	rjmp	.-276    	; 0xc8 <eeprom_write>
+ 1dc:	08 95       	ret
+
+000001de <light2_OFF>:
+}
+
+void light2_OFF(){
+	PORTD &= ~(1 << PD5);
+ 1de:	82 b3       	in	r24, 0x12	; 18
+ 1e0:	8f 7d       	andi	r24, 0xDF	; 223
+ 1e2:	82 bb       	out	0x12, r24	; 18
+	PORTF &= ~(1 << PF4);
+ 1e4:	e2 e6       	ldi	r30, 0x62	; 98
+ 1e6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1e8:	80 81       	ld	r24, Z
+ 1ea:	8f 7e       	andi	r24, 0xEF	; 239
+ 1ec:	80 83       	st	Z, r24
+	lastState.lightState_2 = 0;
+ 1ee:	ea e3       	ldi	r30, 0x3A	; 58
+ 1f0:	f1 e0       	ldi	r31, 0x01	; 1
+ 1f2:	11 82       	std	Z+1, r1	; 0x01
+	eeprom_write(light2_address, lastState.lightState_2);
+ 1f4:	61 81       	ldd	r22, Z+1	; 0x01
+ 1f6:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 1fa:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+ 1fe:	64 cf       	rjmp	.-312    	; 0xc8 <eeprom_write>
+ 200:	08 95       	ret
+
+00000202 <light3_ON>:
+}
+
+void light3_ON(){
+	PORTD |= (1 << PD7);
+ 202:	82 b3       	in	r24, 0x12	; 18
+ 204:	80 68       	ori	r24, 0x80	; 128
+ 206:	82 bb       	out	0x12, r24	; 18
+	PORTF |= (1 << PF5);
+ 208:	e2 e6       	ldi	r30, 0x62	; 98
+ 20a:	f0 e0       	ldi	r31, 0x00	; 0
+ 20c:	80 81       	ld	r24, Z
+ 20e:	80 62       	ori	r24, 0x20	; 32
+ 210:	80 83       	st	Z, r24
+	lastState.lightState_3 = 1;
+ 212:	ea e3       	ldi	r30, 0x3A	; 58
+ 214:	f1 e0       	ldi	r31, 0x01	; 1
+ 216:	81 e0       	ldi	r24, 0x01	; 1
+ 218:	82 83       	std	Z+2, r24	; 0x02
+	eeprom_write(light3_address, lastState.lightState_3);
+ 21a:	62 81       	ldd	r22, Z+2	; 0x02
+ 21c:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+ 220:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+ 224:	51 cf       	rjmp	.-350    	; 0xc8 <eeprom_write>
+ 226:	08 95       	ret
+
+00000228 <light3_OFF>:
+}
+
+void light3_OFF(){
+	PORTD &= ~(1 << PD7);
+ 228:	82 b3       	in	r24, 0x12	; 18
+ 22a:	8f 77       	andi	r24, 0x7F	; 127
+ 22c:	82 bb       	out	0x12, r24	; 18
+	PORTF &= ~(1 << PF5);
+ 22e:	e2 e6       	ldi	r30, 0x62	; 98
+ 230:	f0 e0       	ldi	r31, 0x00	; 0
+ 232:	80 81       	ld	r24, Z
+ 234:	8f 7d       	andi	r24, 0xDF	; 223
+ 236:	80 83       	st	Z, r24
+	lastState.lightState_3 = 0;
+ 238:	ea e3       	ldi	r30, 0x3A	; 58
+ 23a:	f1 e0       	ldi	r31, 0x01	; 1
+ 23c:	12 82       	std	Z+2, r1	; 0x02
+	eeprom_write(light3_address, lastState.lightState_3);
+ 23e:	62 81       	ldd	r22, Z+2	; 0x02
+ 240:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+ 244:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+ 248:	3f cf       	rjmp	.-386    	; 0xc8 <eeprom_write>
+ 24a:	08 95       	ret
+
+0000024c <light4_ON>:
+}
+
+void light4_ON(){
+	PORTD |= (1 << PD4);
+ 24c:	82 b3       	in	r24, 0x12	; 18
+ 24e:	80 61       	ori	r24, 0x10	; 16
+ 250:	82 bb       	out	0x12, r24	; 18
+	PORTF |= (1 << PF6);
+ 252:	e2 e6       	ldi	r30, 0x62	; 98
+ 254:	f0 e0       	ldi	r31, 0x00	; 0
+ 256:	80 81       	ld	r24, Z
+ 258:	80 64       	ori	r24, 0x40	; 64
+ 25a:	80 83       	st	Z, r24
+	lastState.lightState_4 = 1;
+ 25c:	ea e3       	ldi	r30, 0x3A	; 58
+ 25e:	f1 e0       	ldi	r31, 0x01	; 1
+ 260:	81 e0       	ldi	r24, 0x01	; 1
+ 262:	83 83       	std	Z+3, r24	; 0x03
+	eeprom_write(light4_address, lastState.lightState_4);
+ 264:	63 81       	ldd	r22, Z+3	; 0x03
+ 266:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 26a:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 26e:	2c cf       	rjmp	.-424    	; 0xc8 <eeprom_write>
+ 270:	08 95       	ret
+
+00000272 <light4_OFF>:
+}
+
+void light4_OFF(){
+	PORTD &= ~(1 << PD4);
+ 272:	82 b3       	in	r24, 0x12	; 18
+ 274:	8f 7e       	andi	r24, 0xEF	; 239
+ 276:	82 bb       	out	0x12, r24	; 18
+	PORTF &= ~(1 << PF6);
+ 278:	e2 e6       	ldi	r30, 0x62	; 98
+ 27a:	f0 e0       	ldi	r31, 0x00	; 0
+ 27c:	80 81       	ld	r24, Z
+ 27e:	8f 7b       	andi	r24, 0xBF	; 191
+ 280:	80 83       	st	Z, r24
+	lastState.lightState_4 = 0;
+ 282:	ea e3       	ldi	r30, 0x3A	; 58
+ 284:	f1 e0       	ldi	r31, 0x01	; 1
+ 286:	13 82       	std	Z+3, r1	; 0x03
+	eeprom_write(light4_address, lastState.lightState_4);
+ 288:	63 81       	ldd	r22, Z+3	; 0x03
+ 28a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 28e:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 292:	1a cf       	rjmp	.-460    	; 0xc8 <eeprom_write>
+ 294:	08 95       	ret
+
+00000296 <calculateCRC>:
+	static uint16_t counter = 0;
+	if (timer_flag) {
+		timer_flag = 0;
+		counter++;
+		if (counter >= ms) {
+			counter = 0;                       // Reset the counter
+ 296:	dc 01       	movw	r26, r24
+ 298:	40 e0       	ldi	r20, 0x00	; 0
+ 29a:	50 e0       	ldi	r21, 0x00	; 0
+ 29c:	80 e0       	ldi	r24, 0x00	; 0
+ 29e:	15 c0       	rjmp	.+42     	; 0x2ca <calculateCRC+0x34>
+ 2a0:	fd 01       	movw	r30, r26
+ 2a2:	e4 0f       	add	r30, r20
+ 2a4:	f5 1f       	adc	r31, r21
+ 2a6:	90 81       	ld	r25, Z
+ 2a8:	89 27       	eor	r24, r25
+ 2aa:	20 e0       	ldi	r18, 0x00	; 0
+ 2ac:	0a c0       	rjmp	.+20     	; 0x2c2 <calculateCRC+0x2c>
+ 2ae:	88 23       	and	r24, r24
+ 2b0:	34 f4       	brge	.+12     	; 0x2be <calculateCRC+0x28>
+ 2b2:	90 e0       	ldi	r25, 0x00	; 0
+ 2b4:	88 0f       	add	r24, r24
+ 2b6:	99 1f       	adc	r25, r25
+ 2b8:	97 e0       	ldi	r25, 0x07	; 7
+ 2ba:	89 27       	eor	r24, r25
+ 2bc:	01 c0       	rjmp	.+2      	; 0x2c0 <calculateCRC+0x2a>
+ 2be:	88 0f       	add	r24, r24
+ 2c0:	2f 5f       	subi	r18, 0xFF	; 255
+ 2c2:	28 30       	cpi	r18, 0x08	; 8
+ 2c4:	a0 f3       	brcs	.-24     	; 0x2ae <calculateCRC+0x18>
+ 2c6:	4f 5f       	subi	r20, 0xFF	; 255
+ 2c8:	5f 4f       	sbci	r21, 0xFF	; 255
+ 2ca:	46 17       	cp	r20, r22
+ 2cc:	57 07       	cpc	r21, r23
+ 2ce:	40 f3       	brcs	.-48     	; 0x2a0 <calculateCRC+0xa>
+ 2d0:	08 95       	ret
+
+000002d2 <timer1_init>:
+ 2d2:	8e b5       	in	r24, 0x2e	; 46
+ 2d4:	88 60       	ori	r24, 0x08	; 8
+ 2d6:	8e bd       	out	0x2e, r24	; 46
+ 2d8:	88 e2       	ldi	r24, 0x28	; 40
+ 2da:	9e e0       	ldi	r25, 0x0E	; 14
+ 2dc:	9b bd       	out	0x2b, r25	; 43
+ 2de:	8a bd       	out	0x2a, r24	; 42
+ 2e0:	87 b7       	in	r24, 0x37	; 55
+ 2e2:	80 61       	ori	r24, 0x10	; 16
+ 2e4:	87 bf       	out	0x37, r24	; 55
+ 2e6:	8e b5       	in	r24, 0x2e	; 46
+ 2e8:	85 60       	ori	r24, 0x05	; 5
+ 2ea:	8e bd       	out	0x2e, r24	; 46
+ 2ec:	08 95       	ret
+
+000002ee <__vector_12>:
+ 2ee:	1f 92       	push	r1
+ 2f0:	0f 92       	push	r0
+ 2f2:	0f b6       	in	r0, 0x3f	; 63
+ 2f4:	0f 92       	push	r0
+ 2f6:	11 24       	eor	r1, r1
+ 2f8:	8f 93       	push	r24
+ 2fa:	81 e0       	ldi	r24, 0x01	; 1
+ 2fc:	80 93 40 01 	sts	0x0140, r24	; 0x800140 <timer_flag>
+ 300:	8f 91       	pop	r24
+ 302:	0f 90       	pop	r0
+ 304:	0f be       	out	0x3f, r0	; 63
+ 306:	0f 90       	pop	r0
+ 308:	1f 90       	pop	r1
+ 30a:	18 95       	reti
+
+0000030c <SPI_init_slave>:
+		}
+	}
+}
+
+void SPI_init_slave() {
+	DDRB |= (1 << DDB4);
+ 30c:	87 b3       	in	r24, 0x17	; 23
+ 30e:	80 61       	ori	r24, 0x10	; 16
+ 310:	87 bb       	out	0x17, r24	; 23
+	SPCR |= (1 << SPE);
+ 312:	8d b1       	in	r24, 0x0d	; 13
+ 314:	80 64       	ori	r24, 0x40	; 64
+ 316:	8d b9       	out	0x0d, r24	; 13
+	SPCR |= (1 << SPIE);                       // Enable SPI interrupt
+ 318:	8d b1       	in	r24, 0x0d	; 13
+ 31a:	80 68       	ori	r24, 0x80	; 128
+ 31c:	8d b9       	out	0x0d, r24	; 13
+ 31e:	08 95       	ret
+
+00000320 <__vector_17>:
+}
+
+ISR(SPI_STC_vect) {
+ 320:	1f 92       	push	r1
+ 322:	0f 92       	push	r0
+ 324:	0f b6       	in	r0, 0x3f	; 63
+ 326:	0f 92       	push	r0
+ 328:	11 24       	eor	r1, r1
+ 32a:	0b b6       	in	r0, 0x3b	; 59
+ 32c:	0f 92       	push	r0
+ 32e:	2f 93       	push	r18
+ 330:	3f 93       	push	r19
+ 332:	4f 93       	push	r20
+ 334:	5f 93       	push	r21
+ 336:	6f 93       	push	r22
+ 338:	7f 93       	push	r23
+ 33a:	8f 93       	push	r24
+ 33c:	9f 93       	push	r25
+ 33e:	af 93       	push	r26
+ 340:	bf 93       	push	r27
+ 342:	ef 93       	push	r30
+ 344:	ff 93       	push	r31
+	uint8_t receivedSPIData = SPDR;
+ 346:	9f b1       	in	r25, 0x0f	; 15
+	static char receivedBytes[2];
+	static uint8_t receivedCRC = 0;
+	static uint8_t byteIndex = 0;
+
+	if (byteIndex < 2) {
+ 348:	80 91 39 01 	lds	r24, 0x0139	; 0x800139 <byteIndex.1975>
+ 34c:	82 30       	cpi	r24, 0x02	; 2
+ 34e:	48 f4       	brcc	.+18     	; 0x362 <__vector_17+0x42>
+		receivedBytes[byteIndex] = receivedSPIData;
+ 350:	e8 2f       	mov	r30, r24
+ 352:	f0 e0       	ldi	r31, 0x00	; 0
+ 354:	e9 5c       	subi	r30, 0xC9	; 201
+ 356:	fe 4f       	sbci	r31, 0xFE	; 254
+ 358:	90 83       	st	Z, r25
+		byteIndex++;
+ 35a:	8f 5f       	subi	r24, 0xFF	; 255
+ 35c:	80 93 39 01 	sts	0x0139, r24	; 0x800139 <byteIndex.1975>
+ 360:	07 c0       	rjmp	.+14     	; 0x370 <__vector_17+0x50>
+		} else if (byteIndex == 2) {
+ 362:	82 30       	cpi	r24, 0x02	; 2
+ 364:	29 f4       	brne	.+10     	; 0x370 <__vector_17+0x50>
+		receivedCRC = receivedSPIData;
+ 366:	90 93 36 01 	sts	0x0136, r25	; 0x800136 <__data_end>
+		byteIndex++;
+ 36a:	8f 5f       	subi	r24, 0xFF	; 255
+ 36c:	80 93 39 01 	sts	0x0139, r24	; 0x800139 <byteIndex.1975>
+	}
+
+	if (byteIndex == 3) {
+ 370:	80 91 39 01 	lds	r24, 0x0139	; 0x800139 <byteIndex.1975>
+ 374:	83 30       	cpi	r24, 0x03	; 3
+ 376:	81 f4       	brne	.+32     	; 0x398 <__vector_17+0x78>
+		uint8_t calculatedCRC = calculateCRC((uint8_t *)receivedBytes, 2);
+ 378:	62 e0       	ldi	r22, 0x02	; 2
+ 37a:	70 e0       	ldi	r23, 0x00	; 0
+ 37c:	87 e3       	ldi	r24, 0x37	; 55
+ 37e:	91 e0       	ldi	r25, 0x01	; 1
+ 380:	8a df       	rcall	.-236    	; 0x296 <calculateCRC>
+		if (calculatedCRC == receivedCRC) {
+ 382:	90 91 36 01 	lds	r25, 0x0136	; 0x800136 <__data_end>
+ 386:	89 13       	cpse	r24, r25
+ 388:	05 c0       	rjmp	.+10     	; 0x394 <__vector_17+0x74>
+			receivedBytes[2] = '\0';
+ 38a:	10 92 39 01 	sts	0x0139, r1	; 0x800139 <byteIndex.1975>
+			SPIprocessCommand(receivedBytes);
+ 38e:	87 e3       	ldi	r24, 0x37	; 55
+ 390:	91 e0       	ldi	r25, 0x01	; 1
+ 392:	15 d1       	rcall	.+554    	; 0x5be <SPIprocessCommand>
+		}
+		byteIndex = 0;
+ 394:	10 92 39 01 	sts	0x0139, r1	; 0x800139 <byteIndex.1975>
+	}
+	SPSR |= (1 << SPIF);
+ 398:	8e b1       	in	r24, 0x0e	; 14
+ 39a:	80 68       	ori	r24, 0x80	; 128
+ 39c:	8e b9       	out	0x0e, r24	; 14
+}
+ 39e:	ff 91       	pop	r31
+ 3a0:	ef 91       	pop	r30
+ 3a2:	bf 91       	pop	r27
+ 3a4:	af 91       	pop	r26
+ 3a6:	9f 91       	pop	r25
+ 3a8:	8f 91       	pop	r24
+ 3aa:	7f 91       	pop	r23
+ 3ac:	6f 91       	pop	r22
+ 3ae:	5f 91       	pop	r21
+ 3b0:	4f 91       	pop	r20
+ 3b2:	3f 91       	pop	r19
+ 3b4:	2f 91       	pop	r18
+ 3b6:	0f 90       	pop	r0
+ 3b8:	0b be       	out	0x3b, r0	; 59
+ 3ba:	0f 90       	pop	r0
+ 3bc:	0f be       	out	0x3f, r0	; 63
+ 3be:	0f 90       	pop	r0
+ 3c0:	1f 90       	pop	r1
+ 3c2:	18 95       	reti
+
+000003c4 <__vector_18>:
+
+ISR(USART0_RX_vect){
+ 3c4:	1f 92       	push	r1
+ 3c6:	0f 92       	push	r0
+ 3c8:	0f b6       	in	r0, 0x3f	; 63
+ 3ca:	0f 92       	push	r0
+ 3cc:	11 24       	eor	r1, r1
+ 3ce:	0b b6       	in	r0, 0x3b	; 59
+ 3d0:	0f 92       	push	r0
+ 3d2:	2f 93       	push	r18
+ 3d4:	3f 93       	push	r19
+ 3d6:	4f 93       	push	r20
+ 3d8:	5f 93       	push	r21
+ 3da:	6f 93       	push	r22
+ 3dc:	7f 93       	push	r23
+ 3de:	8f 93       	push	r24
+ 3e0:	9f 93       	push	r25
+ 3e2:	af 93       	push	r26
+ 3e4:	bf 93       	push	r27
+ 3e6:	ef 93       	push	r30
+ 3e8:	ff 93       	push	r31
+	unsigned char receivedData = UDR0;
+ 3ea:	8c b1       	in	r24, 0x0c	; 12
+	UARTprocessCommand(receivedData);
+ 3ec:	b3 d1       	rcall	.+870    	; 0x754 <UARTprocessCommand>
+}
+ 3ee:	ff 91       	pop	r31
+ 3f0:	ef 91       	pop	r30
+ 3f2:	bf 91       	pop	r27
+ 3f4:	af 91       	pop	r26
+ 3f6:	9f 91       	pop	r25
+ 3f8:	8f 91       	pop	r24
+ 3fa:	7f 91       	pop	r23
+ 3fc:	6f 91       	pop	r22
+ 3fe:	5f 91       	pop	r21
+ 400:	4f 91       	pop	r20
+ 402:	3f 91       	pop	r19
+ 404:	2f 91       	pop	r18
+ 406:	0f 90       	pop	r0
+ 408:	0b be       	out	0x3b, r0	; 59
+ 40a:	0f 90       	pop	r0
+ 40c:	0f be       	out	0x3f, r0	; 63
+ 40e:	0f 90       	pop	r0
+ 410:	1f 90       	pop	r1
+ 412:	18 95       	reti
+
+00000414 <setup>:
+
+void setup(void){
+	i2c_init();
+ 414:	82 de       	rcall	.-764    	; 0x11a <i2c_init>
+	SPI_init_slave();                   
+ 416:	7a df       	rcall	.-268    	; 0x30c <SPI_init_slave>
+	timer1_init();
+ 418:	5c df       	rcall	.-328    	; 0x2d2 <timer1_init>
+	USART_Init(MYUBRR);                 
+ 41a:	87 e6       	ldi	r24, 0x67	; 103
+ 41c:	90 e0       	ldi	r25, 0x00	; 0
+ 41e:	86 d1       	rcall	.+780    	; 0x72c <USART_Init>
+ 420:	81 b3       	in	r24, 0x11	; 17
+
+	DDRD|=(1<<7)|(1<<5)|(1<<6)|(1<<4);
+ 422:	80 6f       	ori	r24, 0xF0	; 240
+ 424:	81 bb       	out	0x11, r24	; 17
+ 426:	e1 e6       	ldi	r30, 0x61	; 97
+	DDRF|=(1<<4)|(1<<5)|(1<<6)|(1<<3)|(1<<2)|(1<<1)|(1<<0);
+ 428:	f0 e0       	ldi	r31, 0x00	; 0
+ 42a:	80 81       	ld	r24, Z
+ 42c:	8f 67       	ori	r24, 0x7F	; 127
+ 42e:	80 83       	st	Z, r24
+ 430:	08 95       	ret
+
+00000432 <readStatesFromEEPROM>:
+ 432:	ef 92       	push	r14
+}
+
+void readStatesFromEEPROM(void){
+ 434:	ff 92       	push	r15
+ 436:	1f 93       	push	r17
+ 438:	cf 93       	push	r28
+ 43a:	df 93       	push	r29
+ 43c:	cd b7       	in	r28, 0x3d	; 61
+ 43e:	de b7       	in	r29, 0x3e	; 62
+ 440:	28 97       	sbiw	r28, 0x08	; 8
+ 442:	0f b6       	in	r0, 0x3f	; 63
+ 444:	f8 94       	cli
+ 446:	de bf       	out	0x3e, r29	; 62
+ 448:	0f be       	out	0x3f, r0	; 63
+ 44a:	cd bf       	out	0x3d, r28	; 61
+	uint16_t addresses[] = {light1_address, light2_address, light3_address, light4_address};
+ 44c:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 450:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+ 454:	9a 83       	std	Y+2, r25	; 0x02
+ 456:	89 83       	std	Y+1, r24	; 0x01
+ 458:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 45c:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+ 460:	9c 83       	std	Y+4, r25	; 0x04
+ 462:	8b 83       	std	Y+3, r24	; 0x03
+ 464:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+ 468:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+ 46c:	9e 83       	std	Y+6, r25	; 0x06
+ 46e:	8d 83       	std	Y+5, r24	; 0x05
+ 470:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 474:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 478:	98 87       	std	Y+8, r25	; 0x08
+ 47a:	8f 83       	std	Y+7, r24	; 0x07
+	uint8_t *state_ptr = (uint8_t *)&lastState;
+	for (uint8_t i = 0; i < sizeof(lastState); i++) {
+ 47c:	10 e0       	ldi	r17, 0x00	; 0
+ 47e:	14 c0       	rjmp	.+40     	; 0x4a8 <readStatesFromEEPROM+0x76>
+		state_ptr[i] = eeprom_read(addresses[i]);
+ 480:	81 2f       	mov	r24, r17
+ 482:	90 e0       	ldi	r25, 0x00	; 0
+ 484:	9c 01       	movw	r18, r24
+ 486:	26 5c       	subi	r18, 0xC6	; 198
+ 488:	3e 4f       	sbci	r19, 0xFE	; 254
+ 48a:	79 01       	movw	r14, r18
+ 48c:	88 0f       	add	r24, r24
+ 48e:	99 1f       	adc	r25, r25
+ 490:	e1 e0       	ldi	r30, 0x01	; 1
+ 492:	f0 e0       	ldi	r31, 0x00	; 0
+ 494:	ec 0f       	add	r30, r28
+ 496:	fd 1f       	adc	r31, r29
+ 498:	e8 0f       	add	r30, r24
+ 49a:	f9 1f       	adc	r31, r25
+ 49c:	80 81       	ld	r24, Z
+ 49e:	91 81       	ldd	r25, Z+1	; 0x01
+ 4a0:	27 de       	rcall	.-946    	; 0xf0 <eeprom_read>
+ 4a2:	f7 01       	movw	r30, r14
+ 4a4:	80 83       	st	Z, r24
+}
+
+void readStatesFromEEPROM(void){
+	uint16_t addresses[] = {light1_address, light2_address, light3_address, light4_address};
+	uint8_t *state_ptr = (uint8_t *)&lastState;
+	for (uint8_t i = 0; i < sizeof(lastState); i++) {
+ 4a6:	1f 5f       	subi	r17, 0xFF	; 255
+ 4a8:	14 30       	cpi	r17, 0x04	; 4
+ 4aa:	50 f3       	brcs	.-44     	; 0x480 <readStatesFromEEPROM+0x4e>
+		state_ptr[i] = eeprom_read(addresses[i]);
+	}
+}
+ 4ac:	28 96       	adiw	r28, 0x08	; 8
+ 4ae:	0f b6       	in	r0, 0x3f	; 63
+ 4b0:	f8 94       	cli
+ 4b2:	de bf       	out	0x3e, r29	; 62
+ 4b4:	0f be       	out	0x3f, r0	; 63
+ 4b6:	cd bf       	out	0x3d, r28	; 61
+ 4b8:	df 91       	pop	r29
+ 4ba:	cf 91       	pop	r28
+ 4bc:	1f 91       	pop	r17
+ 4be:	ff 90       	pop	r15
+ 4c0:	ef 90       	pop	r14
+ 4c2:	08 95       	ret
+
+000004c4 <retainLightStates>:
+
+void retainLightStates(void){
+ 4c4:	ef 92       	push	r14
+ 4c6:	ff 92       	push	r15
+ 4c8:	0f 93       	push	r16
+ 4ca:	1f 93       	push	r17
+ 4cc:	cf 93       	push	r28
+ 4ce:	df 93       	push	r29
+ 4d0:	cd b7       	in	r28, 0x3d	; 61
+ 4d2:	de b7       	in	r29, 0x3e	; 62
+ 4d4:	a0 97       	sbiw	r28, 0x20	; 32
+ 4d6:	0f b6       	in	r0, 0x3f	; 63
+ 4d8:	f8 94       	cli
+ 4da:	de bf       	out	0x3e, r29	; 62
+ 4dc:	0f be       	out	0x3f, r0	; 63
+ 4de:	cd bf       	out	0x3d, r28	; 61
+	pin_map_t lightMapping[4][2] = {
+ 4e0:	88 e1       	ldi	r24, 0x18	; 24
+ 4e2:	e6 e0       	ldi	r30, 0x06	; 6
+ 4e4:	f1 e0       	ldi	r31, 0x01	; 1
+ 4e6:	de 01       	movw	r26, r28
+ 4e8:	11 96       	adiw	r26, 0x01	; 1
+ 4ea:	01 90       	ld	r0, Z+
+ 4ec:	0d 92       	st	X+, r0
+ 4ee:	8a 95       	dec	r24
+ 4f0:	e1 f7       	brne	.-8      	; 0x4ea <retainLightStates+0x26>
+		{{&PORTD, PD5}, {&PORTF, PF4}},  // light2state
+		{{&PORTD, PD7}, {&PORTF, PF5}},  // light3state
+		{{&PORTD, PD4}, {&PORTF, PF6}}   // light4state
+	};
+
+	volatile uint8_t *lightStates[4] = {&lastState.lightState_1, &lastState.lightState_2, &lastState.lightState_3, &lastState.lightState_4};
+ 4f2:	88 e0       	ldi	r24, 0x08	; 8
+ 4f4:	ee e1       	ldi	r30, 0x1E	; 30
+ 4f6:	f1 e0       	ldi	r31, 0x01	; 1
+ 4f8:	de 01       	movw	r26, r28
+ 4fa:	59 96       	adiw	r26, 0x19	; 25
+ 4fc:	01 90       	ld	r0, Z+
+ 4fe:	0d 92       	st	X+, r0
+ 500:	8a 95       	dec	r24
+ 502:	e1 f7       	brne	.-8      	; 0x4fc <retainLightStates+0x38>
+
+	for(uint8_t i = 0; i < 4; i++) {
+ 504:	20 e0       	ldi	r18, 0x00	; 0
+ 506:	46 c0       	rjmp	.+140    	; 0x594 <retainLightStates+0xd0>
+		if(*lightStates[i]) {
+ 508:	82 2f       	mov	r24, r18
+ 50a:	90 e0       	ldi	r25, 0x00	; 0
+ 50c:	fc 01       	movw	r30, r24
+ 50e:	ee 0f       	add	r30, r30
+ 510:	ff 1f       	adc	r31, r31
+ 512:	41 e0       	ldi	r20, 0x01	; 1
+ 514:	50 e0       	ldi	r21, 0x00	; 0
+ 516:	4c 0f       	add	r20, r28
+ 518:	5d 1f       	adc	r21, r29
+ 51a:	e4 0f       	add	r30, r20
+ 51c:	f5 1f       	adc	r31, r21
+ 51e:	00 8c       	ldd	r0, Z+24	; 0x18
+ 520:	f1 8d       	ldd	r31, Z+25	; 0x19
+ 522:	e0 2d       	mov	r30, r0
+ 524:	30 81       	ld	r19, Z
+ 526:	33 23       	and	r19, r19
+ 528:	a1 f1       	breq	.+104    	; 0x592 <retainLightStates+0xce>
+			*lightMapping[i][0].port ^= (1 << lightMapping[i][0].pin);
+ 52a:	7c 01       	movw	r14, r24
+ 52c:	ee 0c       	add	r14, r14
+ 52e:	ff 1c       	adc	r15, r15
+ 530:	d7 01       	movw	r26, r14
+ 532:	a8 0f       	add	r26, r24
+ 534:	b9 1f       	adc	r27, r25
+ 536:	aa 0f       	add	r26, r26
+ 538:	bb 1f       	adc	r27, r27
+ 53a:	a4 0f       	add	r26, r20
+ 53c:	b5 1f       	adc	r27, r21
+ 53e:	0d 91       	ld	r16, X+
+ 540:	1c 91       	ld	r17, X
+ 542:	11 97       	sbiw	r26, 0x01	; 1
+ 544:	f8 01       	movw	r30, r16
+ 546:	30 81       	ld	r19, Z
+ 548:	41 e0       	ldi	r20, 0x01	; 1
+ 54a:	50 e0       	ldi	r21, 0x00	; 0
+ 54c:	ba 01       	movw	r22, r20
+ 54e:	12 96       	adiw	r26, 0x02	; 2
+ 550:	0c 90       	ld	r0, X
+ 552:	12 97       	sbiw	r26, 0x02	; 2
+ 554:	02 c0       	rjmp	.+4      	; 0x55a <retainLightStates+0x96>
+ 556:	66 0f       	add	r22, r22
+ 558:	77 1f       	adc	r23, r23
+ 55a:	0a 94       	dec	r0
+ 55c:	e2 f7       	brpl	.-8      	; 0x556 <retainLightStates+0x92>
+ 55e:	63 27       	eor	r22, r19
+ 560:	60 83       	st	Z, r22
+			*lightMapping[i][1].port ^= (1 << lightMapping[i][1].pin);
+ 562:	13 96       	adiw	r26, 0x03	; 3
+ 564:	0d 90       	ld	r0, X+
+ 566:	bc 91       	ld	r27, X
+ 568:	a0 2d       	mov	r26, r0
+ 56a:	3c 91       	ld	r19, X
+ 56c:	f7 01       	movw	r30, r14
+ 56e:	e8 0f       	add	r30, r24
+ 570:	f9 1f       	adc	r31, r25
+ 572:	ee 0f       	add	r30, r30
+ 574:	ff 1f       	adc	r31, r31
+ 576:	81 e0       	ldi	r24, 0x01	; 1
+ 578:	90 e0       	ldi	r25, 0x00	; 0
+ 57a:	8c 0f       	add	r24, r28
+ 57c:	9d 1f       	adc	r25, r29
+ 57e:	e8 0f       	add	r30, r24
+ 580:	f9 1f       	adc	r31, r25
+ 582:	05 80       	ldd	r0, Z+5	; 0x05
+ 584:	02 c0       	rjmp	.+4      	; 0x58a <retainLightStates+0xc6>
+ 586:	44 0f       	add	r20, r20
+ 588:	55 1f       	adc	r21, r21
+ 58a:	0a 94       	dec	r0
+ 58c:	e2 f7       	brpl	.-8      	; 0x586 <retainLightStates+0xc2>
+ 58e:	43 27       	eor	r20, r19
+ 590:	4c 93       	st	X, r20
+		{{&PORTD, PD4}, {&PORTF, PF6}}   // light4state
+	};
+
+	volatile uint8_t *lightStates[4] = {&lastState.lightState_1, &lastState.lightState_2, &lastState.lightState_3, &lastState.lightState_4};
+
+	for(uint8_t i = 0; i < 4; i++) {
+ 592:	2f 5f       	subi	r18, 0xFF	; 255
+ 594:	24 30       	cpi	r18, 0x04	; 4
+ 596:	08 f4       	brcc	.+2      	; 0x59a <retainLightStates+0xd6>
+ 598:	b7 cf       	rjmp	.-146    	; 0x508 <retainLightStates+0x44>
+		if(*lightStates[i]) {
+			*lightMapping[i][0].port ^= (1 << lightMapping[i][0].pin);
+			*lightMapping[i][1].port ^= (1 << lightMapping[i][1].pin);
+		}
+	}
+}
+ 59a:	a0 96       	adiw	r28, 0x20	; 32
+ 59c:	0f b6       	in	r0, 0x3f	; 63
+ 59e:	f8 94       	cli
+ 5a0:	de bf       	out	0x3e, r29	; 62
+ 5a2:	0f be       	out	0x3f, r0	; 63
+ 5a4:	cd bf       	out	0x3d, r28	; 61
+ 5a6:	df 91       	pop	r29
+ 5a8:	cf 91       	pop	r28
+ 5aa:	1f 91       	pop	r17
+ 5ac:	0f 91       	pop	r16
+ 5ae:	ff 90       	pop	r15
+ 5b0:	ef 90       	pop	r14
+ 5b2:	08 95       	ret
+
+000005b4 <main>:
+uint16_t light3_address = 0x0002;
+uint16_t light4_address = 0x0003;
+volatile states lastState = {0};
+	
+int main(void) {
+	setup();
+ 5b4:	2f df       	rcall	.-418    	; 0x414 <setup>
+	readStatesFromEEPROM();
+ 5b6:	3d df       	rcall	.-390    	; 0x432 <readStatesFromEEPROM>
+	retainLightStates();
+ 5b8:	85 df       	rcall	.-246    	; 0x4c4 <retainLightStates>
+ 5ba:	78 94       	sei
+	sei();                             // Enable global interrupts
+ 5bc:	ff cf       	rjmp	.-2      	; 0x5bc <main+0x8>
+
+000005be <SPIprocessCommand>:
+ 5be:	cf 93       	push	r28
+ *  Author: kjeyabalan
+ */ 
+
+#include "spiDataProcess.h"
+
+void SPIprocessCommand(const char* command) {                                         //SPI Received Data
+ 5c0:	df 93       	push	r29
+ 5c2:	ec 01       	movw	r28, r24
+	if (strcmp(command, "L1") == 0) {
+ 5c4:	66 e2       	ldi	r22, 0x26	; 38
+ 5c6:	71 e0       	ldi	r23, 0x01	; 1
+ 5c8:	3f d1       	rcall	.+638    	; 0x848 <strcmp>
+ 5ca:	89 2b       	or	r24, r25
+ 5cc:	29 f5       	brne	.+74     	; 0x618 <SPIprocessCommand+0x5a>
+		PORTD ^= (1 << PD6);
+ 5ce:	92 b3       	in	r25, 0x12	; 18
+ 5d0:	80 e4       	ldi	r24, 0x40	; 64
+ 5d2:	89 27       	eor	r24, r25
+ 5d4:	82 bb       	out	0x12, r24	; 18
+		PORTF ^= (1 << PF3);
+ 5d6:	e2 e6       	ldi	r30, 0x62	; 98
+ 5d8:	f0 e0       	ldi	r31, 0x00	; 0
+ 5da:	90 81       	ld	r25, Z
+ 5dc:	88 e0       	ldi	r24, 0x08	; 8
+ 5de:	89 27       	eor	r24, r25
+ 5e0:	80 83       	st	Z, r24
+		uint8_t newLightState_1 = (lastState.lightState_1 == 0) ? 1 : 0;
+ 5e2:	90 91 3a 01 	lds	r25, 0x013A	; 0x80013a <lastState>
+ 5e6:	81 e0       	ldi	r24, 0x01	; 1
+ 5e8:	91 11       	cpse	r25, r1
+ 5ea:	80 e0       	ldi	r24, 0x00	; 0
+		if (newLightState_1 != lastState.lightState_1) {
+ 5ec:	90 91 3a 01 	lds	r25, 0x013A	; 0x80013a <lastState>
+ 5f0:	89 17       	cp	r24, r25
+ 5f2:	09 f4       	brne	.+2      	; 0x5f6 <SPIprocessCommand+0x38>
+ 5f4:	98 c0       	rjmp	.+304    	; 0x726 <SPIprocessCommand+0x168>
+			lastState.lightState_1 = newLightState_1;
+ 5f6:	ca e3       	ldi	r28, 0x3A	; 58
+ 5f8:	d1 e0       	ldi	r29, 0x01	; 1
+ 5fa:	88 83       	st	Y, r24
+			eeprom_write(light1_address, lastState.lightState_1);                 // Store the Light state 1 in EEPROM
+ 5fc:	68 81       	ld	r22, Y
+ 5fe:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 602:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+ 606:	60 dd       	rcall	.-1344   	; 0xc8 <eeprom_write>
+			USART_Transmit(lastState.lightState_1 == 1 ? 'A' : 'B');
+ 608:	88 81       	ld	r24, Y
+ 60a:	81 30       	cpi	r24, 0x01	; 1
+ 60c:	11 f4       	brne	.+4      	; 0x612 <SPIprocessCommand+0x54>
+ 60e:	81 e4       	ldi	r24, 0x41	; 65
+ 610:	01 c0       	rjmp	.+2      	; 0x614 <SPIprocessCommand+0x56>
+ 612:	82 e4       	ldi	r24, 0x42	; 66
+ 614:	97 d0       	rcall	.+302    	; 0x744 <USART_Transmit>
+ 616:	87 c0       	rjmp	.+270    	; 0x726 <SPIprocessCommand+0x168>
+		}
+	}
+	/*else if(strcmp(command, "R1") == 0){                                        // ESP restart
+		USART_Transmit('x');
+	}*/
+	else if (strcmp(command, "H1") == 0) {                                            //network hard reset
+ 618:	69 e2       	ldi	r22, 0x29	; 41
+ 61a:	71 e0       	ldi	r23, 0x01	; 1
+ 61c:	ce 01       	movw	r24, r28
+ 61e:	14 d1       	rcall	.+552    	; 0x848 <strcmp>
+ 620:	89 2b       	or	r24, r25
+		USART_Transmit('R');
+ 622:	19 f4       	brne	.+6      	; 0x62a <SPIprocessCommand+0x6c>
+ 624:	82 e5       	ldi	r24, 0x52	; 82
+ 626:	8e d0       	rcall	.+284    	; 0x744 <USART_Transmit>
+	}
+	else if (strcmp(command, "L2") == 0) {
+ 628:	7e c0       	rjmp	.+252    	; 0x726 <SPIprocessCommand+0x168>
+ 62a:	6c e2       	ldi	r22, 0x2C	; 44
+ 62c:	71 e0       	ldi	r23, 0x01	; 1
+ 62e:	ce 01       	movw	r24, r28
+ 630:	0b d1       	rcall	.+534    	; 0x848 <strcmp>
+ 632:	89 2b       	or	r24, r25
+ 634:	29 f5       	brne	.+74     	; 0x680 <SPIprocessCommand+0xc2>
+		PORTD ^= (1 << PD5);
+ 636:	92 b3       	in	r25, 0x12	; 18
+ 638:	80 e2       	ldi	r24, 0x20	; 32
+ 63a:	89 27       	eor	r24, r25
+ 63c:	82 bb       	out	0x12, r24	; 18
+		PORTF ^= (1 << PF4);
+ 63e:	e2 e6       	ldi	r30, 0x62	; 98
+ 640:	f0 e0       	ldi	r31, 0x00	; 0
+ 642:	90 81       	ld	r25, Z
+ 644:	80 e1       	ldi	r24, 0x10	; 16
+ 646:	89 27       	eor	r24, r25
+ 648:	80 83       	st	Z, r24
+		uint8_t newLightState_2 = (lastState.lightState_2 == 0) ? 1 : 0;
+ 64a:	90 91 3b 01 	lds	r25, 0x013B	; 0x80013b <lastState+0x1>
+ 64e:	81 e0       	ldi	r24, 0x01	; 1
+ 650:	91 11       	cpse	r25, r1
+ 652:	80 e0       	ldi	r24, 0x00	; 0
+		if(newLightState_2 != lastState.lightState_2){
+ 654:	90 91 3b 01 	lds	r25, 0x013B	; 0x80013b <lastState+0x1>
+ 658:	89 17       	cp	r24, r25
+ 65a:	09 f4       	brne	.+2      	; 0x65e <SPIprocessCommand+0xa0>
+ 65c:	64 c0       	rjmp	.+200    	; 0x726 <SPIprocessCommand+0x168>
+			lastState.lightState_2 = newLightState_2;
+ 65e:	ca e3       	ldi	r28, 0x3A	; 58
+ 660:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light2_address, lastState.lightState_2);                 // Store the Light state 2 in EEPROM
+ 662:	89 83       	std	Y+1, r24	; 0x01
+ 664:	69 81       	ldd	r22, Y+1	; 0x01
+ 666:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 66a:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+			USART_Transmit(lastState.lightState_2 == 1 ? 'C' : 'D');
+ 66e:	2c dd       	rcall	.-1448   	; 0xc8 <eeprom_write>
+ 670:	89 81       	ldd	r24, Y+1	; 0x01
+ 672:	81 30       	cpi	r24, 0x01	; 1
+ 674:	11 f4       	brne	.+4      	; 0x67a <SPIprocessCommand+0xbc>
+ 676:	83 e4       	ldi	r24, 0x43	; 67
+ 678:	01 c0       	rjmp	.+2      	; 0x67c <SPIprocessCommand+0xbe>
+ 67a:	84 e4       	ldi	r24, 0x44	; 68
+ 67c:	63 d0       	rcall	.+198    	; 0x744 <USART_Transmit>
+		}
+	}
+	else if (strcmp(command, "L3") == 0) {
+ 67e:	53 c0       	rjmp	.+166    	; 0x726 <SPIprocessCommand+0x168>
+ 680:	6f e2       	ldi	r22, 0x2F	; 47
+ 682:	71 e0       	ldi	r23, 0x01	; 1
+ 684:	ce 01       	movw	r24, r28
+ 686:	e0 d0       	rcall	.+448    	; 0x848 <strcmp>
+ 688:	89 2b       	or	r24, r25
+ 68a:	21 f5       	brne	.+72     	; 0x6d4 <SPIprocessCommand+0x116>
+		PORTD ^= (1 << PD7);
+ 68c:	82 b3       	in	r24, 0x12	; 18
+ 68e:	80 58       	subi	r24, 0x80	; 128
+ 690:	82 bb       	out	0x12, r24	; 18
+		PORTF ^= (1 << PF5);
+ 692:	e2 e6       	ldi	r30, 0x62	; 98
+ 694:	f0 e0       	ldi	r31, 0x00	; 0
+ 696:	90 81       	ld	r25, Z
+ 698:	80 e2       	ldi	r24, 0x20	; 32
+ 69a:	89 27       	eor	r24, r25
+ 69c:	80 83       	st	Z, r24
+		uint8_t newLightState_3 = (lastState.lightState_3 == 0) ? 1 : 0;
+ 69e:	90 91 3c 01 	lds	r25, 0x013C	; 0x80013c <lastState+0x2>
+ 6a2:	81 e0       	ldi	r24, 0x01	; 1
+ 6a4:	91 11       	cpse	r25, r1
+ 6a6:	80 e0       	ldi	r24, 0x00	; 0
+		if (newLightState_3 != lastState.lightState_3){
+ 6a8:	90 91 3c 01 	lds	r25, 0x013C	; 0x80013c <lastState+0x2>
+ 6ac:	89 17       	cp	r24, r25
+ 6ae:	09 f4       	brne	.+2      	; 0x6b2 <SPIprocessCommand+0xf4>
+			lastState.lightState_3 = newLightState_3;
+ 6b0:	3a c0       	rjmp	.+116    	; 0x726 <SPIprocessCommand+0x168>
+ 6b2:	ca e3       	ldi	r28, 0x3A	; 58
+ 6b4:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light3_address, lastState.lightState_3);                  //Store the Light state 3 in EEPROM
+ 6b6:	8a 83       	std	Y+2, r24	; 0x02
+ 6b8:	6a 81       	ldd	r22, Y+2	; 0x02
+ 6ba:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+ 6be:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+			USART_Transmit(lastState.lightState_3 == 1 ? 'E' : 'F');
+ 6c2:	02 dd       	rcall	.-1532   	; 0xc8 <eeprom_write>
+ 6c4:	8a 81       	ldd	r24, Y+2	; 0x02
+ 6c6:	81 30       	cpi	r24, 0x01	; 1
+ 6c8:	11 f4       	brne	.+4      	; 0x6ce <SPIprocessCommand+0x110>
+ 6ca:	85 e4       	ldi	r24, 0x45	; 69
+ 6cc:	01 c0       	rjmp	.+2      	; 0x6d0 <SPIprocessCommand+0x112>
+ 6ce:	86 e4       	ldi	r24, 0x46	; 70
+ 6d0:	39 d0       	rcall	.+114    	; 0x744 <USART_Transmit>
+		}
+	}
+	else if (strcmp(command, "L4") == 0) {
+ 6d2:	29 c0       	rjmp	.+82     	; 0x726 <SPIprocessCommand+0x168>
+ 6d4:	62 e3       	ldi	r22, 0x32	; 50
+ 6d6:	71 e0       	ldi	r23, 0x01	; 1
+ 6d8:	ce 01       	movw	r24, r28
+ 6da:	b6 d0       	rcall	.+364    	; 0x848 <strcmp>
+ 6dc:	89 2b       	or	r24, r25
+ 6de:	19 f5       	brne	.+70     	; 0x726 <SPIprocessCommand+0x168>
+		PORTD ^= (1 << PD4);
+ 6e0:	92 b3       	in	r25, 0x12	; 18
+ 6e2:	80 e1       	ldi	r24, 0x10	; 16
+ 6e4:	89 27       	eor	r24, r25
+ 6e6:	82 bb       	out	0x12, r24	; 18
+		PORTF ^= (1 << PF6);
+ 6e8:	e2 e6       	ldi	r30, 0x62	; 98
+ 6ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 6ec:	90 81       	ld	r25, Z
+ 6ee:	80 e4       	ldi	r24, 0x40	; 64
+ 6f0:	89 27       	eor	r24, r25
+ 6f2:	80 83       	st	Z, r24
+		uint8_t newLightState_4 = (lastState.lightState_4 == 0) ? 1 : 0;
+ 6f4:	90 91 3d 01 	lds	r25, 0x013D	; 0x80013d <lastState+0x3>
+ 6f8:	81 e0       	ldi	r24, 0x01	; 1
+ 6fa:	91 11       	cpse	r25, r1
+ 6fc:	80 e0       	ldi	r24, 0x00	; 0
+		if(newLightState_4 != lastState.lightState_4){
+ 6fe:	90 91 3d 01 	lds	r25, 0x013D	; 0x80013d <lastState+0x3>
+ 702:	89 17       	cp	r24, r25
+			lastState.lightState_4 = newLightState_4;
+ 704:	81 f0       	breq	.+32     	; 0x726 <SPIprocessCommand+0x168>
+ 706:	ca e3       	ldi	r28, 0x3A	; 58
+ 708:	d1 e0       	ldi	r29, 0x01	; 1
+			eeprom_write(light4_address, lastState.lightState_4);                  // Store the Light state 4 in EEPROM
+ 70a:	8b 83       	std	Y+3, r24	; 0x03
+ 70c:	6b 81       	ldd	r22, Y+3	; 0x03
+ 70e:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 712:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+			USART_Transmit(lastState.lightState_4 == 1 ? 'G' : 'H');
+ 716:	d8 dc       	rcall	.-1616   	; 0xc8 <eeprom_write>
+ 718:	8b 81       	ldd	r24, Y+3	; 0x03
+ 71a:	81 30       	cpi	r24, 0x01	; 1
+ 71c:	11 f4       	brne	.+4      	; 0x722 <SPIprocessCommand+0x164>
+ 71e:	87 e4       	ldi	r24, 0x47	; 71
+ 720:	01 c0       	rjmp	.+2      	; 0x724 <SPIprocessCommand+0x166>
+ 722:	88 e4       	ldi	r24, 0x48	; 72
+ 724:	0f d0       	rcall	.+30     	; 0x744 <USART_Transmit>
+		}
+	}
+ 726:	df 91       	pop	r29
+ 728:	cf 91       	pop	r28
+ 72a:	08 95       	ret
+
+0000072c <USART_Init>:
+#include "uart.h"
+#include "main.h"
+
+void USART_Init(unsigned int ubrr)
+{
+	UBRR0H = (unsigned char)(ubrr >> 8);
+ 72c:	90 93 90 00 	sts	0x0090, r25	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+	UBRR0L = (unsigned char)ubrr;
+ 730:	89 b9       	out	0x09, r24	; 9
+	UCSR0B = (1 << RXEN0) | (1 << TXEN0);
+ 732:	88 e1       	ldi	r24, 0x18	; 24
+ 734:	8a b9       	out	0x0a, r24	; 10
+	UCSR0B |= (1 << RXCIE0);
+ 736:	8a b1       	in	r24, 0x0a	; 10
+ 738:	80 68       	ori	r24, 0x80	; 128
+ 73a:	8a b9       	out	0x0a, r24	; 10
+	UCSR0C = (1 << USBS0) | (3 << UCSZ00);
+ 73c:	8e e0       	ldi	r24, 0x0E	; 14
+ 73e:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+ 742:	08 95       	ret
+
+00000744 <USART_Transmit>:
+}
+
+void USART_Transmit(uint8_t data) {
+	while (!(UCSR0A & (1 << UDRE0)));
+ 744:	5d 9b       	sbis	0x0b, 5	; 11
+ 746:	fe cf       	rjmp	.-4      	; 0x744 <USART_Transmit>
+	UDR0 = data;
+ 748:	8c b9       	out	0x0c, r24	; 12
+ 74a:	08 95       	ret
+
+0000074c <USART_Receive>:
+}
+
+unsigned char USART_Receive(void)
+{
+	while (!(UCSR0A & (1 << RXC0)));
+ 74c:	5f 9b       	sbis	0x0b, 7	; 11
+ 74e:	fe cf       	rjmp	.-4      	; 0x74c <USART_Receive>
+	return UDR0;
+ 750:	8c b1       	in	r24, 0x0c	; 12
+}
+ 752:	08 95       	ret
+
+00000754 <UARTprocessCommand>:
+ */ 
+
+
+#include "uartDataProcess.h"
+
+void UARTprocessCommand(unsigned char receivedData){
+ 754:	cf 93       	push	r28
+ 756:	df 93       	push	r29
+	if (receivedData == 'L') {
+ 758:	8c 34       	cpi	r24, 0x4C	; 76
+ 75a:	51 f4       	brne	.+20     	; 0x770 <UARTprocessCommand+0x1c>
+		receivedData = USART_Receive();
+ 75c:	f7 df       	rcall	.-18     	; 0x74c <USART_Receive>
+		if (receivedData == '1') {
+ 75e:	81 33       	cpi	r24, 0x31	; 49
+			light1_ON();
+ 760:	11 f4       	brne	.+4      	; 0x766 <UARTprocessCommand+0x12>
+ 762:	05 dd       	rcall	.-1526   	; 0x16e <light1_ON>
+ 764:	6e c0       	rjmp	.+220    	; 0x842 <UARTprocessCommand+0xee>
+			}else if (receivedData == '0') {
+ 766:	80 33       	cpi	r24, 0x30	; 48
+ 768:	09 f0       	breq	.+2      	; 0x76c <UARTprocessCommand+0x18>
+			light1_OFF();
+ 76a:	6b c0       	rjmp	.+214    	; 0x842 <UARTprocessCommand+0xee>
+ 76c:	13 dd       	rcall	.-1498   	; 0x194 <light1_OFF>
+		}
+	}
+
+	else if (receivedData == 'M') {
+ 76e:	69 c0       	rjmp	.+210    	; 0x842 <UARTprocessCommand+0xee>
+ 770:	8d 34       	cpi	r24, 0x4D	; 77
+		receivedData = USART_Receive();
+ 772:	51 f4       	brne	.+20     	; 0x788 <UARTprocessCommand+0x34>
+		if (receivedData == '1') {
+ 774:	eb df       	rcall	.-42     	; 0x74c <USART_Receive>
+ 776:	81 33       	cpi	r24, 0x31	; 49
+			light2_ON();
+ 778:	11 f4       	brne	.+4      	; 0x77e <UARTprocessCommand+0x2a>
+ 77a:	1e dd       	rcall	.-1476   	; 0x1b8 <light2_ON>
+			}else if (receivedData == '0') {
+ 77c:	62 c0       	rjmp	.+196    	; 0x842 <UARTprocessCommand+0xee>
+ 77e:	80 33       	cpi	r24, 0x30	; 48
+			light2_OFF();
+ 780:	09 f0       	breq	.+2      	; 0x784 <UARTprocessCommand+0x30>
+ 782:	5f c0       	rjmp	.+190    	; 0x842 <UARTprocessCommand+0xee>
+		}
+	}
+	else if (receivedData == 'N') {
+ 784:	2c dd       	rcall	.-1448   	; 0x1de <light2_OFF>
+ 786:	5d c0       	rjmp	.+186    	; 0x842 <UARTprocessCommand+0xee>
+		receivedData = USART_Receive();
+ 788:	8e 34       	cpi	r24, 0x4E	; 78
+ 78a:	51 f4       	brne	.+20     	; 0x7a0 <UARTprocessCommand+0x4c>
+		if (receivedData == '1') {
+ 78c:	df df       	rcall	.-66     	; 0x74c <USART_Receive>
+			light3_ON();
+ 78e:	81 33       	cpi	r24, 0x31	; 49
+ 790:	11 f4       	brne	.+4      	; 0x796 <UARTprocessCommand+0x42>
+			}else if (receivedData == '0') {
+ 792:	37 dd       	rcall	.-1426   	; 0x202 <light3_ON>
+ 794:	56 c0       	rjmp	.+172    	; 0x842 <UARTprocessCommand+0xee>
+			light3_OFF();
+ 796:	80 33       	cpi	r24, 0x30	; 48
+ 798:	09 f0       	breq	.+2      	; 0x79c <UARTprocessCommand+0x48>
+ 79a:	53 c0       	rjmp	.+166    	; 0x842 <UARTprocessCommand+0xee>
+		}
+	}
+
+	else if (receivedData == 'O') {
+ 79c:	45 dd       	rcall	.-1398   	; 0x228 <light3_OFF>
+		receivedData = USART_Receive();
+ 79e:	51 c0       	rjmp	.+162    	; 0x842 <UARTprocessCommand+0xee>
+ 7a0:	8f 34       	cpi	r24, 0x4F	; 79
+		if (receivedData == '1') {
+ 7a2:	51 f4       	brne	.+20     	; 0x7b8 <UARTprocessCommand+0x64>
+ 7a4:	d3 df       	rcall	.-90     	; 0x74c <USART_Receive>
+			light4_ON();
+ 7a6:	81 33       	cpi	r24, 0x31	; 49
+ 7a8:	11 f4       	brne	.+4      	; 0x7ae <UARTprocessCommand+0x5a>
+		}
+		else if (receivedData == '0') {
+ 7aa:	50 dd       	rcall	.-1376   	; 0x24c <light4_ON>
+			light4_OFF();
+ 7ac:	4a c0       	rjmp	.+148    	; 0x842 <UARTprocessCommand+0xee>
+ 7ae:	80 33       	cpi	r24, 0x30	; 48
+		}
+	}
+	
+	else if(receivedData == 'Z'){
+ 7b0:	09 f0       	breq	.+2      	; 0x7b4 <UARTprocessCommand+0x60>
+ 7b2:	47 c0       	rjmp	.+142    	; 0x842 <UARTprocessCommand+0xee>
+ 7b4:	5e dd       	rcall	.-1348   	; 0x272 <light4_OFF>
+		receivedData = USART_Receive();
+ 7b6:	45 c0       	rjmp	.+138    	; 0x842 <UARTprocessCommand+0xee>
+ 7b8:	8a 35       	cpi	r24, 0x5A	; 90
+		if(receivedData == '1'){
+ 7ba:	09 f0       	breq	.+2      	; 0x7be <UARTprocessCommand+0x6a>
+			light1_ON();
+ 7bc:	42 c0       	rjmp	.+132    	; 0x842 <UARTprocessCommand+0xee>
+ 7be:	c6 df       	rcall	.-116    	; 0x74c <USART_Receive>
+			light2_ON();
+ 7c0:	81 33       	cpi	r24, 0x31	; 49
+ 7c2:	f9 f4       	brne	.+62     	; 0x802 <UARTprocessCommand+0xae>
+			light3_ON();
+ 7c4:	d4 dc       	rcall	.-1624   	; 0x16e <light1_ON>
+			light4_ON();
+ 7c6:	f8 dc       	rcall	.-1552   	; 0x1b8 <light2_ON>
+ 7c8:	1c dd       	rcall	.-1480   	; 0x202 <light3_ON>
+			eeprom_write(light1_address, lastState.lightState_1);
+ 7ca:	40 dd       	rcall	.-1408   	; 0x24c <light4_ON>
+ 7cc:	ca e3       	ldi	r28, 0x3A	; 58
+ 7ce:	d1 e0       	ldi	r29, 0x01	; 1
+ 7d0:	68 81       	ld	r22, Y
+ 7d2:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 7d6:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+			eeprom_write(light2_address, lastState.lightState_2);
+ 7da:	76 dc       	rcall	.-1812   	; 0xc8 <eeprom_write>
+ 7dc:	69 81       	ldd	r22, Y+1	; 0x01
+ 7de:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 7e2:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+			eeprom_write(light3_address, lastState.lightState_3);
+ 7e6:	70 dc       	rcall	.-1824   	; 0xc8 <eeprom_write>
+ 7e8:	6a 81       	ldd	r22, Y+2	; 0x02
+ 7ea:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+ 7ee:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+			eeprom_write(light4_address, lastState.lightState_4);
+ 7f2:	6a dc       	rcall	.-1836   	; 0xc8 <eeprom_write>
+ 7f4:	6b 81       	ldd	r22, Y+3	; 0x03
+ 7f6:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 7fa:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+		}
+		else if(receivedData == '0'){
+ 7fe:	64 dc       	rcall	.-1848   	; 0xc8 <eeprom_write>
+ 800:	20 c0       	rjmp	.+64     	; 0x842 <UARTprocessCommand+0xee>
+			light1_OFF();
+ 802:	80 33       	cpi	r24, 0x30	; 48
+ 804:	f1 f4       	brne	.+60     	; 0x842 <UARTprocessCommand+0xee>
+			light2_OFF();
+ 806:	c6 dc       	rcall	.-1652   	; 0x194 <light1_OFF>
+			light3_OFF();
+ 808:	ea dc       	rcall	.-1580   	; 0x1de <light2_OFF>
+ 80a:	0e dd       	rcall	.-1508   	; 0x228 <light3_OFF>
+			light4_OFF();
+ 80c:	32 dd       	rcall	.-1436   	; 0x272 <light4_OFF>
+ 80e:	ca e3       	ldi	r28, 0x3A	; 58
+			eeprom_write(light1_address, lastState.lightState_1);
+ 810:	d1 e0       	ldi	r29, 0x01	; 1
+ 812:	68 81       	ld	r22, Y
+ 814:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <light1_address>
+ 818:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <light1_address+0x1>
+ 81c:	55 dc       	rcall	.-1878   	; 0xc8 <eeprom_write>
+ 81e:	69 81       	ldd	r22, Y+1	; 0x01
+			eeprom_write(light2_address, lastState.lightState_2);
+ 820:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <light2_address>
+ 824:	90 91 05 01 	lds	r25, 0x0105	; 0x800105 <light2_address+0x1>
+ 828:	4f dc       	rcall	.-1890   	; 0xc8 <eeprom_write>
+ 82a:	6a 81       	ldd	r22, Y+2	; 0x02
+ 82c:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <light3_address>
+			eeprom_write(light3_address, lastState.lightState_3);
+ 830:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <light3_address+0x1>
+ 834:	49 dc       	rcall	.-1902   	; 0xc8 <eeprom_write>
+ 836:	6b 81       	ldd	r22, Y+3	; 0x03
+ 838:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+			eeprom_write(light4_address, lastState.lightState_4);
+ 83c:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 840:	43 dc       	rcall	.-1914   	; 0xc8 <eeprom_write>
+ 842:	df 91       	pop	r29
+ 844:	cf 91       	pop	r28
+ 846:	08 95       	ret
+
+00000848 <strcmp>:
+ 848:	fb 01       	movw	r30, r22
+	
+	/*else if(receivedData == 'x'){
+		wdt_enable(WDTO_15MS);
+		while (1);
+	}*/
+ 84a:	dc 01       	movw	r26, r24
+ 84c:	8d 91       	ld	r24, X+
+ 84e:	01 90       	ld	r0, Z+
+ 850:	80 19       	sub	r24, r0
+ 852:	01 10       	cpse	r0, r1
+ 854:	d9 f3       	breq	.-10     	; 0x84c <strcmp+0x4>
+ 856:	99 0b       	sbc	r25, r25
+ 858:	08 95       	ret
+
+0000085a <_exit>:
+ 85a:	f8 94       	cli
+
+0000085c <__stop_program>:
+ 85c:	ff cf       	rjmp	.-2      	; 0x85c <__stop_program>
